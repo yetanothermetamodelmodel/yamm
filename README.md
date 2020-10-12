@@ -1,5 +1,9 @@
-# yamm
 
+
+<img align="right" src="YAMMLogo.PNG">
+
+
+# yamm
 * [Installation](https://github.com/yetanothermetamodelmodel/yamm/blob/main/documentation/Installation.pdf)
 * [Getting started](https://www.youtube.com/watch?v=oYlNeZk0GwM)
 * [User documentation](https://github.com/yetanothermetamodelmodel/yamm/blob/main/documentation/UserDokumentation.pdf)
