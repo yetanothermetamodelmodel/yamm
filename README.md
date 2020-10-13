@@ -1,9 +1,8 @@
 
 
-<img align="right" src="YAMMLogo.PNG">
+<img  src="YAMMLogo.PNG">
 
 
-# YAMM
 * [Was ist YAMM?](/documentation/YAMMOverview.pdf)
 * [Installation](https://github.com/yetanothermetamodelmodel/yamm/blob/main/documentation/Installation.pdf)
 * [Erste Schritte](https://www.youtube.com/watch?v=oYlNeZk0GwM)
