@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/online.yamm.YAMMFeature_1.0.0.202010262054.jar" id="online.yamm.YAMMFeature" version="1.0.0.202010262054">
+      <category name="YAMM"/>
+   </feature>
+   <category-def name="YAMM" label="YAMM"/>
+</site>
