@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="online.yamm.markov.design.Activator"
+               id="online.yamm.markov.design"
+	       name="markov">
+    </component>
+  </extension>
+  <extension
+        point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+     <editpartProvider
+           class="online.yamm.markov.design.StatePartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+     <editpartProvider
+           class="online.yamm.markov.design.TransitionPartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+  </extension>
+</plugin>

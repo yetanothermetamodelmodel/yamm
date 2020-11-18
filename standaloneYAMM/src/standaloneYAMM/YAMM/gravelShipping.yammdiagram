@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yammDiagram:YModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yammDiagram="http://www.yamm.online/coreModelDiagram/YammDiagram">
+  <clazz ObjectID="f5e24a2" name="RObject">
+    <ownedAttribute ObjectID="f2bd771" name="rContainer" type="//@clazz.0" clazz="//@clazz.0"/>
+    <ownedAttribute ObjectID="f55ebef" name="yClass" type="//@packages.0/@ownedMemberPackage.4" clazz="//@clazz.0"/>
+    <ownedAttribute ObjectID="fbb4ab" name="ObjectID" type="//@packages.0/@ownedMemberPackage.3" clazz="//@clazz.0"/>
+    <ownedAttribute ObjectID="f2dc78d" name="filter" type="//@packages.0/@ownedMemberPackage.4" clazz="//@clazz.0"/>
+    <ownedAttribute ObjectID="f5c38a7" name="yammInternal" type="//@packages.0/@ownedMemberPackage.4" clazz="//@clazz.0"/>
+    <ownedAttribute ObjectID="f24f0ed" name="chartView" isUnique="true" type="//@packages.0/@ownedMemberPackage.4" clazz="//@clazz.0"/>
+    <ownedAttribute ObjectID="f7f0444" name="tmp" type="//@clazz.0" clazz="//@clazz.0"/>
+    <ownedAttribute ObjectID="f100397" name="var_i" isUnique="true" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.0"/>
+  </clazz>
+  <clazz ObjectID="f4cc70d" name="YClass" superClass="//@clazz.0"/>
+  <clazz ObjectID="f7a6aa2" name="LoadingDock" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.2">
+    <ownedAttribute ObjectID="f1fa391" name="truckCurrentlyLoaded" association="true" aggregation="composite" type="//@clazz.3" clazz="//@clazz.2">
+      <ownedElement xsi:type="yammDiagram:YParameter" ObjectID="f465861" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+    </ownedAttribute>
+    <ownedAttribute ObjectID="f6385b0" name="queueLD" association="true" type="//@clazz.14" clazz="//@clazz.2"/>
+    <ownedAttribute ObjectID="f13b814" name="queueWS" association="true" type="//@clazz.5" clazz="//@clazz.2"/>
+    <ownedAttribute ObjectID="f1700ff" name="event" isUnique="true" type="//@packages.1/@ownedMemberPackage.3" clazz="//@clazz.2"/>
+    <ownedAttribute ObjectID="f82aae" name="gravelShipping" association="true" type="//@clazz.12" clazz="//@clazz.2"/>
+    <ownedAttribute ObjectID="f13c7ac" name="loadingTime" isUnique="true" type="//@packages.1/@ownedMemberPackage.4" clazz="//@clazz.2"/>
+    <ownedAttribute ObjectID="f633c1e" name="drivingToWeightStation" isUnique="true" type="//@packages.1/@ownedMemberPackage.4" clazz="//@clazz.2"/>
+    <ownedAttribute ObjectID="f382758" name="loadingWeight" isUnique="true" type="//@packages.1/@ownedMemberPackage.4" clazz="//@clazz.2"/>
+    <ownedOperation ObjectID="f4bd866" name="simulate" clazz="//@clazz.2" returnType="//@packages.0/@ownedMemberPackage.2">
+      <ownedParameter ObjectID="f4779e6" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+      <stateMachine ObjectID="f5e4242" name="YStateMachinef5e4242">
+        <transition ObjectID="f46769e" name="YTransitionf46769e" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.7" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.0" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+        <transition ObjectID="f7bedb3" name="YTransitionf7bedb3" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.1"/>
+        <transition ObjectID="f1ed1a" name="YTransitionf1ed1a" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.1" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.2"/>
+        <transition ObjectID="f6419b3" name="YTransitionf6419b3" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.7" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.4" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.3"/>
+        <transition ObjectID="f64c486" name="YTransitionf64c486" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.8" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.5" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.4"/>
+        <transition ObjectID="f3c0e8a" name="YTransitionf3c0e8a" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.8" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.5"/>
+        <transition ObjectID="f16606e" name="YTransitionf16606e" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.4" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.6"/>
+        <transition ObjectID="f40afbb" name="YTransitionf40afbb" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.1" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.5" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.7"/>
+        <transition ObjectID="f50954" name="YTransitionf50954" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.6" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.8"/>
+        <transition ObjectID="f307286" name="YTransitionf307286" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.5" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.6" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.9"/>
+        <transition ObjectID="f15b739" name="YTransitionf15b739" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.6" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.10"/>
+        <transition ObjectID="f67d41b" name="YTransitionf67d41b" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.4" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.8" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.11"/>
+        <transition ObjectID="f106128" name="YTransitionf106128" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.4" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.2/@ownedOperation.0/@stateMachine/@trAttach.12"/>
+        <transition ObjectID="f215638" name="YTransitionf215638" source="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.2" target="//@clazz.2/@ownedOperation.0/@stateMachine/@subvertex.7"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f245daf" name="YStatef245daf" outgoing="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.1 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.6" incoming="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f57dee0" name="YStatef57dee0" outgoing="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.2 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.7" incoming="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.1"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f5aa854" name="YPseudostatef5aa854" outgoing="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.13"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f5763e0" name="YFinalStatef5763e0" incoming="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.5 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.2 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.10 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.8 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.12"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f40ce60" name="YStatef40ce60" outgoing="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.11 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.12" incoming="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.3 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.6"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f44dbe7" name="YStatef44dbe7" outgoing="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.9" incoming="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.4 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.7"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f3d8ca9" name="YStatef3d8ca9" outgoing="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.8 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.10" incoming="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.9"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f189cbb" name="YStatef189cbb" outgoing="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.0 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.3" incoming="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.13"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f1a5dd2" name="YStatef1a5dd2" outgoing="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.5 //@clazz.2/@ownedOperation.0/@stateMachine/@transition.4" incoming="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.11"/>
+        <trAttach ObjectID="f740c18" name="YTrAttachmentf740c18" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="event = DES.EventQueue.peek(timeStep, true, null, this, null); event != null;"/>
+        <trAttach ObjectID="f19bc22" name="YTrAttachmentf19bc22" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.1" guardStringRep="event instanceof LoadingDone;"/>
+        <trAttach ObjectID="f70b1e2" name="YTrAttachmentf70b1e2" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.2" guardStringRep="truckCurrentlyLoaded != null;">
+          <effects ObjectID="f176164" effectStringRep="var_i = drivingToWeightStation.nextInt;"/>
+          <effects ObjectID="f54bd7b" effectStringRep="queueWS.addWithDelay(truckCurrentlyLoaded, var_i, timeStep);"/>
+          <effects ObjectID="f7b52a5" effectStringRep="DES.EventQueue.consume(timeStep, true, null, this, null);"/>
+          <effects ObjectID="f3e5c98" effectStringRep="//Print(timeStep + &quot;loading done | &quot; + name);"/>
+          <effects ObjectID="f7a8af3" effectStringRep="setReturnValue(true);"/>
+        </trAttach>
+        <trAttach ObjectID="f5307e9" name="YTrAttachmentf5307e9" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.3" guardStringRep="DES.EventQueue.peek(timeStep, true, null, this, null) == null;"/>
+        <trAttach ObjectID="f6a7c8e" name="YTrAttachmentf6a7c8e" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.4" guardStringRep="truckCurrentlyLoaded == null;"/>
+        <trAttach ObjectID="f2457fc" name="YTrAttachmentf2457fc" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.5" guardStringRep="truckCurrentlyLoaded != null;">
+          <effects ObjectID="f3256d2" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+        <trAttach ObjectID="f5589a8" name="YTrAttachmentf5589a8" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.6" guardStringRep="!(event instanceof LoadingDone);">
+          <effects ObjectID="f22871d" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+        <trAttach ObjectID="f1da764" name="YTrAttachmentf1da764" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.7" guardStringRep="truckCurrentlyLoaded == null;"/>
+        <trAttach ObjectID="f576ac0" name="YTrAttachmentf576ac0" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.8" guardStringRep="tmp != null;">
+          <effects ObjectID="f40b34c" effectStringRep="queueLD.consume(filter);"/>
+          <effects ObjectID="f57c36e" effectStringRep="truckCurrentlyLoaded = tmp as Truck;"/>
+          <effects ObjectID="f2727c4" effectStringRep="var_i = loadingWeight.nextInt;"/>
+          <effects ObjectID="f14979f" effectStringRep="var_i = Math.min(var_i, gravelShipping._gravelToShip);"/>
+          <effects ObjectID="f5449dd" effectStringRep="truckCurrentlyLoaded.load(var_i);"/>
+          <effects ObjectID="f1454f3" effectStringRep="gravelShipping._gravelToShip = gravelShipping._gravelToShip - truckCurrentlyLoaded.loadedWithTons;"/>
+          <effects ObjectID="f5758ff" effectStringRep="//Print(timeStep + &quot;loading | &quot; + name);"/>
+          <effects ObjectID="f26bda9" effectStringRep="event = new LoadingDone;"/>
+          <effects ObjectID="f62fb4a" effectStringRep="var_i = loadingTime.nextInt;"/>
+          <effects ObjectID="f66c878" effectStringRep="event.timeStep = timeStep + var_i;"/>
+          <effects ObjectID="f8e13a" effectStringRep="event.receivingObject = this;"/>
+          <effects ObjectID="f78a26c" effectStringRep="setReturnValue(true);"/>
+        </trAttach>
+        <trAttach ObjectID="f65f226" name="YTrAttachmentf65f226" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.9" guardStringRep="true;">
+          <effects ObjectID="f9d690" effectStringRep="filter = new java.util.HashMap&lt;String, Object>;"/>
+          <effects ObjectID="f550b59" effectStringRep="(filter as java.util.Map).put(&quot;active&quot;, true);"/>
+          <effects ObjectID="f44667" effectStringRep="tmp = queueLD.peek(filter) as Truck;"/>
+        </trAttach>
+        <trAttach ObjectID="f2240d4" name="YTrAttachmentf2240d4" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.10" guardStringRep="tmp == null;">
+          <effects ObjectID="f534032" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+        <trAttach ObjectID="f2f5a6f" name="YTrAttachmentf2f5a6f" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.11" guardStringRep="gravelShipping._gravelToShip > 0;">
+          <effects ObjectID="f3000c"/>
+        </trAttach>
+        <trAttach ObjectID="f353006" name="YTrAttachmentf353006" transition="//@clazz.2/@ownedOperation.0/@stateMachine/@transition.12" guardStringRep="gravelShipping._gravelToShip &lt;= 0;">
+          <effects ObjectID="f49511a" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+    <ownedOperation ObjectID="f723ef1" name="LoadingDock" clazz="//@clazz.2">
+      <ownedParameter ObjectID="f610b02" name="random" isUnique="true" type="//@packages.0/@ownedMemberPackage.4"/>
+      <ownedParameter ObjectID="f7a3405" name="_name" isUnique="true" type="//@packages.0/@ownedMemberPackage.3"/>
+      <stateMachine ObjectID="fa7779" name="YStateMachinefa7779">
+        <transition ObjectID="f6d9c55" name="YTransitionf6d9c55" source="//@clazz.2/@ownedOperation.1/@stateMachine/@subvertex.0" target="//@clazz.2/@ownedOperation.1/@stateMachine/@subvertex.1" attachment="//@clazz.2/@ownedOperation.1/@stateMachine/@trAttach.0"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f679b22" name="YPseudostatef679b22" outgoing="//@clazz.2/@ownedOperation.1/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="ffc3" name="YFinalStateffc3" incoming="//@clazz.2/@ownedOperation.1/@stateMachine/@transition.0"/>
+        <trAttach ObjectID="f53a54d" name="YTrAttachmentf53a54d" transition="//@clazz.2/@ownedOperation.1/@stateMachine/@transition.0" guardStringRep="true;">
+          <effects ObjectID="f32acb5" effectStringRep=""/>
+          <effects ObjectID="f4f2167" effectStringRep="name = _name;"/>
+          <effects ObjectID="f2d62f" effectStringRep="loadingWeight = new DES.Randomizer;"/>
+          <effects ObjectID="f188834" effectStringRep="loadingWeight.random = random;"/>
+          <effects ObjectID="f3b827e" effectStringRep="loadingWeight.addProbInt(0.3, 40);"/>
+          <effects ObjectID="f643418" effectStringRep="loadingWeight.addProbInt(0.6, 50);"/>
+          <effects ObjectID="f654b24" effectStringRep="loadingWeight.addProbInt(1.0, 60);"/>
+          <effects ObjectID="ffedeb" effectStringRep="loadingTime = new DES.Randomizer;"/>
+          <effects ObjectID="f7441d7" effectStringRep="loadingTime.random = random;"/>
+          <effects ObjectID="f24b9ed" effectStringRep="loadingTime.addProbInt(1.0, 60);"/>
+          <effects ObjectID="f775da6" effectStringRep="loadingTime.addProbInt(1.0, 10);"/>
+          <effects ObjectID="f36b5a6" effectStringRep="loadingTime.addProbInt(1.0, 40);"/>
+          <effects ObjectID="f100878" effectStringRep="loadingTime.addProbInt(1.0, 100);"/>
+          <effects ObjectID="f9ceac" effectStringRep="loadingTime.addProbInt(1.0, 140);"/>
+          <effects ObjectID="f59ee7a" effectStringRep="loadingTime.addProbInt(1.0, 180);"/>
+          <effects ObjectID="f6a2fc4" effectStringRep="drivingToWeightStation = new DES.Randomizer;"/>
+          <effects ObjectID="f26a6d2" effectStringRep="drivingToWeightStation.random = random;"/>
+          <effects ObjectID="f7222c" effectStringRep="drivingToWeightStation.addProbInt(0.5, 30);"/>
+          <effects ObjectID="f43f5df" effectStringRep="drivingToWeightStation.addProbInt(0.78, 45);"/>
+          <effects ObjectID="f55753f" effectStringRep="drivingToWeightStation.addProbInt(1.0, 60);"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+  </clazz>
+  <clazz ObjectID="f1d4f09" name="Truck" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.2">
+    <ownedAttribute ObjectID="f75186f" name="loadedWithTons" isUnique="true" defaultValue="&quot;0&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.3"/>
+    <ownedAttribute ObjectID="f2079c5" name="active" isUnique="true" defaultValue="&quot;true&quot;" type="//@packages.0/@ownedMemberPackage.2" clazz="//@clazz.3"/>
+    <ownedAttribute ObjectID="f17dd31" name="reactivationTime" isUnique="true" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.3"/>
+    <ownedAttribute ObjectID="fa2967" name="event" isUnique="true" type="//@packages.1/@ownedMemberPackage.3" clazz="//@clazz.3"/>
+    <ownedAttribute ObjectID="fbed9f" name="repairServiceCalled" isUnique="true" type="//@packages.0/@ownedMemberPackage.2" clazz="//@clazz.3"/>
+    <ownedOperation ObjectID="f1232b0" name="simulate" clazz="//@clazz.3" returnType="//@packages.0/@ownedMemberPackage.2">
+      <ownedParameter ObjectID="f772978" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+      <stateMachine ObjectID="f6850cf" name="YStateMachinef6850cf">
+        <transition ObjectID="f76e692" name="YTransitionf76e692" source="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.3/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+        <transition ObjectID="f72b18" name="YTransitionf72b18" source="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.2" attachment="//@clazz.3/@ownedOperation.0/@stateMachine/@trAttach.1"/>
+        <transition ObjectID="f71240c" name="YTransitionf71240c" source="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.2" target="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.3/@ownedOperation.0/@stateMachine/@trAttach.2"/>
+        <transition ObjectID="f721135" name="YTransitionf721135" source="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.2" target="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.3/@ownedOperation.0/@stateMachine/@trAttach.3"/>
+        <transition ObjectID="f19ee07" name="YTransitionf19ee07" source="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.2" target="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.3/@ownedOperation.0/@stateMachine/@trAttach.4"/>
+        <transition ObjectID="f52582e" name="YTransitionf52582e" source="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.3" target="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.3/@ownedOperation.0/@stateMachine/@trAttach.5"/>
+        <transition ObjectID="f6bac85" name="YTransitionf6bac85" source="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.3" target="//@clazz.3/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.3/@ownedOperation.0/@stateMachine/@trAttach.6"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f1741d6" name="YPseudostatef1741d6" outgoing="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.0 //@clazz.3/@ownedOperation.0/@stateMachine/@transition.1"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f350bc9" name="YFinalStatef350bc9" incoming="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.0 //@clazz.3/@ownedOperation.0/@stateMachine/@transition.4 //@clazz.3/@ownedOperation.0/@stateMachine/@transition.3 //@clazz.3/@ownedOperation.0/@stateMachine/@transition.6 //@clazz.3/@ownedOperation.0/@stateMachine/@transition.5"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f613a2a" name="YStatef613a2a" outgoing="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.2 //@clazz.3/@ownedOperation.0/@stateMachine/@transition.3 //@clazz.3/@ownedOperation.0/@stateMachine/@transition.4" incoming="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.1"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f4e0cb1" name="YStatef4e0cb1" outgoing="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.5 //@clazz.3/@ownedOperation.0/@stateMachine/@transition.6" incoming="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.2"/>
+        <trAttach ObjectID="f6d2dd6" name="TrAttachmentf6d2dd6" transition="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="DES.EventQueue.peek(timeStep, true, null, this, null) == null;">
+          <effects ObjectID="f29a661" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+        <trAttach ObjectID="f564bc1" name="YTrAttachmentf564bc1" transition="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.1" guardStringRep="DES.EventQueue.peek(timeStep, true, null, this, null) != null;">
+          <effects ObjectID="f16b344" effectStringRep="event = DES.EventQueue.peek(timeStep, true, null, this, null);"/>
+        </trAttach>
+        <trAttach ObjectID="f3849c5" name="YTrAttachmentf3849c5" transition="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.2" guardStringRep="event instanceof DeactivateTruck;">
+          <effects ObjectID="f1f1fa2" effectStringRep="active = false;"/>
+          <effects ObjectID="fe6220" effectStringRep="DES.EventQueue.consume(timeStep, true, null, this, null);"/>
+          <effects ObjectID="f48540a" effectStringRep="setReturnValue(true);"/>
+        </trAttach>
+        <trAttach ObjectID="f5f0188" name="YTrAttachmentf5f0188" transition="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.3" guardStringRep="event instanceof ActivateTruck;">
+          <effects ObjectID="f45962e" effectStringRep="active = true;"/>
+          <effects ObjectID="f6c60b9" effectStringRep="DES.EventQueue.consume(timeStep, true, null, this, null);"/>
+          <effects ObjectID="f2ec388" effectStringRep="repairServiceCalled = false;"/>
+          <effects ObjectID="fd87dd" effectStringRep="setReturnValue(true);"/>
+        </trAttach>
+        <trAttach ObjectID="f4ffe9e" name="YTrAttachmentf4ffe9e" transition="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.4" guardStringRep="!(event instanceof ActivateTruck || event instanceof DeactivateTruck);">
+          <effects ObjectID="f37b68d" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+        <trAttach ObjectID="f3f34a8" name="YTrAttachmentf3f34a8" transition="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.5" guardStringRep="repairServiceCalled;"/>
+        <trAttach ObjectID="f19e899" name="YTrAttachmentf19e899" transition="//@clazz.3/@ownedOperation.0/@stateMachine/@transition.6" guardStringRep="!repairServiceCalled;">
+          <effects ObjectID="fd7803" effectStringRep="event = new RequireRepairService;"/>
+          <effects ObjectID="f3b16a7" effectStringRep="event.objectAttached = this;"/>
+          <effects ObjectID="f18d5b8" effectStringRep="event.timeStep = timeStep + 5;"/>
+          <effects ObjectID="f460bf9" effectStringRep="event.receivingType = Service.yClass as YClass;"/>
+          <effects ObjectID="f142f55" effectStringRep="repairServiceCalled = true;"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+    <ownedOperation ObjectID="f69f581" name="load" clazz="//@clazz.3">
+      <ownedParameter ObjectID="f79df89" name="gravelToLoad" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+      <stateMachine ObjectID="fb5dc4" name="YStateMachinefb5dc4">
+        <transition ObjectID="f2dd4d4" name="YTransitionf2dd4d4" source="//@clazz.3/@ownedOperation.1/@stateMachine/@subvertex.0" target="//@clazz.3/@ownedOperation.1/@stateMachine/@subvertex.1" attachment="//@clazz.3/@ownedOperation.1/@stateMachine/@trAttach.0"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f2d3725" name="YPseudostatef2d3725" outgoing="//@clazz.3/@ownedOperation.1/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f66ec54" name="YFinalStatef66ec54" incoming="//@clazz.3/@ownedOperation.1/@stateMachine/@transition.0"/>
+        <trAttach ObjectID="f447c5e" name="YTrAttachmentf447c5e" transition="//@clazz.3/@ownedOperation.1/@stateMachine/@transition.0" guardStringRep="true;">
+          <effects ObjectID="fe019b" effectStringRep="loadedWithTons = gravelToLoad;"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+  </clazz>
+  <clazz ObjectID="f4bda1a" name="DeactivateTruck" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.3"/>
+  <clazz ObjectID="f4d09ab" name="WeighingStationQueue" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.1" observeQueue="true">
+    <ownedAttribute ObjectID="f6a1d0c" name="type" isUnique="true" type="//@clazz.3" clazz="//@clazz.5"/>
+    <ownedOperation ObjectID="f75d782" name="WeighingStationQueue" clazz="//@clazz.5">
+      <stateMachine ObjectID="f6bc09b" name="YStateMachinef6bc09b">
+        <transition ObjectID="f90f29" name="YTransitionfc448c" source="//@clazz.5/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.5/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.5/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f756e1a" name="YPseudostatef28bab9" outgoing="//@clazz.5/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f3c64e5" name="YFinalStatef2d52ea" incoming="//@clazz.5/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <trAttach ObjectID="f5310d2" name="YTrAttachmentf609325" transition="//@clazz.5/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
+          <effects ObjectID="f23277e" effectStringRep="chartView = new online.yamm.util.YammChartView(&quot;QueueWeighingStation&quot;);"/>
+          <effects ObjectID="f261d9f" effectStringRep="(chartView as online.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;queue&quot;, &quot;queueWS&quot;);"/>
+          <effects ObjectID="f1ee59c" effectStringRep="(chartView as online.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;delayed&quot;, &quot;delayed&quot;);"/>
+          <effects ObjectID="f3d4bbb" effectStringRep="(chartView as online.yamm.util.YammChartView).showCharts;"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+  </clazz>
+  <clazz ObjectID="f799f86" name="ActivateTruck" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.3"/>
+  <clazz ObjectID="f75d544" name="RequireRepairService" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.3"/>
+  <clazz ObjectID="f423975" name="Service" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.2">
+    <ownedAttribute ObjectID="fcf456" name="event" isUnique="true" type="//@packages.1/@ownedMemberPackage.3" clazz="//@clazz.8"/>
+    <ownedAttribute ObjectID="f4acffe" name="newEvent" isUnique="true" type="//@packages.1/@ownedMemberPackage.3" clazz="//@clazz.8"/>
+    <ownedAttribute ObjectID="f4729a6" name="repairTime" isUnique="true" defaultValue="&quot;10&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.8"/>
+    <ownedOperation ObjectID="f1855c7" name="simulate" clazz="//@clazz.8" returnType="//@packages.0/@ownedMemberPackage.2">
+      <ownedParameter ObjectID="f160012" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+      <stateMachine ObjectID="f57f0d2" name="YStateMachinef57f0d2">
+        <transition ObjectID="f778069" name="YTransitionf778069" source="//@clazz.8/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.8/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.8/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+        <transition ObjectID="f73c4c" name="YTransitionf73c4c" source="//@clazz.8/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.8/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.8/@ownedOperation.0/@stateMachine/@trAttach.1"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f201e75" name="YPseudostatef201e75" outgoing="//@clazz.8/@ownedOperation.0/@stateMachine/@transition.0 //@clazz.8/@ownedOperation.0/@stateMachine/@transition.1"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="fc0fb2" name="YFinalStatefc0fb2" incoming="//@clazz.8/@ownedOperation.0/@stateMachine/@transition.1 //@clazz.8/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <trAttach ObjectID="fe37c4" name="YTrAttachmentfe37c4" transition="//@clazz.8/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="DES.EventQueue.peek(timeStep, true, RequireRepairService.yClass as YClass, null, Service.yClass as YClass) != null;">
+          <effects ObjectID="f6190b4" effectStringRep="event = DES.EventQueue.consume(timeStep, true, RequireRepairService.yClass as YClass, null, Service.yClass as YClass);"/>
+          <effects ObjectID="fec81b" effectStringRep="newEvent = new ActivateTruck;"/>
+          <effects ObjectID="f4afe6d" effectStringRep="newEvent.receivingObject = event.objectAttached; "/>
+          <effects ObjectID="f1bf0a9" effectStringRep="newEvent.receivingType = Truck.yClass as YClass;"/>
+          <effects ObjectID="f3e914e" effectStringRep="newEvent.timeStep = timeStep + repairTime;"/>
+          <effects ObjectID="f3c599a" effectStringRep="setReturnValue(true);"/>
+        </trAttach>
+        <trAttach ObjectID="f2f54ca" name="YTrAttachmentf2f54ca" transition="//@clazz.8/@ownedOperation.0/@stateMachine/@transition.1" guardStringRep="DES.EventQueue.peek(timeStep, true, RequireRepairService.yClass as YClass, null, Service.yClass as YClass) == null;">
+          <effects ObjectID="f263c9a" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+  </clazz>
+  <clazz ObjectID="f642b36" name="LoadingDone" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.3"/>
+  <clazz ObjectID="f31253" name="WeighingStation" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.2">
+    <ownedAttribute ObjectID="f7428ba" name="truckCurrentlyWeighed" association="true" isUnique="true" aggregation="composite" type="//@clazz.3" clazz="//@clazz.10"/>
+    <ownedAttribute ObjectID="f717202" name="event" isUnique="true" type="//@packages.1/@ownedMemberPackage.3" clazz="//@clazz.10"/>
+    <ownedAttribute ObjectID="f702a03" name="queueWS" association="true" isUnique="true" type="//@clazz.5" clazz="//@clazz.10"/>
+    <ownedAttribute ObjectID="f68b2e6" name="queueLD" association="true" isUnique="true" type="//@clazz.14" clazz="//@clazz.10"/>
+    <ownedAttribute ObjectID="f640b0c" name="gravelShipping" association="true" type="//@clazz.12" clazz="//@clazz.10"/>
+    <ownedAttribute ObjectID="f45e98e" name="drivingToUnloadDock" isUnique="true" type="//@packages.1/@ownedMemberPackage.4" clazz="//@clazz.10"/>
+    <ownedAttribute ObjectID="f2a583b" name="drivingToLoadingDock" isUnique="true" type="//@packages.1/@ownedMemberPackage.4" clazz="//@clazz.10"/>
+    <ownedAttribute ObjectID="f203df2" name="MAX_LOAD" isUnique="true" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.10"/>
+    <ownedAttribute ObjectID="f2caf9e" name="weighingTime" isUnique="true" type="//@packages.1/@ownedMemberPackage.4" clazz="//@clazz.10"/>
+    <ownedOperation ObjectID="fa20ed" name="simulate" clazz="//@clazz.10" returnType="//@packages.0/@ownedMemberPackage.2">
+      <ownedParameter ObjectID="f31ca67" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+      <stateMachine ObjectID="f27ad63" name="YStateMachinef27ad63">
+        <transition ObjectID="f59ee79" name="YTransitionf46769e" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.2" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.0" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+        <transition ObjectID="f54af63" name="YTransitionf7bedb3" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.1"/>
+        <transition ObjectID="f363bd8" name="YTransitionf1ed1a" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.1" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.2"/>
+        <transition ObjectID="f7ac604" name="YTransitionf6419b3" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.2" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.4" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.3"/>
+        <transition ObjectID="f50cfa9" name="YTransitionf64c486" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.4" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.5" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.4"/>
+        <transition ObjectID="f7f553d" name="YTransitionf3c0e8a" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.4" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.5"/>
+        <transition ObjectID="f1746e9" name="YTransitionf16606e" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.4" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.6"/>
+        <transition ObjectID="f5deb88" name="YTransitionf40afbb" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.1" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.5" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.7"/>
+        <transition ObjectID="f70431f" name="YTransitionf50954" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.6" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.8"/>
+        <transition ObjectID="f2629f8" name="YTransitionf307286" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.5" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.6" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.9"/>
+        <transition ObjectID="f680cc" name="YTransitionf15b739" source="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.6" target="//@clazz.10/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.10/@ownedOperation.0/@stateMachine/@trAttach.10"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f7af5a" name="YStatef245daf" outgoing="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.1 //@clazz.10/@ownedOperation.0/@stateMachine/@transition.6" incoming="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f6ffe5c" name="YStatef57dee0" outgoing="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.2 //@clazz.10/@ownedOperation.0/@stateMachine/@transition.7" incoming="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.1"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f67fe1" name="YPseudostatef5aa854" outgoing="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.3 //@clazz.10/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f61e5c" name="YFinalStatef5763e0" incoming="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.5 //@clazz.10/@ownedOperation.0/@stateMachine/@transition.2 //@clazz.10/@ownedOperation.0/@stateMachine/@transition.10 //@clazz.10/@ownedOperation.0/@stateMachine/@transition.8"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f7b1f9a" name="YStatef40ce60" outgoing="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.4 //@clazz.10/@ownedOperation.0/@stateMachine/@transition.5" incoming="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.3 //@clazz.10/@ownedOperation.0/@stateMachine/@transition.6"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f661fc4" name="YStatef44dbe7" outgoing="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.9" incoming="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.4 //@clazz.10/@ownedOperation.0/@stateMachine/@transition.7"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f1f1641" name="YStatef3d8ca9" outgoing="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.8 //@clazz.10/@ownedOperation.0/@stateMachine/@transition.10" incoming="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.9"/>
+        <trAttach ObjectID="f6b1e62" name="YTrAttachmentf740c18" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="event = DES.EventQueue.peek(timeStep, true, null, this, null); event != null;"/>
+        <trAttach ObjectID="f6c5480" name="YTrAttachmentf19bc22" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.1" guardStringRep="event instanceof WeighingDone;"/>
+        <trAttach ObjectID="f74f3b6" name="YTrAttachmentf70b1e2" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.2" guardStringRep="truckCurrentlyWeighed != null;">
+          <effects ObjectID="f7c5e0e" effectStringRep="truckCurrentlyWeighed.loadedWithTons = 0;"/>
+          <effects ObjectID="f589f3b" effectStringRep="var_i = drivingToLoadingDock.nextInt;"/>
+          <effects ObjectID="f5946f9" effectStringRep="queueLD.addWithDelay(truckCurrentlyWeighed, var_i, timeStep);"/>
+          <effects ObjectID="f242248" effectStringRep="//Print(timeStep + &quot;weighing done | &quot; + name);"/>
+          <effects ObjectID="f4155e3" effectStringRep="DES.EventQueue.consume(timeStep, true, null, this, null);"/>
+          <effects ObjectID="f9cc62" effectStringRep="setReturnValue(true);"/>
+        </trAttach>
+        <trAttach ObjectID="f60e76f" name="YTrAttachmentf5307e9" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.3" guardStringRep="DES.EventQueue.peek(timeStep, true, null, this, null) == null;"/>
+        <trAttach ObjectID="fe065d" name="YTrAttachmentf6a7c8e" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.4" guardStringRep="truckCurrentlyWeighed == null;"/>
+        <trAttach ObjectID="f60a057" name="YTrAttachmentf2457fc" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.5" guardStringRep="truckCurrentlyWeighed != null;">
+          <effects ObjectID="fa919a" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+        <trAttach ObjectID="f51d0d6" name="YTrAttachmentf5589a8" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.6" guardStringRep="!(event instanceof WeighingDone);">
+          <effects ObjectID="f6d8376" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+        <trAttach ObjectID="fff914" name="YTrAttachmentf1da764" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.7" guardStringRep="truckCurrentlyWeighed == null;"/>
+        <trAttach ObjectID="f9b9e1" name="YTrAttachmentf576ac0" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.8" guardStringRep="tmp != null;">
+          <effects ObjectID="f56e8b7" effectStringRep="queueWS.consume(filter);"/>
+          <effects ObjectID="f4a1344" effectStringRep="truckCurrentlyWeighed = tmp as Truck;"/>
+          <effects ObjectID="f2138e6" effectStringRep="//Print(timeStep + &quot;weighing | &quot; + name);"/>
+          <effects ObjectID="f5e0878" effectStringRep="event = new WeighingDone;"/>
+          <effects ObjectID="f380a3a" effectStringRep="var_i = weighingTime.nextInt;"/>
+          <effects ObjectID="f28c9ea" effectStringRep="event.timeStep = timeStep + var_i;"/>
+          <effects ObjectID="f6fd5e0" effectStringRep="event.receivingObject = this;"/>
+          <effects ObjectID="f29252a" effectStringRep="setReturnValue(true);"/>
+        </trAttach>
+        <trAttach ObjectID="f34f7f8" name="YTrAttachmentf65f226" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.9" guardStringRep="true;">
+          <effects ObjectID="f53894d" effectStringRep="filter = new java.util.HashMap&lt;String, Object>;"/>
+          <effects ObjectID="f131c1a" effectStringRep="(filter as java.util.Map).put(&quot;active&quot;, true);"/>
+          <effects ObjectID="f13ea74" effectStringRep="tmp = queueWS.peek(filter) as Truck;"/>
+        </trAttach>
+        <trAttach ObjectID="f18d38c" name="YTrAttachmentf2240d4" transition="//@clazz.10/@ownedOperation.0/@stateMachine/@transition.10" guardStringRep="tmp == null;">
+          <effects ObjectID="f12be3" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+    <ownedOperation ObjectID="f224902" name="WeighingStation" clazz="//@clazz.10">
+      <ownedParameter ObjectID="f1c4d08" name="random" isUnique="true" type="//@packages.0/@ownedMemberPackage.4"/>
+      <ownedParameter ObjectID="f362f4a" name="_name" isUnique="true" type="//@packages.0/@ownedMemberPackage.3"/>
+      <ownedParameter ObjectID="f26173d" name="_MAX_LOAD" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+      <stateMachine ObjectID="fa138b" name="YStateMachinefa138b">
+        <transition ObjectID="f1855f7" name="YTransitionf1855f7" source="//@clazz.10/@ownedOperation.1/@stateMachine/@subvertex.0" target="//@clazz.10/@ownedOperation.1/@stateMachine/@subvertex.1" attachment="//@clazz.10/@ownedOperation.1/@stateMachine/@trAttach.0"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f1dd4a6" name="YPseudostatef1dd4a6" outgoing="//@clazz.10/@ownedOperation.1/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f7b85d1" name="YFinalStatef7b85d1" incoming="//@clazz.10/@ownedOperation.1/@stateMachine/@transition.0"/>
+        <trAttach ObjectID="f236ecd" name="YTrAttachmentf236ecd" transition="//@clazz.10/@ownedOperation.1/@stateMachine/@transition.0" guardStringRep="true;">
+          <effects ObjectID="f3ae649" effectStringRep="MAX_LOAD =_MAX_LOAD;"/>
+          <effects ObjectID="f731376" effectStringRep="name = _name;"/>
+          <effects ObjectID="f4c3495" effectStringRep="drivingToUnloadDock = new DES.Randomizer();"/>
+          <effects ObjectID="f5acf62" effectStringRep="drivingToUnloadDock.random = random;"/>
+          <effects ObjectID="f4597ab" effectStringRep="drivingToUnloadDock.addProbInt(0.5, 120);"/>
+          <effects ObjectID="f3a667" effectStringRep="drivingToUnloadDock.addProbInt(0.8, 150);"/>
+          <effects ObjectID="f66e8d7" effectStringRep="drivingToUnloadDock.addProbInt(1.0, 180);"/>
+          <effects ObjectID="f5962fd" effectStringRep="drivingToLoadingDock = new DES.Randomizer();"/>
+          <effects ObjectID="f52706e" effectStringRep="drivingToLoadingDock.random = random;"/>
+          <effects ObjectID="f3e2456" effectStringRep="drivingToLoadingDock.addProbInt(0.5, 30);"/>
+          <effects ObjectID="f2dbaa5" effectStringRep="drivingToLoadingDock.addProbInt(1.0, 45);"/>
+          <effects ObjectID="f33a5f2" effectStringRep="weighingTime = new DES.Randomizer();"/>
+          <effects ObjectID="f6e00be" effectStringRep="weighingTime.random = random;"/>
+          <effects ObjectID="f1838f7" effectStringRep="weighingTime.addProbInt(0.5, 10);"/>
+          <effects ObjectID="f4fd7e2" effectStringRep="weighingTime.addProbInt(0.5, 30);"/>
+          <effects ObjectID="f364833" effectStringRep="weighingTime.addProbInt(0.5, 20);"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+  </clazz>
+  <clazz ObjectID="f3548a3" name="WeighingDone" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.3"/>
+  <clazz ObjectID="f77d288" name="GravelShipping" superClass="//@clazz.0">
+    <ownedAttribute ObjectID="f7a450e" name="weighingStations" association="true" upper="-1" aggregation="composite" type="//@clazz.10" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f325015" name="loadingDocks" association="true" upper="-1" aggregation="composite" type="//@clazz.2" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f749668" name="weighingStationQueues" association="true" upper="-1" aggregation="composite" type="//@clazz.5" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f6aa7e2" name="trucks" association="true" upper="-1" type="//@clazz.3" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f547732" name="loadingDockQueue" association="true" upper="-1" aggregation="composite" type="//@clazz.14" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f306170" name="_seed" isUnique="true" defaultValue="&quot;&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f6740d3" name="_gravelToShip" isUnique="true" defaultValue="&quot;&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12" observe="true"/>
+    <ownedAttribute ObjectID="f18d080" name="_loadingDockNumber" isUnique="true" defaultValue="&quot;&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f133037" name="_weighingStationDockNumber" isUnique="true" defaultValue="&quot;&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f342404" name="_truckNumber" isUnique="true" defaultValue="&quot;&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f536649" name="var_event" isUnique="true" type="//@packages.1/@ownedMemberPackage.3"/>
+    <ownedAttribute ObjectID="f310fc3" name="var_truck" isUnique="true" type="//@clazz.3"/>
+    <ownedAttribute ObjectID="f3139a2" name="var_service" isUnique="true" type="//@clazz.8"/>
+    <ownedAttribute ObjectID="f40b9e6" name="var_loadingDock" isUnique="true" type="//@clazz.2"/>
+    <ownedAttribute ObjectID="f2f0c4e" name="var_weighingStation" isUnique="true" type="//@clazz.10"/>
+    <ownedAttribute ObjectID="f3e011f" name="services" association="true" upper="-1" aggregation="composite" type="//@clazz.8" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f7ff9d1" name="var_weighingStationQueue" isUnique="true" type="//@clazz.5"/>
+    <ownedAttribute ObjectID="f69467" name="var_index" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+    <ownedAttribute ObjectID="f544d50" name="random" isUnique="true" type="//@packages.0/@ownedMemberPackage.4" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f3eb8cc" name="var_randomizer" isUnique="true" type="//@packages.1/@ownedMemberPackage.4" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f1c3b6d" name="deactivateGenerator" association="true" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f669ec5" name="deactivateTruckGenerator" association="true" aggregation="composite" type="//@clazz.13" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f77a678" name="gravelShipped" isUnique="true" defaultValue="&quot;0&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12" observe="true"/>
+    <ownedAttribute ObjectID="f648aff" name="successfullLoadings" isUnique="true" defaultValue="&quot;0&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12" observe="true"/>
+    <ownedAttribute ObjectID="f3fc311" name="successfullLoadingSizes" isUnique="true" defaultValue="&quot;0&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12" observe="true"/>
+    <ownedAttribute ObjectID="f36e620" name="unsuccessfullLoadings" isUnique="true" defaultValue="&quot;0&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12" observe="true"/>
+    <ownedAttribute ObjectID="f68166" name="unsuccessfullLoadingSizes" isUnique="true" defaultValue="&quot;0&quot;" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12" observe="true"/>
+    <ownedAttribute ObjectID="f3bf7b8" name="MAX_LOAD" isUnique="true" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f1059b4" name="var_loadingDockQueue" isUnique="true" type="//@clazz.14" clazz="//@clazz.12"/>
+    <ownedAttribute ObjectID="f5afdf8" name="obj" association="true" type="//@packages.0/@ownedMemberPackage.4" clazz="//@clazz.12"/>
+    <ownedOperation ObjectID="f6e6d96" name="start" clazz="//@clazz.12">
+      <ownedParameter ObjectID="f58745b" name="gravelToShip" isUnique="true" defaultValue="" type="//@packages.0/@ownedMemberPackage.0"/>
+      <ownedParameter ObjectID="f3b41db" name="trucks" isUnique="true" defaultValue="" type="//@packages.0/@ownedMemberPackage.0"/>
+      <ownedParameter ObjectID="f4ef56e" name="loadingDockNumber" isUnique="true" defaultValue="" type="//@packages.0/@ownedMemberPackage.0"/>
+      <ownedParameter ObjectID="f7effd8" name="weighingStationNumber" isUnique="true" defaultValue="" type="//@packages.0/@ownedMemberPackage.0"/>
+      <ownedParameter ObjectID="f3b8876" name="seed" isUnique="true" defaultValue="" type="//@packages.0/@ownedMemberPackage.0"/>
+      <ownedParameter ObjectID="f42a0ac" name="MAX_LOAD" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+      <stateMachine ObjectID="f7c22ce" name="YStateMachinef7c22ce" desInitializer="true">
+        <transition ObjectID="f282fd8" name="YTransitionf282fd8" qualifiedName="" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.9" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+        <transition ObjectID="f3caf9e" name="YTransitionf3caf9e" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.1" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.2" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.1"/>
+        <transition ObjectID="f4b4a1c" name="YTransitionf4b4a1c" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.2" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.2" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.2"/>
+        <transition ObjectID="f1040a8" name="YTransitionf1040a8" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.2" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.3"/>
+        <transition ObjectID="f2bec3" name="YTransitionf2bec3" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.3" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.4"/>
+        <transition ObjectID="f24152b" name="YTransitionf24152b" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.3" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.4" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.5"/>
+        <transition ObjectID="f5d7248" name="YTransitionf5d7248" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.4" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.5" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.6"/>
+        <transition ObjectID="f70fa3" name="YTransitionf70fa3" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.4" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.4" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.7"/>
+        <transition ObjectID="f4ae76a" name="YTransitionf4ae76a" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.7" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.6" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.8"/>
+        <transition ObjectID="f224cb9" name="YTransitionf224cb9" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.5" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.7" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.9"/>
+        <transition ObjectID="f7e77bc" name="YTransitionf7e77bc" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.8" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.10"/>
+        <transition ObjectID="f564fa1" name="YTransitionf564fa1" source="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.9" target="//@clazz.12/@ownedOperation.0/@stateMachine/@subvertex.8" attachment="//@clazz.12/@ownedOperation.0/@stateMachine/@trAttach.11"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f7c5386" name="YPseudostatef7c5386" outgoing="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f6b5451" name="YStatef6b5451" outgoing="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.1" incoming="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.10"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f357d4d" name="YStatef357d4d" outgoing="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.2 //@clazz.12/@ownedOperation.0/@stateMachine/@transition.3" incoming="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.1 //@clazz.12/@ownedOperation.0/@stateMachine/@transition.2"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f20d3c0" name="YStatef20d3c0" outgoing="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.4 //@clazz.12/@ownedOperation.0/@stateMachine/@transition.5" incoming="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.3 //@clazz.12/@ownedOperation.0/@stateMachine/@transition.4"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f77a10a" name="YStatef77a10a" outgoing="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.6 //@clazz.12/@ownedOperation.0/@stateMachine/@transition.7" incoming="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.5 //@clazz.12/@ownedOperation.0/@stateMachine/@transition.7"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f38297e" name="YStatef38297e" outgoing="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.9" incoming="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.6"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f1f078d" name="YFinalStatef1f078d" incoming="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.8"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f7a71b" name="YStatef7a71b" outgoing="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.8" incoming="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.9"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f5ec988" name="YStatef5ec988" outgoing="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.10" incoming="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.11"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f656669" name="YStatef656669" outgoing="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.11" incoming="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <trAttach ObjectID="f3890ef" name="YTrAttachmentf3890ef" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
+          <effects ObjectID="f440b3" breakpoint="true" effectStringRep=" _seed = seed;"/>
+          <effects ObjectID="f299f51" effectStringRep="_loadingDockNumber = loadingDockNumber;"/>
+          <effects ObjectID="f7ab8de" effectStringRep="_weighingStationDockNumber = weighingStationNumber;"/>
+          <effects ObjectID="f47c55b" effectStringRep="_truckNumber = trucks;"/>
+          <effects ObjectID="f1b2615" effectStringRep="_gravelToShip = gravelToShip;"/>
+          <effects ObjectID="f446cc3" effectStringRep="var_index = 1;"/>
+        </trAttach>
+        <trAttach ObjectID="f65bbbb" name="YTrAttachmentf65bbbb" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.1" guardStringRep="true;">
+          <effects ObjectID="f78707b" effectStringRep="random = new java.util.Random(_seed);"/>
+          <effects ObjectID="f247843" effectStringRep="var_service = new Service;"/>
+          <effects ObjectID="f5e1add" effectStringRep="var_loadingDockQueue = new LoadingDockQueue;"/>
+          <effects ObjectID="f2023b" effectStringRep="var_loadingDockQueue.name = &quot;queueLD&quot;;"/>
+          <effects ObjectID="f5d85fb" effectStringRep="loadingDockQueue.add(var_loadingDockQueue);"/>
+          <effects ObjectID="f16efb1" effectStringRep="var_weighingStationQueue = new WeighingStationQueue;"/>
+          <effects ObjectID="ff8f8f" effectStringRep="var_weighingStationQueue.name = &quot;queueWS&quot;;"/>
+          <effects ObjectID="f3ac3ff" effectStringRep="weighingStationQueues.add(var_weighingStationQueue);"/>
+          <effects ObjectID="f21f4eb" effectStringRep="var_index = 1;"/>
+        </trAttach>
+        <trAttach ObjectID="f534204" name="YTrAttachmentf534204" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.2" guardStringRep="var_index &lt;= _loadingDockNumber;">
+          <effects ObjectID="f3906d6" effectStringRep="var_loadingDock = new LoadingDock(random, &quot;LD_&quot; + var_index);"/>
+          <effects ObjectID="f2f598d" effectStringRep="var_loadingDock.gravelShipping = this;"/>
+          <effects ObjectID="f480e49" effectStringRep="var_loadingDock.queueLD = var_loadingDockQueue;"/>
+          <effects ObjectID="f15fcef" effectStringRep="var_loadingDock.queueWS = var_weighingStationQueue;"/>
+          <effects ObjectID="f4cbb14" effectStringRep="loadingDocks.add(var_loadingDock);"/>
+          <effects ObjectID="f63ec68" effectStringRep="var_index++;"/>
+        </trAttach>
+        <trAttach ObjectID="f30eada" name="YTrAttachmentf30eada" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.3" guardStringRep="var_index > _loadingDockNumber;">
+          <effects ObjectID="f16798e" effectStringRep="var_index = 1;"/>
+        </trAttach>
+        <trAttach ObjectID="f6ee7d" name="TrAttachmentf6ee7d" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.4" guardStringRep="var_index &lt;= _weighingStationDockNumber;">
+          <effects ObjectID="f4a0fa7" effectStringRep="var_weighingStation = new WeighingStation(random, &quot;WS_&quot; + var_index, MAX_LOAD);"/>
+          <effects ObjectID="fc03b0" effectStringRep="var_weighingStation.gravelShipping = this;"/>
+          <effects ObjectID="fbc1ab" effectStringRep="var_weighingStation.queueLD = var_loadingDockQueue;"/>
+          <effects ObjectID="f2b586" effectStringRep="var_weighingStation.queueWS = var_weighingStationQueue;"/>
+          <effects ObjectID="f7743d8" effectStringRep="weighingStations.add(var_weighingStation);"/>
+          <effects ObjectID="f40c30e" effectStringRep="var_index++;"/>
+        </trAttach>
+        <trAttach ObjectID="f70574e" name="TrAttachmentf70574e" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.5" guardStringRep="var_index > _weighingStationDockNumber;">
+          <effects ObjectID="f3f3254" effectStringRep="var_index = 1;"/>
+        </trAttach>
+        <trAttach ObjectID="f39fe15" name="YTrAttachmentf39fe15" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.6" guardStringRep="var_index > _truckNumber;"/>
+        <trAttach ObjectID="f8386c" name="YTrAttachmentf8386c" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.7" guardStringRep="var_index &lt;= _truckNumber;">
+          <effects ObjectID="f109a58" effectStringRep="var_truck = new Truck;"/>
+          <effects ObjectID="f180168" effectStringRep="var_truck.name = &quot;Truck_&quot; + var_index; "/>
+          <effects ObjectID="f32b68e" effectStringRep="var_loadingDockQueue.add(var_truck);"/>
+          <effects ObjectID="f435fef" effectStringRep="var_index++;"/>
+        </trAttach>
+        <trAttach ObjectID="f755a45" name="YTrAttachmentf755a45" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.8" guardStringRep="true;">
+          <effects ObjectID="f2da436" breakpoint="true"/>
+        </trAttach>
+        <trAttach ObjectID="f614fc8" name="YTrAttachmentf614fc8" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.9" guardStringRep="true;">
+          <effects ObjectID="f3eeb85" effectStringRep="var_randomizer = new DES.Randomizer();"/>
+          <effects ObjectID="f2fe4ae" effectStringRep="var_randomizer.random = random;"/>
+          <effects ObjectID="f402469" effectStringRep="var_randomizer.addProbInt(0.3, 20);"/>
+          <effects ObjectID="f332ab2" effectStringRep="var_randomizer.addProbInt(0.35, 40);"/>
+          <effects ObjectID="f6bc27b" effectStringRep="var_randomizer.addProbInt(0.35, 100);"/>
+          <effects ObjectID="f46ffcb" effectStringRep="deactivateTruckGenerator = new DeactivateTruckGenerator(0, var_randomizer);"/>
+          <effects ObjectID="f312ccd" effectStringRep="deactivateTruckGenerator.gravelShipping = this;"/>
+        </trAttach>
+        <trAttach ObjectID="f19f3e4" name="YTrAttachmentf19f3e4" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.10" guardStringRep="true;">
+          <effects ObjectID="f599212" effectStringRep="chartView = new online.yamm.util.YammChartView(&quot;GravelToShip&quot;);"/>
+          <effects ObjectID="f7a5c95" effectStringRep="(chartView as online.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;_gravelToShip&quot;, &quot;gravelToShip&quot;);"/>
+          <effects ObjectID="f5ec49c"/>
+          <effects ObjectID="f70a348"/>
+          <effects ObjectID="f4dd3cc" effectStringRep="(chartView as online.yamm.util.YammChartView).showCharts;"/>
+        </trAttach>
+        <trAttach ObjectID="f358143" name="YTrAttachmentf358143" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.11" guardStringRep="true;">
+          <effects ObjectID="f7f8901" effectStringRep="online.yamm.gui.Progress.setProgressValue(this, &quot;_gravelToShip&quot;, _gravelToShip, 0);"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+  </clazz>
+  <clazz ObjectID="f6a71bb" name="DeactivateTruckGenerator" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.2">
+    <ownedAttribute ObjectID="f76963f" name="event" isUnique="true" type="//@packages.1/@ownedMemberPackage.3" clazz="//@clazz.13"/>
+    <ownedAttribute ObjectID="fbaadc" name="_rate" isUnique="true" type="//@packages.1/@ownedMemberPackage.4" clazz="//@clazz.13"/>
+    <ownedAttribute ObjectID="f497026" name="var_time" isUnique="true" type="//@packages.0/@ownedMemberPackage.0" clazz="//@clazz.13"/>
+    <ownedAttribute ObjectID="f23cb54" name="var_trucks" upper="-1" type="//@clazz.3" clazz="//@clazz.13"/>
+    <ownedAttribute ObjectID="f14ea2f" name="gravelShipping" association="true" type="//@clazz.12" clazz="//@clazz.13"/>
+    <ownedOperation ObjectID="f50c0c4" name="DeactivateTruckGenerator" clazz="//@clazz.13">
+      <ownedParameter ObjectID="f351378" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+      <ownedParameter ObjectID="f3f12c6" name="rate" isUnique="true" type="//@packages.1/@ownedMemberPackage.4"/>
+      <stateMachine ObjectID="f2667e3" name="YStateMachinef2667e3">
+        <transition ObjectID="fad8e1" name="YTransitionfad8e1" source="//@clazz.13/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.13/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.13/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f52b7ee" name="YPseudostatef52b7ee" outgoing="//@clazz.13/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f79d96e" name="YFinalStatef79d96e" incoming="//@clazz.13/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <trAttach ObjectID="f519a45" name="YTrAttachmentf519a45" transition="//@clazz.13/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
+          <effects ObjectID="f31c2d2" effectStringRep="_rate = rate;"/>
+          <effects ObjectID="f79f8c2" effectStringRep="event = new DES.Delay;"/>
+          <effects ObjectID="f48634b" effectStringRep="event.receivingObject = this;"/>
+          <effects ObjectID="f20444b" effectStringRep="var_time = _rate.nextInt;"/>
+          <effects ObjectID="f16c754" effectStringRep="event.timeStep = timeStep + var_time;"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+    <ownedOperation ObjectID="f463799" name="simulate" clazz="//@clazz.13" returnType="//@packages.0/@ownedMemberPackage.2">
+      <ownedParameter ObjectID="f44c075" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+      <stateMachine ObjectID="f2a96c1" name="YStateMachinef2a96c1">
+        <transition ObjectID="f769f8b" name="YTransitionf769f8b" source="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.0" target="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.2" attachment="//@clazz.13/@ownedOperation.1/@stateMachine/@trAttach.0"/>
+        <transition ObjectID="f33c794" name="YTransitionf33c794" source="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.2" target="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.3" attachment="//@clazz.13/@ownedOperation.1/@stateMachine/@trAttach.1"/>
+        <transition ObjectID="f5c7e77" name="YTransitionf5c7e77" source="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.2" target="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.1" attachment="//@clazz.13/@ownedOperation.1/@stateMachine/@trAttach.2"/>
+        <transition ObjectID="fe3931" name="YTransitionfe3931" source="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.3" target="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.4" attachment="//@clazz.13/@ownedOperation.1/@stateMachine/@trAttach.3"/>
+        <transition ObjectID="f4cdaf1" name="YTransitionf4cdaf1" source="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.4" target="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.1" attachment="//@clazz.13/@ownedOperation.1/@stateMachine/@trAttach.4"/>
+        <transition ObjectID="f3358f9" name="YTransitionf3358f9" source="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.3" target="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.1" attachment="//@clazz.13/@ownedOperation.1/@stateMachine/@trAttach.5"/>
+        <transition ObjectID="f6bd297" name="YTransitionf6bd297" source="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.4" target="//@clazz.13/@ownedOperation.1/@stateMachine/@subvertex.1" attachment="//@clazz.13/@ownedOperation.1/@stateMachine/@trAttach.6"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f42bb2d" name="YPseudostatef42bb2d" outgoing="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f4171b5" name="YFinalStatef4171b5" incoming="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.4 //@clazz.13/@ownedOperation.1/@stateMachine/@transition.5 //@clazz.13/@ownedOperation.1/@stateMachine/@transition.2 //@clazz.13/@ownedOperation.1/@stateMachine/@transition.6"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f12e90" name="YStatef12e90" outgoing="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.1 //@clazz.13/@ownedOperation.1/@stateMachine/@transition.2" incoming="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f5437ef" name="YStatef5437ef" outgoing="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.3 //@clazz.13/@ownedOperation.1/@stateMachine/@transition.5" incoming="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.1"/>
+        <subvertex xsi:type="yammDiagram:YState" ObjectID="f50f322" name="YStatef50f322" outgoing="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.4 //@clazz.13/@ownedOperation.1/@stateMachine/@transition.6" incoming="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.3"/>
+        <trAttach ObjectID="f229177" name="YTrAttachmentf229177" transition="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.0" guardStringRep="true;">
+          <effects ObjectID="f5d957c" effectStringRep="event = DES.EventQueue.peek(timeStep, true, null, this, null);"/>
+        </trAttach>
+        <trAttach ObjectID="f3e4687" name="YTrAttachmentf3e4687" transition="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.1" guardStringRep="event != null;"/>
+        <trAttach ObjectID="f3ace8e" name="YTrAttachmentf3ace8e" transition="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.2" guardStringRep="event == null;">
+          <effects ObjectID="f4bf675"/>
+          <effects ObjectID="f109808" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+        <trAttach ObjectID="f4ae2e3" name="YTrAttachmentf4ae2e3" transition="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.3" guardStringRep="event instanceof DES.Delay;">
+          <effects ObjectID="f1af408" effectStringRep="DES.EventQueue.consume(timeStep, true, null, this, null);"/>
+          <effects ObjectID="f642fea" effectStringRep="event = new DeactivateTruck;"/>
+          <effects ObjectID="f76c93f" effectStringRep="var_trucks = getInstances(1, &quot;Truck&quot;) as java.util.List&lt;Truck>;"/>
+          <effects ObjectID="f3084e0" effectStringRep="event.receivingObject = var_trucks.get((_rate.random as java.util.Random).nextInt(var_trucks.size));"/>
+          <effects ObjectID="f159ca6" effectStringRep="event.timeStep = timeStep;"/>
+        </trAttach>
+        <trAttach ObjectID="f60a9ae" name="YTrAttachmentf60a9ae" transition="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.4" guardStringRep="gravelShipping._gravelToShip > 0;">
+          <effects ObjectID="f34b4b4" effectStringRep="event = new DES.Delay;"/>
+          <effects ObjectID="f37a258" effectStringRep="event.receivingObject = this;"/>
+          <effects ObjectID="f6e83e2" effectStringRep="var_time = _rate.nextInt;"/>
+          <effects ObjectID="f303109" effectStringRep="event.timeStep = timeStep + var_time + 1;"/>
+          <effects ObjectID="f46c992" effectStringRep="setReturnValue(true);"/>
+        </trAttach>
+        <trAttach ObjectID="f2022a6" name="YTrAttachmentf2022a6" transition="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.5" guardStringRep="!(event instanceof DES.Delay);">
+          <effects ObjectID="f1297b8" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+        <trAttach ObjectID="f154924" name="YTrAttachmentf154924" transition="//@clazz.13/@ownedOperation.1/@stateMachine/@transition.6" guardStringRep="gravelShipping._gravelToShip &lt;= 0;">
+          <effects ObjectID="f3dd133" effectStringRep="setReturnValue(false);"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+  </clazz>
+  <clazz ObjectID="f13d62d" name="LoadingDockQueue" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.1" observeQueue="true">
+    <ownedAttribute ObjectID="f76086b" name="type" isUnique="true" type="//@clazz.3" clazz="//@clazz.14"/>
+    <ownedOperation ObjectID="f7f5a62" name="LoadingDockQueue" clazz="//@clazz.14">
+      <stateMachine ObjectID="f3a7933" name="YStateMachinef3a7933">
+        <transition ObjectID="fc448c" name="YTransitionfc448c" source="//@clazz.14/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.14/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.14/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f28bab9" name="YPseudostatef28bab9" outgoing="//@clazz.14/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f2d52ea" name="YFinalStatef2d52ea" incoming="//@clazz.14/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <trAttach ObjectID="f609325" name="YTrAttachmentf609325" transition="//@clazz.14/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
+          <effects ObjectID="f72077c" effectStringRep="Print(&quot;------------------------------------------------------&quot;);"/>
+          <effects ObjectID="f7675a9" effectStringRep="chartView = new online.yamm.util.YammChartView(&quot;QueueLoadingDock&quot;);"/>
+          <effects ObjectID="f69a05e" effectStringRep="(chartView as online.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;queue&quot;, &quot;queueLD&quot;);"/>
+          <effects ObjectID="f45f43d" effectStringRep="(chartView as online.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;delayed&quot;, &quot;delayed&quot;);"/>
+          <effects ObjectID="f1cbeb7" effectStringRep="(chartView as online.yamm.util.YammChartView).showCharts;"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+  </clazz>
+  <clazz ObjectID="f4b67ca" name="Test" superClass="//@clazz.0">
+    <ownedOperation ObjectID="f69a60" name="opA" clazz="//@clazz.15">
+      <stateMachine ObjectID="f27222" name="YStateMachinef27222">
+        <transition ObjectID="f23ace2" name="YTransitionf23ace2" source="//@clazz.15/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@clazz.15/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@clazz.15/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f314616" name="YPseudostatef314616" outgoing="//@clazz.15/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f17b67a" name="YFinalStatef17b67a" incoming="//@clazz.15/@ownedOperation.0/@stateMachine/@transition.0"/>
+        <trAttach ObjectID="f30086a" name="YTrAttachmentf30086a" transition="//@clazz.15/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
+          <effects ObjectID="f40c046" effectStringRep="opB;"/>
+          <effects ObjectID="f3ad6d2"/>
+        </trAttach>
+      </stateMachine>
+    </ownedOperation>
+    <ownedOperation ObjectID="f43982a" name="opB" clazz="//@clazz.15">
+      <stateMachine ObjectID="f7af4a4" name="YStateMachinef7af4a4">
+        <transition ObjectID="f14923f" name="YTransitionf14923f" source="//@clazz.15/@ownedOperation.1/@stateMachine/@subvertex.0" target="//@clazz.15/@ownedOperation.1/@stateMachine/@subvertex.1" attachment="//@clazz.15/@ownedOperation.1/@stateMachine/@trAttach.0"/>
+        <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f2815f4" name="YPseudostatef2815f4" outgoing="//@clazz.15/@ownedOperation.1/@stateMachine/@transition.0"/>
+        <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f6d04c8" name="YFinalStatef6d04c8" incoming="//@clazz.15/@ownedOperation.1/@stateMachine/@transition.0"/>
+        <trAttach ObjectID="f1d842d" name="YTrAttachmentf1d842d" transition="//@clazz.15/@ownedOperation.1/@stateMachine/@transition.0" guardStringRep="true;"/>
+      </stateMachine>
+    </ownedOperation>
+  </clazz>
+  <packages ObjectID="f186d36" name="Types">
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f21f575" name="Integer" package="//@packages.0"/>
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f6ff69c" name="Double" package="//@packages.0"/>
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f143957" name="Boolean" package="//@packages.0"/>
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f4f4a1" name="String" package="//@packages.0"/>
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="fea65c" name="Object" package="//@packages.0"/>
+  </packages>
+  <packages ObjectID="f2bcfa4" name="DES">
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f6f1844" name="EventQueue" package="//@packages.1" superClass="//@clazz.0">
+      <ownedOperation ObjectID="f78653a" name="consume" clazz="//@packages.1/@ownedMemberPackage.0" returnType="//@packages.1/@ownedMemberPackage.3">
+        <ownedParameter ObjectID="f741ee8" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+        <ownedParameter ObjectID="f325830" name="past" isUnique="true" type="//@packages.0/@ownedMemberPackage.2"/>
+        <ownedParameter ObjectID="f1385ca" name="eventType" isUnique="true" type="//@clazz.1"/>
+        <ownedParameter ObjectID="f334831" name="receiver" isUnique="true" type="//@clazz.0"/>
+        <ownedParameter ObjectID="f4cda47" name="receiverType" isUnique="true" type="//@clazz.1"/>
+        <stateMachine ObjectID="f2a9bdf" name="YStateMachinef2a9bdf"/>
+      </ownedOperation>
+      <ownedOperation ObjectID="f60b252" name="peek" clazz="//@packages.1/@ownedMemberPackage.0" returnType="//@packages.1/@ownedMemberPackage.3">
+        <ownedParameter ObjectID="f465861" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+        <ownedParameter ObjectID="f4b5255" name="past" isUnique="true" type="//@packages.0/@ownedMemberPackage.2"/>
+        <ownedParameter ObjectID="f7afd77" name="eventType" isUnique="true" type="//@clazz.1"/>
+        <ownedParameter ObjectID="f82b36" name="receiver" isUnique="true" type="//@clazz.0"/>
+        <ownedParameter ObjectID="fd7951" name="receiverType" isUnique="true" type="//@clazz.1"/>
+        <stateMachine ObjectID="f545e73" name="YStateMachinef545e73"/>
+      </ownedOperation>
+    </ownedMemberPackage>
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f7b30f" name="Queue" package="//@packages.1" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.2">
+      <ownedAttribute ObjectID="f9f8bb" name="queue" association="true" upper="-1" aggregation="composite" type="//@packages.1/@ownedMemberPackage.2" clazz="//@packages.1/@ownedMemberPackage.1"/>
+      <ownedAttribute ObjectID="f386ee1" name="delayed" association="true" upper="-1" aggregation="composite" type="//@packages.1/@ownedMemberPackage.2" clazz="//@packages.1/@ownedMemberPackage.1"/>
+      <ownedAttribute ObjectID="f2f987a" name="event" isUnique="true" type="//@packages.1/@ownedMemberPackage.3" clazz="//@packages.1/@ownedMemberPackage.1"/>
+      <ownedAttribute ObjectID="f660fa1" name="var_objectManagment" isUnique="true" type="//@packages.0/@ownedMemberPackage.4" clazz="//@packages.1/@ownedMemberPackage.1"/>
+      <ownedAttribute ObjectID="f7625a8" name="YPropertyf7625a8" association="true" type="//@packages.1/@ownedMemberPackage.2" clazz="//@packages.1/@ownedMemberPackage.1"/>
+      <ownedOperation ObjectID="f20be76" name="add" clazz="//@packages.1/@ownedMemberPackage.1">
+        <ownedParameter ObjectID="f4f4254" name="object" isUnique="true" type="//@packages.1/@ownedMemberPackage.2"/>
+        <stateMachine ObjectID="f4abe3c" name="YStateMachinef4abe3c">
+          <transition ObjectID="f5e9a9b" name="YTransitionf5e9a9b" source="//@packages.1/@ownedMemberPackage.1/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@packages.1/@ownedMemberPackage.1/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@packages.1/@ownedMemberPackage.1/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+          <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f38ff8d" name="YPseudostatef38ff8d" outgoing="//@packages.1/@ownedMemberPackage.1/@ownedOperation.0/@stateMachine/@transition.0"/>
+          <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f22957b" name="YFinalStatef22957b" incoming="//@packages.1/@ownedMemberPackage.1/@ownedOperation.0/@stateMachine/@transition.0"/>
+          <trAttach ObjectID="f529472" name="YTrAttachmentf529472" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
+            <effects ObjectID="f3d0304" effectStringRep="queue.add(object);"/>
+            <effects ObjectID="f160b70" effectStringRep="var_objectManagment = getObjectManagement();"/>
+            <effects ObjectID="f6420ae" effectStringRep="(var_objectManagment as online.yamm.ObjectManagement).addQueueElement(this, object, 1);"/>
+          </trAttach>
+        </stateMachine>
+      </ownedOperation>
+      <ownedOperation ObjectID="f68084f" name="consume" clazz="//@packages.1/@ownedMemberPackage.1" returnType="//@packages.1/@ownedMemberPackage.2">
+        <ownedParameter ObjectID="f34e890" name="filterMap" isUnique="true" type="//@packages.0/@ownedMemberPackage.4"/>
+        <stateMachine ObjectID="f467557" name="YStateMachinef467557"/>
+      </ownedOperation>
+      <ownedOperation ObjectID="f7b77c9" name="peek" clazz="//@packages.1/@ownedMemberPackage.1" returnType="//@packages.1/@ownedMemberPackage.2">
+        <ownedParameter ObjectID="f310db4" name="filterMap" isUnique="true" type="//@packages.0/@ownedMemberPackage.4"/>
+        <stateMachine ObjectID="f549a88" name="YStateMachinef549a88"/>
+      </ownedOperation>
+      <ownedOperation ObjectID="f275fe" name="addWithDelay" clazz="//@packages.1/@ownedMemberPackage.1">
+        <ownedParameter ObjectID="f2f3872" name="object" isUnique="true" type="//@packages.1/@ownedMemberPackage.2"/>
+        <ownedParameter ObjectID="f8dd49" name="delay" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+        <ownedParameter ObjectID="f468ab9" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+        <stateMachine ObjectID="f48a287" name="YStateMachinef48a287">
+          <transition ObjectID="f58fd62" name="YTransitionf58fd62" source="//@packages.1/@ownedMemberPackage.1/@ownedOperation.3/@stateMachine/@subvertex.0" target="//@packages.1/@ownedMemberPackage.1/@ownedOperation.3/@stateMachine/@subvertex.1" attachment="//@packages.1/@ownedMemberPackage.1/@ownedOperation.3/@stateMachine/@trAttach.0"/>
+          <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f4b5238" name="YPseudostatef4b5238" outgoing="//@packages.1/@ownedMemberPackage.1/@ownedOperation.3/@stateMachine/@transition.0"/>
+          <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f5e46aa" name="YFinalStatef5e46aa" incoming="//@packages.1/@ownedMemberPackage.1/@ownedOperation.3/@stateMachine/@transition.0"/>
+          <trAttach ObjectID="f459b0" name="YTrAttachmentf459b0" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.3/@stateMachine/@transition.0" guardStringRep="true;">
+            <effects ObjectID="f3af920" effectStringRep="var_objectManagment = getObjectManagement();"/>
+            <effects ObjectID="f3726ea" effectStringRep="(var_objectManagment as online.yamm.ObjectManagement).addDelayedQueueElement(this, object, 1);"/>
+            <effects ObjectID="f59be5a" effectStringRep="delayed.add(object);"/>
+            <effects ObjectID="f6f18ad" effectStringRep="event = new Delay;"/>
+            <effects ObjectID="f28d54b" effectStringRep="event.timeStep = timeStep + delay;"/>
+            <effects ObjectID="f3ae638" effectStringRep="event.objectAttached = object;"/>
+            <effects ObjectID="f5109cb" effectStringRep="event.receivingObject = this;"/>
+          </trAttach>
+        </stateMachine>
+      </ownedOperation>
+      <ownedOperation ObjectID="f764840" name="simulate" clazz="//@packages.1/@ownedMemberPackage.1" returnType="//@packages.0/@ownedMemberPackage.2">
+        <ownedParameter ObjectID="f68416a" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+        <stateMachine ObjectID="f7e7e66" name="YStateMachinef7e7e66">
+          <transition ObjectID="f2b7fa1" name="YTransitionf2b7fa1" source="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@subvertex.2" target="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@subvertex.0" attachment="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@trAttach.0"/>
+          <transition ObjectID="f4bfb83" name="YTransitionf4bfb83" source="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@subvertex.0" target="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@subvertex.1" attachment="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@trAttach.1"/>
+          <transition ObjectID="f78cae7" name="YTransitionf78cae7" source="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@subvertex.1" target="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@subvertex.3" attachment="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@trAttach.2"/>
+          <transition ObjectID="f3b1426" name="YTransitionf3b1426" source="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@subvertex.1" target="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@subvertex.3" attachment="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@trAttach.3"/>
+          <transition ObjectID="f411019" name="YTransitionf411019" source="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@subvertex.0" target="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@subvertex.3" attachment="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@trAttach.4"/>
+          <subvertex xsi:type="yammDiagram:YState" ObjectID="fe5506" name="YStatefe5506" outgoing="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.1 //@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.4" incoming="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.0"/>
+          <subvertex xsi:type="yammDiagram:YState" ObjectID="f4cf3d0" name="YStatef4cf3d0" outgoing="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.2 //@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.3" incoming="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.1"/>
+          <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f384d51" name="YPseudostatef384d51" outgoing="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.0"/>
+          <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f2e7b01" name="YFinalStatef2e7b01" incoming="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.2 //@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.3 //@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.4"/>
+          <trAttach ObjectID="f14e78f" name="YTrAttachmentf14e78f" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.0" guardStringRep="true;">
+            <effects ObjectID="f48c6c2" effectStringRep="event = DES.EventQueue.peek(timeStep, true, null, this, null);"/>
+          </trAttach>
+          <trAttach ObjectID="f1e9b4e" name="YTrAttachmentf1e9b4e" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.1" guardStringRep="event != null;"/>
+          <trAttach ObjectID="f5eb936" name="YTrAttachmentf5eb936" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.2" guardStringRep="event instanceof Delay;">
+            <effects ObjectID="f2c724a" effectStringRep="DES.EventQueue.consume(timeStep, true, null, this, null);"/>
+            <effects ObjectID="fe6655" effectStringRep="(var_objectManagment as online.yamm.ObjectManagement).removeDelayedQueueElement(this, event.objectAttached, 1);"/>
+            <effects ObjectID="fb8378" effectStringRep="add(event.objectAttached);"/>
+            <effects ObjectID="f271ec5" effectStringRep="setReturnValue(true);"/>
+          </trAttach>
+          <trAttach ObjectID="f3696b8" name="YTrAttachmentf3696b8" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.3" guardStringRep="!(event instanceof Delay);">
+            <effects ObjectID="f430192" effectStringRep="setReturnValue(false);"/>
+          </trAttach>
+          <trAttach ObjectID="f11f883" name="YTrAttachmentf11f883" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.4" guardStringRep="event == null;">
+            <effects ObjectID="f41db92" effectStringRep="setReturnValue(false);"/>
+          </trAttach>
+        </stateMachine>
+      </ownedOperation>
+    </ownedMemberPackage>
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f40b04f" name="SimulationObject" package="//@packages.1" superClass="//@clazz.0">
+      <ownedAttribute ObjectID="f555e10" name="name" isUnique="true" type="//@packages.0/@ownedMemberPackage.3" clazz="//@packages.1/@ownedMemberPackage.2"/>
+      <ownedOperation ObjectID="f10ddfa" name="simulate" clazz="//@packages.1/@ownedMemberPackage.2" returnType="//@packages.0/@ownedMemberPackage.2">
+        <ownedParameter ObjectID="f7873fc" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+        <stateMachine ObjectID="f2ac9f0" name="YStateMachinef2ac9f0">
+          <transition ObjectID="f79f4b8" name="YTransitionf79f4b8" source="//@packages.1/@ownedMemberPackage.2/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@packages.1/@ownedMemberPackage.2/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@packages.1/@ownedMemberPackage.2/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+          <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f68bf82" name="YPseudostatef68bf82" outgoing="//@packages.1/@ownedMemberPackage.2/@ownedOperation.0/@stateMachine/@transition.0"/>
+          <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f68c2fb" name="YFinalStatef68c2fb" incoming="//@packages.1/@ownedMemberPackage.2/@ownedOperation.0/@stateMachine/@transition.0"/>
+          <trAttach ObjectID="f352f8d" name="YTrAttachmentf352f8d" transition="//@packages.1/@ownedMemberPackage.2/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
+            <effects ObjectID="f284471" effectStringRep="setReturnValue(false);"/>
+          </trAttach>
+        </stateMachine>
+      </ownedOperation>
+    </ownedMemberPackage>
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f2a26c9" name="Event" package="//@packages.1" superClass="//@clazz.0">
+      <ownedAttribute ObjectID="f3128f5" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0" clazz="//@packages.1/@ownedMemberPackage.3"/>
+      <ownedAttribute ObjectID="f4063c7" name="receivingType" isUnique="true" type="//@clazz.1" clazz="//@packages.1/@ownedMemberPackage.3"/>
+      <ownedAttribute ObjectID="f197074" name="description" type="//@packages.0/@ownedMemberPackage.3" clazz="//@packages.1/@ownedMemberPackage.3"/>
+      <ownedAttribute ObjectID="f94f5c" name="receivingObject" association="true" isUnique="true" type="//@packages.1/@ownedMemberPackage.2" clazz="//@packages.1/@ownedMemberPackage.3">
+        <ownedElement xsi:type="yammDiagram:YParameter" ObjectID="f465861" name="timeStep" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+      </ownedAttribute>
+      <ownedAttribute ObjectID="f210054" name="objectAttached" association="true" isUnique="true" type="//@packages.1/@ownedMemberPackage.2" clazz="//@packages.1/@ownedMemberPackage.3"/>
+      <ownedOperation ObjectID="f6b9c0b" name="toString" clazz="//@packages.1/@ownedMemberPackage.3" returnType="//@packages.0/@ownedMemberPackage.3">
+        <stateMachine ObjectID="f694554" name="YStateMachinef694554">
+          <transition ObjectID="f76f663" name="YTransitionf76f663" source="//@packages.1/@ownedMemberPackage.3/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@packages.1/@ownedMemberPackage.3/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@packages.1/@ownedMemberPackage.3/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+          <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f759d05" name="YPseudostatef759d05" outgoing="//@packages.1/@ownedMemberPackage.3/@ownedOperation.0/@stateMachine/@transition.0"/>
+          <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f190b71" name="YFinalStatef190b71" incoming="//@packages.1/@ownedMemberPackage.3/@ownedOperation.0/@stateMachine/@transition.0"/>
+          <trAttach ObjectID="f776ef5" name="YTrAttachmentf776ef5" transition="//@packages.1/@ownedMemberPackage.3/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
+            <effects ObjectID="f1ac343" effectStringRep="setReturnValue(&quot;TODO: Event.toString()&quot;);"/>
+          </trAttach>
+        </stateMachine>
+      </ownedOperation>
+    </ownedMemberPackage>
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f5961ed" name="Randomizer" package="//@packages.1" superClass="//@clazz.0">
+      <ownedAttribute ObjectID="f49b547" name="random" isUnique="true" type="//@packages.0/@ownedMemberPackage.4" clazz="//@clazz.12"/>
+      <ownedAttribute ObjectID="f13e889" name="USE_GAUSSIAN" isUnique="true" type="//@packages.0/@ownedMemberPackage.2" clazz="//@packages.1/@ownedMemberPackage.4"/>
+      <ownedAttribute ObjectID="f66b9ac" name="i" isUnique="true" type="//@packages.0/@ownedMemberPackage.0" clazz="//@packages.1/@ownedMemberPackage.4"/>
+      <ownedAttribute ObjectID="f19d97b" name="prob2Int" association="true" upper="-1" type="//@packages.1/@ownedMemberPackage.5" clazz="//@packages.1/@ownedMemberPackage.4"/>
+      <ownedAttribute ObjectID="f41fa4e" name="entry" association="true" isUnique="true" type="//@packages.1/@ownedMemberPackage.5" clazz="//@packages.1/@ownedMemberPackage.4"/>
+      <ownedAttribute ObjectID="f7d11a1" name="r" isUnique="true" type="//@packages.0/@ownedMemberPackage.1" clazz="//@packages.1/@ownedMemberPackage.4"/>
+      <ownedAttribute ObjectID="f672a3d" name="x" isUnique="true" defaultValue="&quot;0&quot;" type="//@packages.0/@ownedMemberPackage.1" clazz="//@packages.1/@ownedMemberPackage.4"/>
+      <ownedAttribute ObjectID="f64dcec" name="sumAllProp" isUnique="true" defaultValue="&quot;0&quot;" type="//@packages.0/@ownedMemberPackage.1" clazz="//@packages.1/@ownedMemberPackage.4"/>
+      <ownedOperation ObjectID="f27d00b" name="addProbInt" clazz="//@packages.1/@ownedMemberPackage.4">
+        <ownedParameter ObjectID="f46955f" name="to" isUnique="true" type="//@packages.0/@ownedMemberPackage.1"/>
+        <ownedParameter ObjectID="f547076" name="value" isUnique="true" type="//@packages.0/@ownedMemberPackage.0"/>
+        <stateMachine ObjectID="f7f9230" name="YStateMachinef7f9230">
+          <transition ObjectID="f16bfc2" name="YTransitionf16bfc2" source="//@packages.1/@ownedMemberPackage.4/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@packages.1/@ownedMemberPackage.4/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@packages.1/@ownedMemberPackage.4/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+          <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f5ef90" name="YPseudostatef5ef90" outgoing="//@packages.1/@ownedMemberPackage.4/@ownedOperation.0/@stateMachine/@transition.0"/>
+          <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f3b08da" name="YFinalStatef3b08da" incoming="//@packages.1/@ownedMemberPackage.4/@ownedOperation.0/@stateMachine/@transition.0"/>
+          <trAttach ObjectID="f4c947d" name="YTrAttachmentf4c947d" transition="//@packages.1/@ownedMemberPackage.4/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
+            <effects ObjectID="f46566a" effectStringRep="sumAllProp = sumAllProp + to;"/>
+            <effects ObjectID="f4dc7ba" effectStringRep="prob2Int.add(new Probability2Value);"/>
+            <effects ObjectID="f20b257" effectStringRep="prob2Int.get(prob2Int.size - 1).probabilityUpperLimit = to;"/>
+            <effects ObjectID="f5793d3" effectStringRep="prob2Int.get(prob2Int.size - 1).value = value;"/>
+          </trAttach>
+        </stateMachine>
+      </ownedOperation>
+      <ownedOperation ObjectID="f66c63" name="nextInt" clazz="//@packages.1/@ownedMemberPackage.4" returnType="//@packages.0/@ownedMemberPackage.0">
+        <stateMachine ObjectID="f30aac5" name="YStateMachinef30aac5">
+          <transition ObjectID="f5626fe" name="YTransitionf5626fe" source="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.0" target="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.2" attachment="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@trAttach.0"/>
+          <transition ObjectID="f43cf6d" name="YTransitionf43cf6d" source="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.0" target="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.2" attachment="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@trAttach.1"/>
+          <transition ObjectID="f532d9a" name="YTransitionf532d9a" source="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.5" target="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.3" attachment="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@trAttach.2"/>
+          <transition ObjectID="f1d935c" name="YTransitionf1d935c" source="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.4" target="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.3" attachment="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@trAttach.3"/>
+          <transition ObjectID="f7c9630" name="YTransitionf7c9630" source="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.3" target="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.4" attachment="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@trAttach.4"/>
+          <transition ObjectID="f146bd8" name="YTransitionf146bd8" source="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.3" target="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.1" attachment="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@trAttach.5"/>
+          <transition ObjectID="f19a4e3" name="YTransitionf19a4e3" source="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.4" target="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.1" attachment="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@trAttach.6"/>
+          <transition ObjectID="f1440f2" name="YTransitionf1440f2" source="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.2" target="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@subvertex.5" attachment="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@trAttach.7"/>
+          <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f311e7" name="YPseudostatef311e7" outgoing="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.0 //@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.1"/>
+          <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f4ede39" name="YFinalStatef4ede39" incoming="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.5 //@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.6"/>
+          <subvertex xsi:type="yammDiagram:YState" ObjectID="f1c1425" name="YStatef1c1425" outgoing="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.7" incoming="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.0 //@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.1"/>
+          <subvertex xsi:type="yammDiagram:YState" ObjectID="f6c9142" name="YStatef6c9142" outgoing="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.4 //@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.5" incoming="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.2 //@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.3"/>
+          <subvertex xsi:type="yammDiagram:YState" ObjectID="f6995d3" name="YStatef6995d3" outgoing="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.3 //@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.6" incoming="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.4"/>
+          <subvertex xsi:type="yammDiagram:YState" ObjectID="f577f47" name="YStatef577f47" outgoing="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.2" incoming="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.7"/>
+          <trAttach ObjectID="f59536" name="YTrAttachmentf59536" transition="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.0" guardStringRep="USE_GAUSSIAN;">
+            <effects ObjectID="f6de5ab" effectStringRep="r = (random as java.util.Random).nextGaussian;"/>
+          </trAttach>
+          <trAttach ObjectID="f70685" name="YTrAttachmentf70685" transition="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.1" guardStringRep="!USE_GAUSSIAN;">
+            <effects ObjectID="f325de1" effectStringRep="r = (random as java.util.Random).nextDouble;"/>
+          </trAttach>
+          <trAttach ObjectID="f2dd09a" name="YTrAttachmentf2dd09a" transition="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.2" guardStringRep="true;">
+            <effects ObjectID="f2050fd" effectStringRep="x = 0;"/>
+            <effects ObjectID="f728e4a" effectStringRep="i = 0;"/>
+          </trAttach>
+          <trAttach ObjectID="f654c2c" name="YTrAttachmentf654c2c" transition="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.3" guardStringRep="r > entry.probabilityUpperLimit + x;"/>
+          <trAttach ObjectID="f177a55" name="YTrAttachmentf177a55" transition="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.4" guardStringRep="i &lt; prob2Int.size;">
+            <effects ObjectID="f2bde0d" effectStringRep="entry = prob2Int.get(i++);"/>
+            <effects ObjectID="f4be425" effectStringRep="x = x + entry.probabilityUpperLimit;"/>
+          </trAttach>
+          <trAttach ObjectID="f34e904" name="YTrAttachmentf34e904" transition="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.5" guardStringRep="i >= prob2Int.size;">
+            <effects ObjectID="f1b61b9" effectStringRep="setReturnValue(0);"/>
+          </trAttach>
+          <trAttach ObjectID="f6e4855" name="YTrAttachmentf6e4855" transition="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.6" guardStringRep="r &lt;= entry.probabilityUpperLimit + x;">
+            <effects ObjectID="f7a9b6f" effectStringRep="setReturnValue(entry.value);"/>
+          </trAttach>
+          <trAttach ObjectID="f7758dd" name="YTrAttachmentf7758dd" transition="//@packages.1/@ownedMemberPackage.4/@ownedOperation.1/@stateMachine/@transition.7" guardStringRep="true;">
+            <effects ObjectID="f5dc2c3" effectStringRep="r = r * sumAllProp;"/>
+          </trAttach>
+        </stateMachine>
+      </ownedOperation>
+    </ownedMemberPackage>
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f6019cc" name="Probability2Value" package="//@packages.1" superClass="//@clazz.0">
+      <ownedAttribute ObjectID="f5512dc" name="probabilityUpperLimit" isUnique="true" type="//@packages.0/@ownedMemberPackage.1" clazz="//@packages.1/@ownedMemberPackage.5"/>
+      <ownedAttribute ObjectID="f6e635c" name="value" isUnique="true" type="//@packages.0/@ownedMemberPackage.0" clazz="//@packages.1/@ownedMemberPackage.5"/>
+    </ownedMemberPackage>
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f67d23f" name="Delay" package="//@packages.1" superClass="//@clazz.0 //@packages.1/@ownedMemberPackage.3"/>
+  </packages>
+  <packages ObjectID="f59cafd" name="Observer">
+    <ownedMemberPackage xsi:type="yammDiagram:YClass" ObjectID="f3ecad1" name="ObserverA" package="//@packages.2" superClass="//@clazz.0">
+      <ownedAttribute ObjectID="f7ed1bd" name="i" type="//@packages.0/@ownedMemberPackage.0" clazz="//@packages.2/@ownedMemberPackage.0" observe="true"/>
+      <ownedAttribute ObjectID="f4a6b7e" name="aaaaaa" type="//@clazz.2" clazz="//@packages.2/@ownedMemberPackage.0"/>
+      <ownedAttribute ObjectID="f737395" name="gravelShipping" association="true" type="//@clazz.12" clazz="//@packages.2/@ownedMemberPackage.0"/>
+      <ownedOperation ObjectID="f1a6920" name="StepObserver" clazz="//@packages.2/@ownedMemberPackage.0">
+        <stateMachine ObjectID="fec090" name="YStateMachinefec090" initialActive="true" rtc="observer">
+          <transition ObjectID="f5b475f" name="YTransitionf5b475f" source="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.3" target="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.2" attachment="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@trAttach.0"/>
+          <transition ObjectID="f297490" name="YTransitionf297490" source="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.2" target="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.4" attachment="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@trAttach.1"/>
+          <transition ObjectID="f3742fb" name="YTransitionf3742fb" source="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.3" attachment="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@trAttach.2"/>
+          <transition ObjectID="f7cee32" name="YTransitionf7cee32" source="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.0" target="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.2" attachment="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@trAttach.3"/>
+          <transition ObjectID="f69580f" name="YTransitionf69580f" source="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.4" target="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@trAttach.4"/>
+          <transition ObjectID="f531506" name="YTransitionf531506" source="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.4" target="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@subvertex.1" attachment="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@trAttach.5"/>
+          <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f43f11" name="YPseudostatef43f11" outgoing="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.2 //@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.3"/>
+          <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f512911" name="YFinalStatef512911" incoming="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.4 //@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.5"/>
+          <subvertex xsi:type="yammDiagram:YState" ObjectID="f17ebbe" name="YStatef17ebbe" outgoing="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.1" incoming="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.0 //@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.3"/>
+          <subvertex xsi:type="yammDiagram:YState" ObjectID="f2e8817" name="YStatef2e8817" outgoing="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.0" incoming="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.2"/>
+          <subvertex xsi:type="yammDiagram:YState" ObjectID="f4f649a" name="YStatef4f649a" outgoing="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.4 //@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.5" incoming="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.1"/>
+          <trAttach ObjectID="fd33b1" name="YTrAttachmentfd33b1" transition="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="gravelShipping = (getInstances(1, &quot;GravelShipping&quot;) as java.util.List&lt;GravelShipping>).get(0); gravelShipping != null;"/>
+          <trAttach ObjectID="f3dc57f" name="YTrAttachmentf3dc57f" transition="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.1" guardStringRep="true;">
+            <effects ObjectID="f4187fc" effectStringRep="observerAddValue(&quot;valueA&quot;, var_i++);"/>
+            <effects ObjectID="f5d5802" effectStringRep="//Print(&quot;timeStep: &quot; + yTimeStep + &quot; gravel to ship: &quot; + gravelShipping._gravelToShip);"/>
+          </trAttach>
+          <trAttach ObjectID="f2b9ec5" name="YTrAttachmentf2b9ec5" transition="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.2" guardStringRep="gravelShipping == null;"/>
+          <trAttach ObjectID="f6e6834" name="YTrAttachmentf6e6834" transition="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.3" guardStringRep="gravelShipping != null;"/>
+          <trAttach ObjectID="f6bec36" name="YTrAttachmentf6bec36" transition="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.4" guardStringRep="gravelShipping._gravelToShip == 0;">
+            <effects ObjectID="f78d274" effectStringRep="Print(&quot;-------------------------------------------------------------&quot;);"/>
+          </trAttach>
+          <trAttach ObjectID="fdcbe3" name="YTrAttachmentfdcbe3" transition="//@packages.2/@ownedMemberPackage.0/@ownedOperation.0/@stateMachine/@transition.5" guardStringRep="gravelShipping._gravelToShip != 0;"/>
+        </stateMachine>
+      </ownedOperation>
+    </ownedMemberPackage>
+  </packages>
+</yammDiagram:YModel>

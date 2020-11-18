@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="online.yamm.example.dfa.design.Activator"
+               id="online.yamm.example.dfa.design"
+	       name="dfa">
+    </component>
+  </extension>
+  <extension
+        point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+     <editpartProvider
+           class="online.yamm.example.dfa.design.providers.StateNodeEditPartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+     <editpartProvider
+           class="online.yamm.example.dfa.design.providers.TransitionEdgeEditPartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+  </extension>
+</plugin>

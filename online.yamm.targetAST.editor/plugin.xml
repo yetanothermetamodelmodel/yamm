@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated targetAST -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="targetAST.presentation.TargetASTModelWizardID"
+            name="%_UI_TargetASTModelWizard_label"
+            class="targetAST.presentation.TargetASTModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TargetASTModelFile.gif">
+         <description>%_UI_TargetASTModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated targetAST -->
+      <editor
+            id="targetAST.presentation.TargetASTEditorID"
+            name="%_UI_TargetASTEditor_label"
+            icon="icons/full/obj16/TargetASTModelFile.gif"
+            extensions="targetast"
+            class="targetAST.presentation.TargetASTEditor"
+            contributorClass="targetAST.presentation.TargetASTActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

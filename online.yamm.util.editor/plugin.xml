@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Chart -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="online.yamm.util.chartModel.chart.presentation.ChartModelWizardID"
+            name="%_UI_ChartModelWizard_label"
+            class="online.yamm.util.chartModel.chart.presentation.ChartModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ChartModelFile.gif">
+         <description>%_UI_ChartModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Chart -->
+      <editor
+            id="online.yamm.util.chartModel.chart.presentation.ChartEditorID"
+            name="%_UI_ChartEditor_label"
+            icon="icons/full/obj16/ChartModelFile.gif"
+            extensions="chart"
+            class="online.yamm.util.chartModel.chart.presentation.ChartEditor"
+            contributorClass="online.yamm.util.chartModel.chart.presentation.ChartActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Table -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="online.yamm.util.tableModel.table.presentation.TableModelWizardID"
+            name="%_UI_TableModelWizard_label"
+            class="online.yamm.util.tableModel.table.presentation.TableModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TableModelFile.gif">
+         <description>%_UI_TableModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Table -->
+      <editor
+            id="online.yamm.util.tableModel.table.presentation.TableEditorID"
+            name="%_UI_TableEditor_label"
+            icon="icons/full/obj16/TableModelFile.gif"
+            extensions="table"
+            class="online.yamm.util.tableModel.table.presentation.TableEditor"
+            contributorClass="online.yamm.util.tableModel.table.presentation.TableActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

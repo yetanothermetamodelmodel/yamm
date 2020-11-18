@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/online.yamm.chen/src" modelPluginID="online.yamm.chen"
+    modelName="Chen" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>chen.ecore</foreignModel>
+  <genPackages prefix="Chen" basePackage="online.yamm.chen" disposableProviderFactory="true"
+      ecorePackage="chen.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="chen.ecore#//Key">
+      <genEnumLiterals ecoreEnumLiteral="chen.ecore#//Key/None"/>
+      <genEnumLiterals ecoreEnumLiteral="chen.ecore#//Key/Strong"/>
+      <genEnumLiterals ecoreEnumLiteral="chen.ecore#//Key/Weak"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="chen.ecore#//Type">
+      <genEnumLiterals ecoreEnumLiteral="chen.ecore#//Type/Disjunkt"/>
+      <genEnumLiterals ecoreEnumLiteral="chen.ecore#//Type/Overlapping"/>
+      <genEnumLiterals ecoreEnumLiteral="chen.ecore#//Type/Union"/>
+    </genEnums>
+    <genClasses ecoreClass="chen.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Entity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Entity/weakEntityType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chen.ecore#//Entity/connectionsToRelations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chen.ecore#//Entity/connectionsToAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="chen.ecore#//Relationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Relationship/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Relationship/indentifyingRelationship"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chen.ecore#//Relationship/connectionsToEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chen.ecore#//Relationship/connectionsToAttributes"/>
+    </genClasses>
+    <genClasses ecoreClass="chen.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Attribute/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Attribute/derived"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Attribute/multivalued"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Attribute/key"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chen.ecore#//Attribute/connectionsToSubAttributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chen.ecore#//Attribute/connectionsToRelationOrEntity"/>
+    </genClasses>
+    <genClasses ecoreClass="chen.ecore#//Connection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Connection/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Connection/kardinality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Connection/totalPartizipation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chen.ecore#//Connection/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference chen.ecore#//Connection/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Connection/generalizationConnection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Connection/generalization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Connection/generalizationOrientation"/>
+    </genClasses>
+    <genClasses ecoreClass="chen.ecore#//Chen">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chen.ecore#//Chen/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chen.ecore#//Chen/connections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chen.ecore#//Chen/realtionships"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chen.ecore#//Chen/attributes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference chen.ecore#//Chen/generalizations"/>
+    </genClasses>
+    <genClasses ecoreClass="chen.ecore#//Generalization">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute chen.ecore#//Generalization/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

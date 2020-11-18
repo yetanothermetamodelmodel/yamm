@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated markov -->
+      <package
+            uri="http://www.yamm.online/sirius/markov"
+            class="online.yamm.markov.markov.MarkovPackage"
+            genModel="model/markov.genmodel"/>
+   </extension>
+
+   <extension
+         point="online.yamm.layerEPackageProvider">
+      <client
+            class="online.yamm.markov.markov.util.MarkovLayerProvider">
+      </client>
+   </extension>
+
+</plugin>

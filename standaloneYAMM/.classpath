@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/online.yamm"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/online.yamm.coreModelDsl"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/online.yamm.coreModelXmi"/>
+	<classpathentry kind="var" path="EMF_COMMON"/>
+	<classpathentry kind="var" path="EMF_ECORE"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/online.yamm.coreModelDiagram"/>
+	<classpathentry kind="var" path="EMF_ECORE_XMI"/>
+	<classpathentry kind="lib" path="C:/Users/Marcel/.p2/pool/plugins/org.apache.log4j_1.2.15.v201012070815.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Marcel/.p2/pool/plugins/com.google.inject_3.0.0.v201312141243.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Marcel/.p2/pool/plugins/org.eclipse.xtext_2.14.0.v20180522-1821.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

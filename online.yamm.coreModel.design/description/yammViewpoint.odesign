@@ -1,0 +1,1436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:properties-ext-widgets-reference="http://www.eclipse.org/sirius/properties/1.0.0/ext/widgets/reference" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="yammViewpoint" version="12.0.0.2017041100">
+  <ownedViewpoints xmi:id="//@ownedViewpoints[name='yammViewpoint']" name="yammViewpoint" modelFileExtension="yammdiagram">
+    <validationSet>
+      <ownedRules xsi:type="validation:SemanticValidationRule" name="validationStart" targetClass="yammDiagram::YStateMachine">
+        <audits auditExpression="service:startValidation()"/>
+      </ownedRules>
+      <ownedRules xsi:type="validation:SemanticValidationRule" name="effectValidation" level="ERROR" message="service:getErrorMessageEffect" targetClass="yammDiagram::YEffect">
+        <audits auditExpression="service:validateEffect()"/>
+      </ownedRules>
+      <ownedRules xsi:type="validation:SemanticValidationRule" name="guardValidation" level="ERROR" message="service:getErrorMessageGuard" targetClass="yammDiagram::YTrAttachment">
+        <audits auditExpression="service:validateGuard()"/>
+      </ownedRules>
+    </validationSet>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" xmi:id="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']" name="Yamm Statemachine Diagram" titleExpression="service:getNameStateMachineDiagram()" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='pasteOnStatemachineDiagram']" domainClass="yammDiagram::YStateMachine" enablePopupBars="true">
+      <metamodel href="../../online.yamm.coreModelDiagram/model/YammDiagram.ecore#/"/>
+      <layout xsi:type="description_1:CustomLayoutConfiguration" id="org.eclipse.elk.layered" label="ELK Layered" description="Layer-based algorithm provided by the Eclipse Layout Kernel. Arranges as many edges as possible into one direction by placing nodes into subsequent layers. This implementation supports different routing styles (straight, orthogonal, splines); if orthogonal routing is selected, arbitrary port constraints are respected, thus enabling the layout of block diagrams such as actor-oriented models or circuit schematics. Furthermore, full layout of compound graphs with cross-hierarchy edges is supported when the respective option is activated on the top level."/>
+      <defaultLayer name="Default">
+        <nodeMappings xmi:id="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@nodeMappings[name='initialstateNode']" name="initialstateNode" deletionDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='deleteState']" semanticCandidatesExpression="feature:subvertex" domainClass="yammDiagram::YPseudostate">
+          <style xsi:type="style:WorkspaceImageDescription" labelExpression="" hideLabelByDefault="true" workspacePath="/online.yamm.coreModel.design/icons/statemachine/pseudostateOnDiagram.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings xmi:id="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@nodeMappings[name='finalstateNode']" name="finalstateNode" deletionDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='deleteState']" semanticCandidatesExpression="feature:subvertex" domainClass="yammDiagram::YFinalState">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="" hideLabelByDefault="true" workspacePath="/online.yamm.coreModel.design/icons/statemachine/finalstateOnDiagram.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="transitionEdge" semanticCandidatesExpression="feature:transition" doubleClickDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='selectTransitionAndTrAttachment']" sourceMapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@nodeMappings[name='finalstateNode'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@nodeMappings[name='initialstateNode'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='stateNode']" targetMapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@nodeMappings[name='finalstateNode'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@nodeMappings[name='initialstateNode'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='stateNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="yammDiagram::YTransition" useDomainElement="true" reconnections="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnectTransitionSource'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnectTransitionTarget']">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="linkTransitionTrAttachment" deletionDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='deleteLinkTransitionTrAttachment']" sourceMapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@edgeMappings[name='transitionEdge']" targetMapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='trAttachmentContainer']" targetFinderExpression="feature:attachment" reconnections="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnectLinkTransitionTrAttachmentTarget'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnectLinkTransitionTrAttachmentSource']">
+          <style lineStyle="dash" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="trAttachmentContainer" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='pasteOnStatemachineDiagram']" semanticCandidatesExpression="feature:trAttach" doubleClickDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='HideEffectsAndGuard']" domainClass="yammDiagram::YTrAttachment" childrenPresentation="List">
+          <subNodeMappings name="effectNode" semanticCandidatesExpression="feature:effects" doubleClickDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='doubleClickOnEffect']" domainClass="yammDiagram::YEffect">
+            <conditionnalStyles predicateExpression="aql: not self.breakpoint">
+              <style xsi:type="style:BundledImageDescription" labelExpression="feature:effectStringRep" iconPath="/online.yamm.coreModel.design/icons/statemachine/EffectDiagram.gif" labelAlignment="LEFT" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="feature:breakpoint">
+              <style xsi:type="style:BundledImageDescription" labelExpression="feature:effectStringRep" iconPath="/online.yamm.coreModel.design/icons/statemachine/EffectBreakpointDiagram.gif" labelAlignment="LEFT" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" borderLineStyle="dash" labelExpression="feature:guardStringRep" iconPath="/online.yamm.coreModel.design/icons/statemachine/GuardDiagram.gif" labelAlignment="LEFT">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="stateNode" deletionDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='deleteState']" labelDirectEdit="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editState']" semanticCandidatesExpression="feature:subvertex" domainClass="yammDiagram::YState">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="18" arcHeight="18" borderSizeComputationExpression="1" showIcon="false" labelExpression="feature:stateName" roundedCorner="true" widthComputationExpression="8" heightComputationExpression="3">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="creationToolPalette" label="Statemachine Editor">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createState" label="State" containerMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='stateNode']" iconPath="/online.yamm.coreModel.design/icons/statemachine/statePalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YState" referenceName="subvertex"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deactivateToolReactivation()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createStates" label="-" containerMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='stateNode']" iconPath="/online.yamm.coreModel.design/icons/statemachine/statePalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YState" referenceName="subvertex"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:reactivateTool()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createTransition" label="Transition" edgeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@edgeMappings[name='transitionEdge']" iconPath="/online.yamm.coreModel.design/icons/statemachine/transitionPalette.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:test()"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YTransition" referenceName="transition"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="outgoing" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="incoming" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deactivateToolReactivation()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createTransitions" label="-" edgeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@edgeMappings[name='transitionEdge']" iconPath="/online.yamm.coreModel.design/icons/statemachine/transitionToolReactivationPalette.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YTransition" referenceName="transition"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="outgoing" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="incoming" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:reactivateTool()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createTrAttachment" label="Guard/Effect Composite" containerMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='trAttachmentContainer']" iconPath="/online.yamm.coreModel.design/icons/statemachine/TrAttachmentPalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YTrAttachment" referenceName="trAttach">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:initGuard()"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deactivateToolReactivation()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createEffect" label="Effect" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='trAttachmentContainer']/@subNodeMappings[name='effectNode']" iconPath="/online.yamm.coreModel.design/icons/statemachine/EffectPalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YEffect" referenceName="effects">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:insertEffect()"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deactivateToolReactivation()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createLinkTransitionTrAttachment" label="Guard/Effect Link" precondition="service:linkCreationCompletePrecondition(preTarget)" edgeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@edgeMappings[name='linkTransitionTrAttachment']" iconPath="/online.yamm.coreModel.design/icons/statemachine/linkTransitionTrAttachmentPalette.gif" connectionStartPrecondition="service:linkCreationStartPrecondition()">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="attachment" valueExpression="var:target"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="transition" valueExpression="var:source"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deactivateToolReactivation()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createInitialstate" label="Entrystate" nodeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@nodeMappings[name='initialstateNode']" iconPath="/online.yamm.coreModel.design/icons/statemachine/pseudostatePalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YPseudostate" referenceName="subvertex"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deactivateToolReactivation()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createFinalstate" label="Finalstate" nodeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@nodeMappings[name='finalstateNode']" iconPath="/online.yamm.coreModel.design/icons/statemachine/finalstatePalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YFinalState" referenceName="subvertex"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deactivateToolReactivation()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createTransitionAndAttachment" label="Tansition and Attachment" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@edgeMappings[name='transitionEdge']" iconPath="/online.yamm.coreModel.design/icons/statemachine/TransitionWithAttachmentPalette.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YTransition" referenceName="transition"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YTrAttachment" referenceName="trAttach" variableName="instanceTrAttach">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:initGuard()"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="outgoing" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="incoming" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instanceTrAttach">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="transition" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="attachment" valueExpression="var:instanceTrAttach"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instanceTrAttach">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='trAttachmentContainer']" containerViewExpression="service:getContainerView(sourceView)"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:createdView">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setPosTrAttachment(sourceView, targetView)"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deactivateToolReactivation()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createTransitionsAndAttachments" label="-" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@edgeMappings[name='transitionEdge']" iconPath="/online.yamm.coreModel.design/icons/statemachine/TransitionWithAttachmentPaletteToolReactivation.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YTransition" referenceName="transition"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YTrAttachment" referenceName="trAttach" variableName="instanceTrAttach">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:initGuard()"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="outgoing" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="incoming" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instanceTrAttach">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="transition" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="attachment" valueExpression="var:instanceTrAttach"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instanceTrAttach">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='trAttachmentContainer']" containerViewExpression="service:getContainerView(sourceView)"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:createdView">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setPosTrAttachment(sourceView, targetView)"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:reactivateTool()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="modifyTool">
+          <ownedTools xsi:type="tool:DirectEditLabel" xmi:id="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editState']" name="editState">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="stateName" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" xmi:id="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnectTransitionSource']" name="reconnectTransitionSource" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="source" elementExpression="var:element"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:target"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                  <subModelOperations xsi:type="tool_1:Unset" featureName="outgoing" elementExpression="var:element"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="outgoing" valueExpression="var:element"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" xmi:id="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnectTransitionTarget']" name="reconnectTransitionTarget">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="target" elementExpression="var:element"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                  <subModelOperations xsi:type="tool_1:Unset" featureName="incoming" elementExpression="var:element"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="incoming" valueExpression="var:element"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" xmi:id="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnectLinkTransitionTrAttachmentSource']" name="reconnectLinkTransitionTrAttachmentSource" precondition="service:reconnectLinkTrSourcePrecondition(targetView)" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:Let" variableName="targetTransition" valueExpression="aql:targetView.target">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:targetTransition.reconnectLinkSource(source)"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" xmi:id="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnectLinkTransitionTrAttachmentTarget']" name="reconnectLinkTransitionTrAttachmentTarget" precondition="service:reconnectLinkTrTargetPrecondition(targetView)" forceRefresh="true">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:reconnectLinkTarget(source)"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="HideEffectsAndGuard" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='trAttachmentContainer']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:elementView">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:collapseDecollapseTrAttachment()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="selectTransitionAndTrAttachment" elementsToSelect="service:getTransitionAndAttachment()" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@edgeMappings[name='transitionEdge']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="goToSm">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="service:statemachineExists(element)">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:getStatemachine()">
+                    <subModelOperations xsi:type="tool:Navigation" diagramDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="doubleClickOnEffect" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@containerMappings[name='trAttachmentContainer']/@subNodeMappings[name='effectNode']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="deletionTools">
+          <ownedTools xsi:type="tool:DeleteElementDescription" xmi:id="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='deleteLinkTransitionTrAttachment']" name="deleteLinkTransitionTrAttachment">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deleteLinkTrAttachment()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteState">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deleteState()"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="contexMenue">
+          <ownedTools xsi:type="tool_1:PopupMenu" name="Layout">
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="Mr. Tree">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:diagram">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:layoutMrTree()"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="Stress">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:diagram">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:layoutStress()"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="DisCo">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:diagram">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:layoutDisCo()"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="Force">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:diagram">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:layoutForce()"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="Layered">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:diagram">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:layoutLayered()"/>
+                </firstModelOperations>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="hideSelectedTrAttachments">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:hideSelectedTrAttachments()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="revealSelectedTrAttachments">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:revealSelectedTrAttachments()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="showErrors" label="show errors">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:showErrors()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="pasteTools">
+          <ownedTools xsi:type="tool_1:PasteDescription" name="pasteOnStatemachineDiagram" forceRefresh="true">
+            <container name="container"/>
+            <containerView name="containerView"/>
+            <copiedView name="copiedView"/>
+            <copiedElement name="copiedElement"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:pasteOnStatemachineDiagram(copiedElement)"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='dropClass'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='packageClass'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='dropEnumeration']" name="Yamm Class Diagram" titleExpression="service:getNameClassDiagram()" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.6/@ownedTools[name='pasteOnClassDiagram']" domainClass="yammDiagram::YModel" enablePopupBars="true">
+      <metamodel href="../../online.yamm.coreModelDiagram/model/YammDiagram.ecore#/"/>
+      <validationSet name="nameValidation">
+        <ownedRules xsi:type="validation:ViewValidationRule" name="classNameRule" level="ERROR" message="service:getErrorMessageName()" targets="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']">
+          <audits auditExpression="service:validateClassName()"/>
+          <fixes name="fixNameClass">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:fixName()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="propertyNameRule" level="ERROR" message="service:getErrorMessageName()" targetClass="yammDiagram::YProperty">
+          <audits auditExpression="service:validatePropertyName()"/>
+          <fixes name="fixNameProperty">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:fixName()">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:fixName()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="packageNameRule" level="ERROR" message="service:getErrorMessageName()" targetClass="yammDiagram::YPackage">
+          <audits auditExpression="service:validatePackageName()"/>
+          <fixes name="fixNamePackage">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:fixName()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="enumNameRule" level="ERROR" message="service:getErrorMessageName()" targetClass="yammDiagram::YEnumeration">
+          <audits auditExpression="service:validateEnumName()"/>
+          <fixes name="fixNameEnum">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:fixName()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="enumLiteralNameRule" level="ERROR" message="service:getErrorMessageName()" targetClass="yammDiagram::YEnumerationLiteral">
+          <audits auditExpression="service:validateEnumLiteralName()"/>
+          <fixes name="fixNameEnumLiteral">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:fixName()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="parameterNameRule" level="ERROR" message="service:getErrorMessageName()" targetClass="yammDiagram::YParameter">
+          <audits auditExpression="service:validateParameterName()"/>
+          <fixes name="fixNameParameter">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:fixName()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="operationNameRule" level="ERROR" message="service:getErrorMessageName()" targetClass="yammDiagram::YOperation">
+          <audits auditExpression="service:validateOperationName()"/>
+          <fixes name="fixNameOperation">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:fixName()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+      </validationSet>
+      <layout xsi:type="description_1:CustomLayoutConfiguration" id="org.eclipse.elk.layered" label="ELK Layered" description="Layer-based algorithm provided by the Eclipse Layout Kernel. Arranges as many edges as possible into one direction by placing nodes into subsequent layers. This implementation supports different routing styles (straight, orthogonal, splines); if orthogonal routing is selected, arbitrary port constraints are respected, thus enabling the layout of block diagrams such as actor-oriented models or circuit schematics. Furthermore, full layout of compound graphs with cross-hierarchy edges is supported when the respective option is activated on the top level."/>
+      <defaultLayer name="Default">
+        <edgeMappings name="generalizationEdge" deletionDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='deleteGeneralization']" sourceMapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']" targetMapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']" targetFinderExpression="feature:superClass" reconnections="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='reconnectGeneralizationTarget'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='reconnectGeneralizationSource']">
+          <style targetArrow="InputClosedArrow" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="associationEdge" preconditionExpression="aql:self.association = true" labelDirectEdit="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editLabelAssociation']" semanticCandidatesExpression="service:getAssociations(diagram)" sourceMapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']" targetMapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']" targetFinderExpression="feature:type" sourceFinderExpression="feature:clazz" domainClass="yammDiagram::YProperty" useDomainElement="true" reconnections="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='reconnectAssociationTarget'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='reconnectAssociationSource']">
+          <conditionnalStyles predicateExpression="service:isComposite">
+            <style sourceArrow="FillDiamond" targetArrow="NoDecoration" sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+              <centerLabelStyleDescription showIcon="false" labelExpression="feature:name">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+              <endLabelStyleDescription showIcon="false" labelExpression="service:getCardinality()">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="service:isAssociation">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+              <centerLabelStyleDescription showIcon="false" labelExpression="feature:name">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+              <endLabelStyleDescription showIcon="false" labelExpression="aql:self.getCardinality()">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="bidirectionalAssociation" preconditionExpression="aql:self.association = true" deletionDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='deleteBiAssociation']" labelDirectEdit="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editLabelBiAssociation']" semanticCandidatesExpression="service:getBidirectionalAssociations(diagram)" sourceMapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']" targetMapping="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']" targetFinderExpression="feature:type" sourceFinderExpression="feature:clazz" domainClass="yammDiagram::YProperty" useDomainElement="true" reconnections="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='reconnectBiAssociationSource'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='reconnectBiAssociationTarget']">
+          <style sourceArrow="InputArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <beginLabelStyleDescription showIcon="false" labelExpression="service:biassoLabelB()">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="service:biassoLabelA()">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="classContainer" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.6/@ownedTools[name='pasteOnClassDiagram']" labelDirectEdit="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editlabelClass']" semanticCandidatesExpression="service:semCandiClassContainer()" domainClass="yammDiagram::YClass" childrenPresentation="VerticalStack">
+          <subContainerMappings name="propertiesContainer" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.6/@ownedTools[name='pasteOnClassDiagram']" semanticCandidatesExpression="var:self" domainClass="yammDiagram::YClass" childrenPresentation="List">
+            <subNodeMappings name="propertyNode" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.6/@ownedTools[name='pasteOnClassDiagram']" preconditionExpression="service:preconditionProperty()" labelDirectEdit="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editLabelAttribute']" semanticCandidatesExpression="feature:ownedAttribute" doubleClickDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='observe']" domainClass="yammDiagram::YProperty">
+              <conditionnalStyles predicateExpression="aql: not self.observe and self.static">
+                <style xsi:type="style:BundledImageDescription" labelExpression="feature:signature" iconPath="/online.yamm.coreModel.design/icons/classDiagram/attributeDiagram.gif" labelAlignment="LEFT" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelFormat>underline</labelFormat>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql: not self.observe">
+                <style xsi:type="style:BundledImageDescription" labelExpression="feature:signature" iconPath="/online.yamm.coreModel.design/icons/classDiagram/attributeDiagram.gif" labelAlignment="LEFT" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="aql: self.observe and self.static">
+                <style xsi:type="style:BundledImageDescription" labelExpression="feature:signature" iconPath="/online.yamm.coreModel.design/icons/classDiagram/attributeDiagramObserve.gif" labelAlignment="LEFT" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelFormat>underline</labelFormat>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                </style>
+              </conditionnalStyles>
+              <conditionnalStyles predicateExpression="feature:observe">
+                <style xsi:type="style:BundledImageDescription" labelExpression="feature:signature" iconPath="/online.yamm.coreModel.design/icons/classDiagram/attributeDiagramObserve.gif" labelAlignment="LEFT" sizeComputationExpression="" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                </style>
+              </conditionnalStyles>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="" labelAlignment="LEFT" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="operationContainer" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.6/@ownedTools[name='pasteOnClassDiagram']" labelDirectEdit="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editlabelOperation']" semanticCandidatesExpression="feature:ownedOperation" doubleClickDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='navigateToStatemachineDiagram']" domainClass="yammDiagram::YOperation" childrenPresentation="List">
+            <subNodeMappings name="parameterNode" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.6/@ownedTools[name='pasteOnClassDiagram']" labelDirectEdit="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editLabelParameter']" semanticCandidatesExpression="service:getParameterCandidates()" domainClass="yammDiagram::YParameter">
+              <style xsi:type="style:SquareDescription" labelExpression="feature:signature" iconPath="/online.yamm.coreModel.design/icons/classDiagram/parameterDiagram.gif" labelAlignment="LEFT" labelPosition="node">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="feature:signature" iconPath="/online.yamm.coreModel.design/icons/classDiagram/operationDiagram.gif" labelAlignment="LEFT">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="service:classNameLabel()" iconPath="/online.yamm.coreModel.design/icons/classDiagram/classDiagram.gif" labelAlignment="LEFT">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="enumerationContainer" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.6/@ownedTools[name='pasteOnClassDiagram']" labelDirectEdit="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editLabelEnumeration']" semanticCandidatesExpression="service:semCandiEnumeration()" domainClass="yammDiagram::YEnumeration" childrenPresentation="List">
+          <subNodeMappings name="enumerationLiteralNode" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.6/@ownedTools[name='pasteOnClassDiagram']" labelDirectEdit="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editLabelEnumerationLiteral']" semanticCandidatesExpression="feature:ownedLiteral" domainClass="yammDiagram::YEnumerationLiteral">
+            <style xsi:type="style:SquareDescription" iconPath="/online.yamm.coreModel.design/icons/classDiagram/attributeDiagram.gif" labelAlignment="LEFT" labelPosition="node">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/online.yamm.coreModel.design/icons/classDiagram/enumerationDiagram.gif" labelAlignment="LEFT">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="packageContainer" pasteDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.6/@ownedTools[name='pasteOnClassDiagram']" labelDirectEdit="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editlabelPackage']" semanticCandidatesExpression="service:semCandiPackageContainer()" domainClass="yammDiagram::YPackage" dropDescriptions="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='dropClass'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='packageClass'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='dropEnumeration']" reusedContainerMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='packageContainer'] //@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='enumerationContainer']">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" iconPath="/online.yamm.coreModel.design/icons/classDiagram/Package.gif" labelAlignment="LEFT">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="creationTools" label="Class Diagram Editor">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createClass" label="Class" forceRefresh="true" inverseSelectionOrder="true" containerMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/ClassPalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:createClass()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createOperation" label="Operation" containerMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='operationContainer']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/operationPalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YOperation" referenceName="ownedOperation">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="clazz" valueExpression="var:container"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YStateMachine" referenceName="stateMachine"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createProperty" label="Attribute" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='propertiesContainer']/@subNodeMappings[name='propertyNode']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/attributePalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YProperty" referenceName="ownedAttribute">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="clazz" valueExpression="var:container"/>
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:insertProperty(containerView)"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:refreshCreatedAttribute()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createParameter" label="Parameter" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='operationContainer']/@subNodeMappings[name='parameterNode']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/parameterPalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YParameter" referenceName="ownedParameter">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:insertParameter()"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:refreshCreatedParameter()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createGeneralization" label="Generalization" edgeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='generalizationEdge']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/generalizationPalette.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="superClass" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createEnumeration" label="Enumeration" containerMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='enumerationContainer']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/enumerationPalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:createEnumeration()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createEnumerationLiteral" label="Literal" nodeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='enumerationContainer']/@subNodeMappings[name='enumerationLiteralNode']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/attributePalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YEnumerationLiteral" referenceName="ownedLiteral"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createPackage" label="Package" forceRefresh="true" containerMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='packageContainer']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/Package.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:createPackage()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createAssociationEdge" label="Association" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='associationEdge']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/Association.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YProperty" referenceName="ownedAttribute"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="clazz" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="association" valueExpression="true"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:sourceView">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:addAssociation()"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:initProperty()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createCompositeEdge" label="Composite" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='associationEdge']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/Association_composite.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="yammDiagram::YProperty" referenceName="ownedAttribute"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="clazz" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="association" valueExpression="true"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:sourceView">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:addAssociation()"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setComposite(instance)"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createBidirectionAssociation" label="Bidirectional Association" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='bidirectionalAssociation']" iconPath="/online.yamm.coreModel.design/icons/classDiagram/BiAssociation.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:createBiAssociation(source, target)"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="labelEditTools">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editlabelClass" inputLabelExpression="feature:name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:updateReferences()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editlabelOperation" inputLabelExpression="feature:name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:updateReferences()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editLabelEnumeration">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editLabelEnumerationLiteral">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editlabelPackage">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editLabelAssociation">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:updateReferences()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editLabelAttribute" inputLabelExpression="feature:name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editLabelParameter" inputLabelExpression="feature:name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editLabelBiAssociation" inputLabelExpression="aql:self.name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:biAssociationLabelEditDummyService()"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="navigateToStatemachineDiagramTool">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="navigateToStatemachineDiagram" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='operationContainer']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: element.stateMachine">
+                <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Statemachine%20Diagram']"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="reconnectionTools">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnectGeneralizationTarget" forceRefresh="true">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:reconnectGeneralizationTarget(target, source)"/>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnectGeneralizationSource" forceRefresh="true" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:reconnectGeneralizationSource(target, edgeView)"/>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnectAssociationTarget">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnectAssociationSource" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:reconnectAssociationSource(target)"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnectBiAssociationTarget">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:reconnectBiAssociationTarget(source, target)"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnectBiAssociationSource" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:reconnectBiAssociationSource(source, target)"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="deletionTools">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteGeneralization">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:elementView">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deleteGeneralization()">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deleteGeneralization()">
+                    <subModelOperations xsi:type="tool_1:ChangeContext"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteBiAssociation">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deleteBiAssociation()"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="otherTools">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="observe" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='propertiesContainer']/@subNodeMappings[name='propertyNode']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:debug()">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                  <subModelOperations xsi:type="tool_1:Switch">
+                    <cases conditionExpression="aql: self.observe">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="observe" valueExpression="false"/>
+                    </cases>
+                    <cases conditionExpression="aql: not self.observe">
+                      <subModelOperations xsi:type="tool_1:SetValue" featureName="observe" valueExpression="true"/>
+                    </cases>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="dropClass" forceRefresh="true" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:classDrop(element, oldSemanticContainer, newSemanticContainer)"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="packageClass" forceRefresh="true" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='packageContainer']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:packageDrop(element, oldSemanticContainer, newSemanticContainer)"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="dropEnumeration" forceRefresh="true" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='enumerationContainer']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:enumerationDrop(element, oldSemanticContainer, newSemanticContainer)"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="AssociationToAttribute" precondition="service:preconditionAssciationToAttribute()" forceRefresh="true">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:associationToAttribute()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="AttributeToAssociation" precondition="service:preconditionAttributeToAssciation()" forceRefresh="true">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:attributeToAssociation()"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="createTypes">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:createTypesPackage()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="initialActiveOnOperation" label="initialActive" precondition="service:initialActiveOnOperationPrecondition()">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setInitalActive()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="showErrors" label="show errors">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:showErrors()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="pasteTools">
+          <ownedTools xsi:type="tool_1:PasteDescription" name="pasteOnClassDiagram" forceRefresh="true">
+            <container name="container"/>
+            <containerView name="containerView"/>
+            <copiedView name="copiedView"/>
+            <copiedElement name="copiedElement"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:pasteOnClassDiagram(copiedElement)"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="DES_Tools">
+          <ownedTools xsi:type="tool_1:OperationAction" name="SimulationObjectAction" label="DES SimulationObject" precondition="service:operationSimObjPrecondition()">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:desCreateSimObj()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="EventAction" label="DES Event" precondition="service:operationEventPrecondition()">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:desCreateEvent()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="desinitializerOperation" label="DES Initializer" precondition="service:initialActiveOnOperationPrecondition()">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setDesInitializer()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="QueueAction" label="DES Queue" precondition="service:operationEventPrecondition()">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:desCreateQueue()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <decorationDescriptionsSet>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="initialActiveStatemachineDecorationOnOperation" position="NORTH_EAST" preconditionExpression="service:initActiveDecorationPrecondition()" imageExpression="/online.yamm.coreModel.design/icons/classDiagram/initialActive.gif" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='operationContainer']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="DESEventDecoration" position="NORTH_EAST" preconditionExpression="service:eventDecorationPrecondition()" imageExpression="/online.yamm.coreModel.design/icons/classDiagram/initialActive.gif" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="DESSimObjDecoration" position="NORTH_EAST" preconditionExpression="service:simObjDecorationPrecondition()" imageExpression="/online.yamm.coreModel.design/icons/classDiagram/initialActive.gif" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="DESQueueDecoration" position="NORTH_EAST" preconditionExpression="service:queueDecorationPrecondition()" imageExpression="/online.yamm.coreModel.design/icons/classDiagram/initialActive.gif" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="DESinitializerDecoration" position="NORTH_EAST" preconditionExpression="aql: self.stateMachine.desInitializer " imageExpression="/online.yamm.coreModel.design/icons/classDiagram/desInitializer.gif" mappings="//@ownedViewpoints[name='yammViewpoint']/@ownedRepresentations[name='Yamm%20Class%20Diagram']/@defaultLayer/@containerMappings[name='classContainer']/@subContainerMappings[name='operationContainer']"/>
+        </decorationDescriptionsSet>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="online.yamm.coreModel.design.Services"/>
+    <ownedJavaExtensions qualifiedClassName="online.yamm.coreModel.design.ClassDiagramServices"/>
+  </ownedViewpoints>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="sirius_default_rules_properties">
+    <categories name="MyCategory">
+      <pages name="mainBidirectionalAssociation" labelExpression="Main" domainClass="yammDiagram::YProperty" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.1"/>
+      <pages name="efectGroup" labelExpression="Main" domainClass="yammDiagram::YEffect" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <pages name="trAttachmentPage" labelExpression="Main" domainClass="yammDiagram::YTrAttachment" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.3"/>
+      <groups name="effectPropertiesView" labelExpression="Effect" domainClass="yammDiagram::YEffect" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:ButtonDescription" name="openEffectView" buttonLabelExpression="Edit">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:openTextEditor"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="breakpointCheckbox" labelExpression="Breakpoint">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="breakpoint" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="propertyA" labelExpression="aql:self.name + ' : ' + self.type.name" domainClass="yammDiagram::YProperty" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="name_PropertyA_BidirectionalAssociation" labelExpression="Name:" valueExpression="aql:self.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setName(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:SelectDescription" name="opposite_PropertyA_BidirectionalAssociation" labelExpression="Opposite:" isEnabledExpression="service:isNotComposite()" valueExpression="aql:self.opposite" candidatesExpression="aql:input.emfEditServices(self).getChoiceOfValues(self.eClass().getEStructuralFeature('opposite'))" candidateDisplayExpression="aql:candidate.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setOpposite(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="type_PropertyA_BidirectionalAssociation" labelExpression="Type:" referenceNameExpression="type" referenceOwnerExpression="var:self"/>
+        <controls xsi:type="properties:RadioDescription" name="visibility_PropertyA_BidirectionalAssociation" labelExpression="Visibility:" valueExpression="service:getValueVisibility()" candidatesExpression="service:getVisibility()" candidateDisplayExpression="aql:candidate.name" numberOfColumns="4">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setVisibility(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="static_PropertyA_BidirectionalAssociation" labelExpression="Static" valueExpression="aql:self.static">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="static" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="lower_PropertyA_BidirectionalAssociation" labelExpression="Lower Bound:" valueExpression="aql:self.lower">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setLower(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="upper_PropertyA_BidirectionalAssociation" labelExpression="Upper Bound:" valueExpression="aql:self.upper">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setUpper(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="defaultvalue_PropertyA_BidirectionalAssociation" labelExpression="Default Value:" valueExpression="service:getDefaultValueExpression()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="defaultValue" valueExpression="service: getNewDefaultValue(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="invariant_PropertyA_BidirectionalAssociation" labelExpression="Constraint:" valueExpression="feature:invariant">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="invariant" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:RadioDescription" name="aggregation_PropertyA_BidirectionalAssociation" labelExpression="Aggregation:" isEnabledExpression="service:hasNoOpposite()" valueExpression="service:getValueAggregation()" candidatesExpression="service:getAggregations()" candidateDisplayExpression="aql:candidate.name" numberOfColumns="3">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setAggregation(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="ordered_PropertyA_BidirectionalAssociation" labelExpression="Ordered" valueExpression="aql:self.isOrdered">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="isOrdered" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="unique_PropertyA_BidirectionalAssociation" labelExpression="Unique" valueExpression="service:isUnique()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="isUnique" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="derived_PropertyA_BidirectionalAssociation" labelExpression="Dervied" valueExpression="aql:self.isDerived">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="isDerived" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="derivedUnion_PropertyA_BidirectionalAssociation" labelExpression="Dervied Union" valueExpression="aql:self.isDerivedUnion">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="isDerivedUnion" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="jvmType_PropertyA_BidirectionalAssociation" labelExpression="JvmType:" referenceNameExpression="jvmType" referenceOwnerExpression="var:self"/>
+      </groups>
+      <groups name="propertyB" labelExpression="aql:self.name + ' : ' + self.type.name" domainClass="yammDiagram::YProperty" semanticCandidateExpression="service:getOpposite()">
+        <controls xsi:type="properties:TextDescription" name="name_PropertyB_BidirectionalAssociation" labelExpression="Name:" valueExpression="aql:self.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setName(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:SelectDescription" name="opposite_PropertyB_BidirectionalAssociation" labelExpression="Opposite:" valueExpression="aql:self.opposite" candidatesExpression="aql:input.emfEditServices(self).getChoiceOfValues(self.eClass().getEStructuralFeature('opposite'))" candidateDisplayExpression="aql:candidate.name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setOpposite(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="type_PropertyB_BidirectionalAssociation" labelExpression="Type:" referenceNameExpression="type" referenceOwnerExpression="var:self"/>
+        <controls xsi:type="properties:RadioDescription" name="visibility_PropertyB_BidirectionalAssociation" labelExpression="Visibility:" valueExpression="service:getValueVisibility()" candidatesExpression="service:getVisibility()" candidateDisplayExpression="aql:candidate.name" numberOfColumns="4">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setVisibility(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="static_PropertyB_BidirectionalAssociation" labelExpression="Static" valueExpression="aql:self.static">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="static" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="lower_PropertyB_BidirectionalAssociation" labelExpression="Lower Bound:" valueExpression="aql:self.lower">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setLower(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="upper_PropertyB_BidirectionalAssociation" labelExpression="Upper Bound:" valueExpression="aql:self.upper">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setUpper(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="defaultvalue_PropertyB_BidirectionalAssociation" labelExpression="Default Value:" valueExpression="aql:self.defaultValue">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="defaultValue" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="invariant_PropertyB_BidirectionalAssociation" labelExpression="Constraint:" valueExpression="feature:invariant">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="invariant" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:RadioDescription" name="aggregation_PropertyB_BidirectionalAssociation" labelExpression="Aggregation:" isEnabledExpression="service:hasNoOpposite()" valueExpression="service:getValueAggregation()" candidatesExpression="service:getAggregations()" candidateDisplayExpression="aql:candidate.name" numberOfColumns="3">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:setAggregation(newValue)"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="ordered_PropertyB_BidirectionalAssociation" labelExpression="Ordered" valueExpression="aql:self.isOrdered">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="isOrdered" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="unique_PropertyB_BidirectionalAssociation" labelExpression="Unique" valueExpression="service:isUnique()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="isUnique" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="derived_PropertyB_BidirectionalAssociation" labelExpression="Dervied" valueExpression="aql:self.isDerived">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="isDerived" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="derivedUnion_PropertyB_BidirectionalAssociation" labelExpression="Dervied Union" valueExpression="aql:self.isDerivedUnion">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="isDerivedUnion" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="jvmType_PropertyB_BidirectionalAssociation" labelExpression="JvmType:" referenceNameExpression="jvmType" referenceOwnerExpression="var:self"/>
+      </groups>
+      <groups name="trAttachmentGroup" labelExpression="Attachment" domainClass="yammDiagram::YTrAttachment" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:ButtonDescription" name="openGuardView" buttonLabelExpression="Edit">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:openTextEditor"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+    </categories>
+    <categories name="Default">
+      <pages name="sirius_default_rules_defaultpage" labelExpression="aql:input.emfEditServices(self).getTabName()" semanticCandidateExpression="aql:input.getAllSemanticElements()" preconditionExpression="service:defaultPropertiesPrecondition()" groups="//@extensions.0/@categories.1/@groups.0"/>
+      <groups name="sirius_default_rules_defaultgroup" labelExpression="Properties" semanticCandidateExpression="var:self" preconditionExpression="">
+        <controls xsi:type="properties:DynamicMappingForDescription" name="sirius_default_rules_structural_features_for" iterator="eStructuralFeature" iterableExpression="aql:input.emfEditServices(self).getEStructuralFeatures()">
+          <ifs name="sirius_default_rules_mono_string_if" predicateExpression="aql: self.showProperty(eStructuralFeature) and input.emfEditServices(self).needsTextWidget(eStructuralFeature) and not input.emfEditServices(self).isMultiline(eStructuralFeature)">
+            <widget xsi:type="properties:TextDescription" name="sirius_default_rules_mono_string" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs name="sirius_default_rules_multi_string_if" predicateExpression="aql: self.showProperty(eStructuralFeature) and self.showProperty(eStructuralFeature) and input.emfEditServices(self).needsTextWidget(eStructuralFeature) and input.emfEditServices(self).isMultiline(eStructuralFeature)">
+            <widget xsi:type="properties:TextAreaDescription" name="sirius_default_rules_multi_string" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs name="sirius_default_rules_mono_boolean" predicateExpression="aql: self.showProperty(eStructuralFeature) and input.emfEditServices(self).needsCheckboxWidget(eStructuralFeature)">
+            <widget xsi:type="properties:CheckboxDescription" name="sirius_default_rules_mono_boolean" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs name="sirius_default_rules_enum_if" predicateExpression="aql: self.showProperty(eStructuralFeature) and eStructuralFeature.eType.oclIsKindOf(ecore::EEnum) and not(eStructuralFeature.many)">
+            <widget xsi:type="properties:RadioDescription" name="sirius_default_rules_enum" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:eStructuralFeature.eType.oclAsType(ecore::EEnum).getEEnumLiteralByLiteral(self.eGet(eStructuralFeature.name).toString())" candidatesExpression="aql:eStructuralFeature.eType.oclAsType(ecore::EEnum).eLiterals" candidateDisplayExpression="aql:candidate.name" numberOfColumns="5">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue.instance)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs name="sirius_default_rules_eattribute_many_if" predicateExpression="aql: self.showProperty(eStructuralFeature) and eStructuralFeature.oclIsKindOf(ecore::EAttribute) and eStructuralFeature.many">
+            <widget xsi:type="properties:ListDescription" name="sirius_default_rules_eattribute_many" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)" displayExpression="var:value"/>
+          </ifs>
+          <ifs name="sirius_default_rules_ereference_if" predicateExpression="aql: self.showProperty(eStructuralFeature) and eStructuralFeature.oclIsKindOf(ecore::EReference)">
+            <widget xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="sirius_default_rules_ereference" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" referenceNameExpression="aql:eStructuralFeature.name"/>
+          </ifs>
+        </controls>
+      </groups>
+    </categories>
+  </extensions>
+</description:Group>

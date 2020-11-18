@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Eclipse-RegisterBuddy: online.yamm.coreModelDsl, online.yamm
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: online.yamm.example.dfa.design;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: online.yamm.example.dfa.design.Activator
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.sirius,
+ org.eclipse.sirius.common.acceleo.aql,
+ org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.8.0",
+ online.yamm.example.dfa;bundle-version="0.1.0",
+ org.eclipse.sirius.diagram.ui;bundle-version="6.0.2",
+ online.yamm;bundle-version="1.0.42",
+ online.yamm.coreModelDsl;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: %providerName
+Automatic-Module-Name: online.yamm.example.dfa.design

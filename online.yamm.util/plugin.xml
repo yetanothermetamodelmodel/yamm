@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="YAMM Views"
+            class="online.yamm.util.chart.ChartView"
+            id="online.yamm.util.Chart"
+            inject="true"
+            name="Yamm Chart View">
+      </view>
+      <view
+            category="YAMM Views"
+            class="online.yamm.util.table.Table"
+            id="online.yamm.util.Table"
+            inject="true"
+            name="Yamm Table View">
+      </view>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Chart -->
+      <package
+            uri="http://www.yamm.online/util/Chart"
+            class="online.yamm.util.chartModel.chart.ChartPackage"
+            genModel="Model/Chart.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            default="true"
+            extensions="chart"
+            id="online.yamm.util.YammChartView"
+            launcher="online.yamm.util.chart.ChartViewLauncher"
+            name="Yamm Chart View">
+      </editor>
+      <editor
+            default="true"
+            extensions="table"
+            id="online.yamm.util.YammTableView"
+            launcher="online.yamm.util.table.TableViewLauncher"
+            name="Yamm Table View">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Table -->
+      <package
+            class="online.yamm.util.tableModel.table.TablePackage"
+            genModel="Model/Table.genmodel"
+            uri="http://www.yamm.online/util/Table">
+      </package>
+   </extension>
+
+</plugin>

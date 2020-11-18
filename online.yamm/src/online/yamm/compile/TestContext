@@ -1,0 +1,203 @@
+Model e { clazz { Class f794779 { name ClassA superClass ( Types.RObject , ClassB ) ownedAttribute { association Property fadffa {
+	clazz ClassA name b type ClassB
+} , association Property f179a87 { clazz ClassA name c type ClassC } , Property f21052d { clazz ClassA name obj type Types.Object } , 
+Property f7c5583 { clazz ClassA name i type Types.Integer } , Property
+ f4d9161 { clazz ClassA name bool type Types.Boolean } , Property f1b5d6a { clazz ClassA name str type Types.String } , association Property
+  f5b371a { clazz ClassA name bs upper -1 type ClassB } , Property f31f399 { clazz ClassA name d type Types.Double } , Property f500ec1 { clazz ClassA name bool type Types.Boolean } , association Property f2daf8 { clazz ClassA name classD type packageA.ClassD } , Property f7f4ca5 { clazz ClassA name doubleList upper -1 type Types.Double } , association isUnique Property f32966c { clazz ClassA name cs upper -1 type ClassC } } ownedOperation { Operation f2f6e02 { name main clazz ClassA ownedParameter { Parameter f4e2a47 { name param1 type Types.Integer } , Parameter f2ae215 { name param2 type packageA.ClassD } } stateMachine StateMachine f3836e { initActive true name StateMachinef3836e rtc effect maxEffectsToBeProcessed 0 transition { Transition f21939c { name Transitionf21939c source Pseudostatef2155ea target Statef1b632d attachment TrAttachmentf5af4c4 } , Transition f4675a8 { name Transitionf4675a8 source Statef1b632d target FinalStatef3eb80c attachment TrAttachmentf712334 } , Transition f1c0a37 { name Transitionf1c0a37 source Statef1b632d target FinalStatef3eb80c attachment TrAttachmentf32692e } } subvertex { Pseudostate f2155ea { name Pseudostatef2155ea outgoing ( Transitionf21939c ) } , FinalState f3eb80c { name FinalStatef3eb80c incoming ( Transitionf4675a8 , Transitionf1c0a37 ) } , State f1b632d { name Statef1b632d outgoing ( Transitionf4675a8 , Transitionf1c0a37 ) incoming ( Transitionf21939c ) } } trAttach { TrAttachment f5af4c4 { name TrAttachmentf5af4c4
+guard
+
+{ 
+	//test Guard
+	true;
+} transition Transitionf21939c effects
+{ Effect f7cc01e {{
+
+//test Effect
+}
+}
+, Effect f41e2c0 {{
+
+//	str.toFirstUpper;
+}
+}
+, Effect f58233f {{
+	
+//
+
+}
+}
+, Effect f2ba25e {{
+	
+
+}
+}
+, Effect f54f766 {{
+
+}
+}
+, Effect f2ebe9f {{
+
+}
+} , Effect breakpoint f6c7ada {{
+//	param1 = 10;
+}
+}
+} } , TrAttachment f712334 { name TrAttachmentf712334
+guard
+{
+	true;
+//	   param1 = 10; 
+//	param1 == 10 ;
+} transition Transitionf4675a8 effects
+{ Effect f1f32b4 {{
+//	Print("a");
+}
+}
+} }
+, TrAttachment f32692e { name TrAttachmentf32692e
+guard
+{ 
+	true ;
+} transition Transitionf1c0a37 effects
+{ Effect f2288e6 {{
+//	Print("b");
+}
+}
+} }
+} } } , Operation f21fe47 { name opA clazz ClassA ownedParameter { isUnique Parameter f64718a { name param1 direction inout type Types.Integer } , Parameter f403239 { name param2 direction inout type packageA.ClassD } } stateMachine StateMachine f7d9a8 { name StateMachinef7d9a8 rtc effect maxEffectsToBeProcessed 0 transition { Transition f21fc6c { name Transitionf21fc6c source Pseudostatef55176b target FinalStatef164330 attachment TrAttachmentf297ff1 } } subvertex { Pseudostate f55176b { name Pseudostatef55176b outgoing ( Transitionf21fc6c ) } , FinalState f164330 { name FinalStatef164330 incoming ( Transitionf21fc6c ) } } trAttach { TrAttachment f297ff1 { name TrAttachmentf297ff1
+guard
+{ true ; } transition Transitionf21fc6c effects
+{ Effect fd91f0 {{
+	Print(param1 + " | " + param2);
+	param1 = 202;
+	param2 = new packageA.ClassD;
+}
+}
+} }
+} } } , Operation f58b2ef { name opAB clazz ClassA returnType Types.Integer stateMachine StateMachine f4ddeec { name StateMachinef4ddeec rtc effect maxEffectsToBeProcessed 0 transition { Transition f41154d { name Transitionf41154d source Pseudostatef2c2932 target FinalStatef107e22 attachment TrAttachmentf602d7c } } subvertex { Pseudostate f2c2932 { name Pseudostatef2c2932 outgoing ( Transitionf41154d ) } , FinalState f107e22 { name FinalStatef107e22 incoming ( Transitionf41154d ) } } trAttach { TrAttachment f602d7c { name TrAttachmentf602d7c
+guard
+{ true ; } transition Transitionf41154d effects
+{ 
+Effect f6fd1e1 {{
+	setReturnValue(111);
+}
+}
+} }
+} } } , Operation f3ec929 { name opExtension clazz ClassA returnType packageA.ClassD ownedParameter { Parameter f390029 { name param1 direction in type packageA.ClassD } , isUnique Parameter f44364 { name param2 direction in type Types.Integer } } stateMachine StateMachine f681315 { name StateMachinef7d9a8 rtc effect maxEffectsToBeProcessed 0 transition { Transition f1f60d5 { name Transitionf21fc6c source Pseudostatef55176b target FinalStatef164330 attachment TrAttachmentf297ff1 } } subvertex { Pseudostate f1f5a { name Pseudostatef55176b outgoing ( Transitionf21fc6c ) } , FinalState f38ed49 { name FinalStatef164330 incoming ( Transitionf21fc6c ) } } trAttach { TrAttachment f4820e6 { name TrAttachmentf297ff1
+guard
+{ true ; } transition Transitionf21fc6c effects
+{ Effect f3e1862 {{
+	Print(param1 + " | " + param2);
+}
+}
+} }
+} } } , Operation f398b4c { name opExtension2 clazz ClassA returnType packageA.ClassD ownedParameter { Parameter f78260e { name param1 type ClassA } ,  Parameter f29304d { name param2 type ClassA } } stateMachine StateMachine f4703e { name StateMachinef7d9a8 rtc effect maxEffectsToBeProcessed 0 transition { Transition f67fef7 { name Transitionf21fc6c source Pseudostatef55176b target FinalStatef164330 attachment TrAttachmentf297ff1 } } subvertex { Pseudostate f2f656e { name Pseudostatef55176b outgoing ( Transitionf21fc6c ) } , FinalState f72dc3a { name FinalStatef164330 incoming ( Transitionf21fc6c ) } } trAttach { TrAttachment f77ddbe { name TrAttachmentf297ff1
+guard
+{ true ; } transition Transitionf21fc6c effects
+{ Effect f670c1e {
+{ Print( param1 + " | " + param2 ) ; } }
+} }
+} } } , Operation f1da676 { name opExtension3 clazz ClassA returnType packageA.ClassD ownedParameter { Parameter f2b7876 { name param1 type Types.Object } , Parameter f40800f { name param2 type ClassA } , Parameter f79d08f { name param3 type ClassA } } stateMachine StateMachine f50d6cd { name StateMachinef7d9a8 rtc effect maxEffectsToBeProcessed 0 transition { Transition f7eee27 { name Transitionf21fc6c source Pseudostatef55176b target FinalStatef164330 attachment TrAttachmentf297ff1 } } subvertex { Pseudostate f33e9a { name Pseudostatef55176b outgoing ( Transitionf21fc6c ) } , FinalState f438299 { name FinalStatef164330 incoming ( Transitionf21fc6c ) } } trAttach { TrAttachment f255850 { name TrAttachmentf297ff1
+guard
+{ true ; } transition Transitionf21fc6c effects
+{ Effect f2a0460 {
+{ Print( param1 + " | " + param2 ) ; } }
+} }
+} } } , Operation f606403 { name opExtension4 clazz ClassA returnType packageA.ClassD ownedParameter { Parameter f75f036 { name param1 type Types.Object } , Parameter f6e7c1e { name param2 type Types.Object } , Parameter f5bc61f { name param3 type Types.Object } } stateMachine StateMachine f1b5ce5 { name StateMachinef7d9a8 rtc effect maxEffectsToBeProcessed 0 transition { Transition f6f6c64 { name Transitionf21fc6c source Pseudostatef55176b target FinalStatef164330 attachment TrAttachmentf297ff1 } } subvertex { Pseudostate f14ad5b { name Pseudostatef55176b outgoing ( Transitionf21fc6c ) } , FinalState f6f58e2 { name FinalStatef164330 incoming ( Transitionf21fc6c ) } } trAttach { TrAttachment f135167 { name TrAttachmentf297ff1
+guard
+{ true ; } transition Transitionf21fc6c effects
+{ Effect f1f915d {
+{ Print( param1 + " | " + param2 ) ; } }
+} }
+} } } } } , Class f3c2cc2 { name ClassC superClass ( Types.RObject ) ownedAttribute { association Property f5c6754 { clazz ClassC name b type ClassB } , association Property f6c7589 { clazz ClassC name a type ClassA } } ownedOperation { Operation f6936c4 { name opC clazz ClassC ownedParameter { isUnique Parameter f134082 { name param1 direction inout type Types.Integer } } stateMachine StateMachine f73b03b { name StateMachinef73b03b rtc effect maxEffectsToBeProcessed 0 transition { Transition f6ca129 { name Transitionf6ca129 source Pseudostatef13af5e target FinalStatef69a9f5 attachment TrAttachmentf38e6f7 } } subvertex { Pseudostate f13af5e { name Pseudostatef13af5e outgoing ( Transitionf6ca129 ) } , FinalState f69a9f5 { name FinalStatef69a9f5 incoming ( Transitionf6ca129 ) } } trAttach { TrAttachment f38e6f7 { name TrAttachmentf38e6f7
+guard
+{ true ; } transition Transitionf6ca129 effects
+{ Effect f472198 {{
+	Print(param1);
+	param1 = 202;
+}
+}
+, Effect f38d18a {{
+
+}
+}
+} }
+} } } , Operation f1861cc { name opCA clazz ClassC returnType ClassB ownedParameter { isUnique Parameter f473067 { name param1 type Types.Integer } } stateMachine StateMachine f1a529c { name StateMachinef1a529c rtc effect maxEffectsToBeProcessed 0 transition { Transition f52b02f { name Transitionf52b02f source Pseudostatef167594 target FinalStatef94099 attachment TrAttachmentf37bc77 } } subvertex { Pseudostate f167594 { name Pseudostatef167594 outgoing ( Transitionf52b02f ) } , FinalState f94099 { name FinalStatef94099 incoming ( Transitionf52b02f ) } } trAttach { TrAttachment f37bc77 { name TrAttachmentf37bc77
+guard
+{ true ; } transition Transitionf52b02f effects
+{ Effect f19ef8 {{
+	Print(param1);
+	setReturnValue(new ClassA);
+}
+}
+} }
+} } } } } , Class f293a06 { name ClassB superClass ( Types.RObject ) ownedAttribute { association Property f57a5ea { clazz ClassB name c type ClassC } , association Property f5e7c62 { clazz ClassB name a type ClassA } , Property f3575a0 { clazz ClassB name i type Types.Integer } } ownedOperation { Operation f400be0 { name opB clazz ClassB stateMachine StateMachine f472f3f { name StateMachinef472f3f rtc effect maxEffectsToBeProcessed 0 } } } } , Class f77a137 { name A superClass ( Types.RObject ) ownedOperation { Operation f2e47fd { name op clazz A stateMachine StateMachine f75b186 { name StateMachinef75b186 rtc effect maxEffectsToBeProcessed 0 transition { Transition f4a75bb { name Transitionf4a75bb source Pseudostatef3bb3ee target FinalStatef420675 attachment TrAttachmentf4fd7e3 } } subvertex { Pseudostate f3bb3ee { name Pseudostatef3bb3ee outgoing ( Transitionf4a75bb ) } , FinalState f420675 { name FinalStatef420675 incoming ( Transitionf4a75bb ) } } trAttach { TrAttachment f4fd7e3 { name TrAttachmentf4fd7e3
+guard
+{ true ; } transition Transitionf4a75bb effects
+{ Effect f5fc1a5 {{
+	Print("a");
+}
+}
+} }
+} } } , Operation f511bd4 { name opA clazz A stateMachine StateMachine f48f396 { name StateMachinef75b186 rtc effect maxEffectsToBeProcessed 0 transition { Transition f121939 { name Transitionf4a75bb source Pseudostatef3bb3ee target FinalStatef420675 attachment TrAttachmentf4fd7e3 } } subvertex { Pseudostate f7b393d { name Pseudostatef3bb3ee outgoing ( Transitionf4a75bb ) } , FinalState f748cb4 { name FinalStatef420675 incoming ( Transitionf4a75bb ) } } trAttach { TrAttachment f209874 { name TrAttachmentf4fd7e3
+guard
+{ true ; } transition Transitionf4a75bb effects
+{ Effect f7b9022 {
+{ Print( "opA_a" ) ; } }
+} }
+} } } } } , Class f202f5d { name B superClass ( Types.RObject , A ) ownedOperation { Operation f31e522 { name op clazz B stateMachine StateMachine f3acbd6 { name StateMachinef75b186 rtc effect maxEffectsToBeProcessed 0 transition { Transition f6e00c4 { name Transitionf4a75bb source Pseudostatef3bb3ee target FinalStatef420675 attachment TrAttachmentf4fd7e3 } } subvertex { Pseudostate f76dcf0 { name Pseudostatef3bb3ee outgoing ( Transitionf4a75bb ) } , FinalState f6e3454 { name FinalStatef420675 incoming ( Transitionf4a75bb ) } } trAttach { TrAttachment faadca { name TrAttachmentf4fd7e3
+guard
+{ true ; } transition Transitionf4a75bb effects
+{ Effect f62e4ee {{
+	
+	Print("b");
+}
+}
+} }
+} } } } } , Class ff1f8e { name C superClass ( Types.RObject , B ) ownedOperation { Operation f7ef2 { name op clazz C stateMachine StateMachine f35b153 { name StateMachinef75b186 rtc effect maxEffectsToBeProcessed 0 transition { Transition f4ae083 { name Transitionf4a75bb source Pseudostatef3bb3ee target FinalStatef420675 attachment TrAttachmentf4fd7e3 } } subvertex { Pseudostate f35c200 { name Pseudostatef3bb3ee outgoing ( Transitionf4a75bb ) } , FinalState f425cf5 { name FinalStatef420675 incoming ( Transitionf4a75bb ) } } trAttach { TrAttachment f7dcde0 { name TrAttachmentf4fd7e3
+guard
+{ true ; } transition Transitionf4a75bb effects
+{ Effect f33f98e {{
+	Print("c");
+}
+}
+
+} }
+} } } } } , Class f5a7c4f { name Main superClass ( Types.RObject ) ownedAttribute { association Property f6bf43 { clazz Main name a type A } , association Property f58ef07 { clazz Main name b type B } , association Property f4eef56 { clazz Main name c type C } } ownedOperation { Operation f2629e2 { name main clazz Main stateMachine StateMachine f4faa36 { initActive false name StateMachinef4faa36 rtc effect maxEffectsToBeProcessed 0 transition { Transition f52d2f5 { name Transitionf52d2f5 source Pseudostatef1fea36 target Statefdf288 attachment TrAttachmentf182aa2 } , Transition f6d8b2d { name Transitionf6d8b2d source Statefdf288 target FinalStatef1a1e92 attachment TrAttachmentf10b6c2 } } subvertex { Pseudostate f1fea36 { name Pseudostatef1fea36 outgoing ( Transitionf52d2f5 ) } , FinalState f1a1e92 { name FinalStatef1a1e92 incoming ( Transitionf6d8b2d ) } , State fdf288 { name Statefdf288 outgoing ( Transitionf6d8b2d ) incoming ( Transitionf52d2f5 ) } } trAttach { TrAttachment f182aa2 { name TrAttachmentf182aa2
+guard
+{ true ; } transition Transitionf52d2f5 effects
+{ Effect f571e17 {{
+	b = new B;
+}
+}
+, Effect f77c1bb {{
+//	b.ClassA:opA();
+}
+}
+, Effect f442f85 {
+}
+, Effect f5ad5b5 {
+}
+, Effect f269657 {
+}
+, Effect f45e4d {
+}
+} }
+, TrAttachment f10b6c2 { name TrAttachmentf10b6c2
+guard
+{ true ; } transition Transitionf6d8b2d effects
+{ Effect f5d78bf {
+}
+, Effect f1b2ab9 {
+}
+, Effect f2a7c19 {
+}
+, Effect f3ff726 {
+}
+, Effect f47efa1 {
+}
+} }
+} } } } } } packages { Package f5d0981 { name Types ownedMemberPackage { Class f461c57 { name RObject
+ 	package Types ownedAttribute { Property f116b72 { name rContainer type RObject } }
+ } , Class f6242bd { name Integer package Types } , Class f73d7dc { name Double package Types } ,
+  Class f5756e8 { name Boolean package Types } , Class f1de541 { name String package Types } , Class f6a3c79 { name Object package Types } } } , Package f616bc3 { name packageA ownedMemberPackage { Class f2cdaed { name ClassD package packageA superClass ( Types.RObject ) ownedAttribute { association Property f2d668d { clazz ClassD name classB type ClassB } } } } } } }

@@ -1,0 +1,535 @@
+
+
+-----------
+
+
+Case 2. 
+b = new ClassB;
+set(obj, createInstance("ClassB"), "itsRmofClass", "b");
+
+Case 3.
+b.c = new ClassC;
+set(get("", obj, "itsRmofClass", "b"), createInstance("ClassC"), "c");
+
+Case 4.
+b.c = new ClassC as ClassC;
+set(get("", obj, "itsRmofClass", "b"), createInstance("ClassC"), "c");
+
+Case 5.
+(b as ClassB).c = new ClassC as ClassC;
+set(get("", obj, "itsRmofClass", "b"), createInstance("ClassC"), "c");
+
+Case 6.
+b.c.a.b.c.a.b;
+get("", obj, "itsRmofClass", "b", "c", "a", "b", "c", "a", "b");
+
+Case 7.
+bool = !!!b.a.bool;
+set(obj, (!(!(!((java.lang.Boolean)get("", obj, "itsRmofClass", "b", "a", "bool")).booleanValue()))), "itsRmofClass", "bool");
+
+Case 8.
+b;
+get("", obj, "itsRmofClass", "b");
+
+Case 9.
+this.b;
+get("", obj, "itsRmofClass", "b");
+
+Case 10.
+toString;
+get("", obj, "itsRmofClass").toString();
+
+Case 11.
+toString.equals(str);
+((java.lang.String)get("", obj, "itsRmofClass").toString()).equals(get("", obj, "itsRmofClass", "str"));
+
+Case 12.
+clone.equals(obj);
+((java.lang.Object)get("", obj, "itsRmofClass").clone()).equals(get("", obj, "itsRmofClass", "obj"));
+
+Case 13.
+b.a = this;
+set(get("", obj, "itsRmofClass", "b"), get("", obj, "itsRmofClass"), "a");
+
+Case 14.
+d = i + d;  
+set(obj, (((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue() + ((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue()), "itsRmofClass", "d");
+
+Case 15.
+d = i / 1.1;
+set(obj, (((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue() / 1.1), "itsRmofClass", "d");
+
+Case 16.
+bs.remove(param1 as Integer);  
+((org.eclipse.emf.common.util.AbstractEList)get("", obj, "itsRmofClass", "bs")).remove(((java.lang.Integer)get("", obj, "param1")));
+
+Case 17.
+"hello".equals(str); 
+"hello".equals(get("", obj, "itsRmofClass", "str"));
+
+Case 18.
+param2.classB.a;  
+get("", obj, "param2", "classB", "a");
+
+Case 19.
+d = i + 12.4;
+set(obj, (((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue() + 12.4), "itsRmofClass", "d");
+
+Case 20.
+b.a.bs.addAll(b.a.bs);
+((org.eclipse.emf.common.util.AbstractEList)get("", obj, "itsRmofClass", "b", "a", "bs")).addAll(((java.util.Collection)get("", obj, "itsRmofClass", "b", "a", "bs")));
+
+Case 21.
+bs.addAll(bs);
+((org.eclipse.emf.common.util.AbstractEList)get("", obj, "itsRmofClass", "bs")).addAll(((java.util.Collection)get("", obj, "itsRmofClass", "bs")));
+
+Case 22.
+b.a.bs.add(new ClassB);
+((org.eclipse.emf.common.util.AbstractEList)get("", obj, "itsRmofClass", "b", "a", "bs")).add(createInstance("ClassB"));
+
+Case 23.
+b.a.doubleList.add(d);
+((org.eclipse.emf.common.util.AbstractEList)get("", obj, "itsRmofClass", "b", "a", "doubleList")).add(((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue());
+
+Case 24.
+b.a.doubleList.addAll(doubleList as org.eclipse.emf.common.util.EList<Double>);
+((org.eclipse.emf.common.util.AbstractEList)get("", obj, "itsRmofClass", "b", "a", "doubleList")).addAll(((org.eclipse.emf.common.util.EList<java.lang.Double>)get("", obj, "itsRmofClass", "doubleList")));
+
+Case 25.
+doubleList.addAll(doubleList);
+((org.eclipse.emf.common.util.AbstractEList)get("", obj, "itsRmofClass", "doubleList")).addAll(((java.util.Collection)get("", obj, "itsRmofClass", "doubleList")));
+
+Case 26.
+obj = new java.util.ArrayList(bs);
+set(obj, new java.util.ArrayList(((java.util.Collection)get("", obj, "itsRmofClass", "bs"))), "itsRmofClass", "obj");
+
+Case 27.
+obj = new java.util.HashMap;
+set(obj, new java.util.HashMap(), "itsRmofClass", "obj");
+
+Case 28.
+obj = new java.util.ArrayList(bs) as java.util.List;
+set(obj, new java.util.ArrayList(((java.util.Collection)get("", obj, "itsRmofClass", "bs"))), "itsRmofClass", "obj");
+
+Case 29.
+b.a.bs.get(0).a.b.c.a.bs.get(9);
+((org.eclipse.emf.common.util.BasicEList)get("", ((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "b", "a", "bs")).get(0), "a", "b", "c", "a", "bs")).get(9);
+
+Case 30.
+((b.c.a.obj) as java.util.HashMap).clear;
+((java.util.HashMap)get("", obj, "itsRmofClass", "b", "c", "a", "obj")).clear();
+
+Case 31.
+((b.c.a.obj) as java.util.HashMap<String, String>).put("key", "value");
+((java.util.HashMap)get("", obj, "itsRmofClass", "b", "c", "a", "obj")).put("key", "value");
+
+Case 32.
+((b.c.a.obj as Object) as java.util.HashMap<String, String>).put("key", "value");
+((java.util.HashMap)get("", obj, "itsRmofClass", "b", "c", "a", "obj")).put("key", "value");
+
+Case 33.
+((b.c.a.obj as Object) as java.util.HashMap).put("key", "value");
+((java.util.HashMap)get("", obj, "itsRmofClass", "b", "c", "a", "obj")).put("key", "value");
+
+Case 34.
+((b.c.a.obj as java.util.HashMap).put("key", new ClassB) as ClassB).a = this;
+set(((java.util.HashMap)get("", obj, "itsRmofClass", "b", "c", "a", "obj")).put("key", createInstance("ClassB")), get("", obj, "itsRmofClass"), "a");
+
+Case 35.
+bs.get(i);
+((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "bs")).get(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue());
+
+Case 36.
+bs.get(i.intValue);
+((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "bs")).get(((java.lang.Integer)get("", obj, "itsRmofClass", "i")).intValue());
+
+Case 37. 
+d = (2 + 5) * 10 + d;
+set(obj, (((2 + 5) * 10) + ((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue()), "itsRmofClass", "d");
+
+Case 38. 
+d = (2 + 5.0) * 10 + d;
+set(obj, (((2 + 5.0) * 10) + ((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue()), "itsRmofClass", "d");
+
+Case 39. 
+d = (2 + 5.0) * 10 / d;
+set(obj, (((2 + 5.0) * 10) / ((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue()), "itsRmofClass", "d");
+
+Case 40.
+java.util.Collections.EMPTY_LIST.add(obj);
+((java.util.List)java.util.Collections.EMPTY_LIST).add(get("", obj, "itsRmofClass", "obj"));
+
+Case 41.
+java.util.Collections.addAll(bs, b);
+java.util.Collections.addAll(((java.util.Collection)get("", obj, "itsRmofClass", "bs")), get("", obj, "itsRmofClass", "b"));
+
+Case 42.
+java.util.Arrays.sort(bs.toArray, obj as java.util.Comparator);
+java.util.Arrays.sort(((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "bs")).toArray(), ((java.util.Comparator)get("", obj, "itsRmofClass", "obj")));
+
+Case 43.
+Print(obj instanceof ClassA);
+print(determineFullyQualifiedPackageName(get("", obj, "itsRmofClass", "obj")).equals("ClassA"));
+
+Case 44.
+Print(obj instanceof java.util.HashMap);
+print(get("", obj, "itsRmofClass", "obj") instanceof java.util.HashMap);
+
+Case 45.
+((b.c.a.obj as java.util.HashMap).get(b) as Boolean).compareTo(true);
+((java.lang.Boolean)((java.util.HashMap)get("", obj, "itsRmofClass", "b", "c", "a", "obj")).get(get("", obj, "itsRmofClass", "b"))).compareTo(true);
+
+Case 46.
+(java.util.Collections.EMPTY_SET as java.util.Collections).hashCode;
+((java.lang.Object)java.util.Collections.EMPTY_SET).hashCode();
+
+Case 47.
+new java.util.ArrayList(null);
+new java.util.ArrayList(null);
+
+Case 48.
+(java.util.Collections.EMPTY_MAP.put("key", new packageA.ClassD) as Exception).cause.addSuppressed(new Exception);
+((java.lang.Throwable)((java.lang.Throwable)((java.util.Map)java.util.Collections.EMPTY_MAP).put("key", createInstance("packageA.ClassD"))).getCause()).addSuppressed(((java.lang.Throwable)new java.lang.Exception()));
+
+
+Case 49.
+setReturnValue(b.a.i);
+setReturnValue(((java.lang.Number)get("", obj, "itsRmofClass", "b", "a", "i")).intValue());
+
+Case 50.
+b.a.bs.remove(i).a.b.c.a.bs.remove(i);
+((org.eclipse.emf.common.util.BasicEList)get("", ((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "b", "a", "bs")).remove(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()), "a", "b", "c", "a", "bs")).remove(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue());
+
+Case 51.
+b.a.bs.remove(i).a.b.c.a.bs.remove(i as Integer);
+((org.eclipse.emf.common.util.AbstractEList)get("", ((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "b", "a", "bs")).remove(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()), "a", "b", "c", "a", "bs")).remove(((java.lang.Integer)get("", obj, "itsRmofClass", "i")));
+
+Case 52.
+b.a.bs.remove(Integer.valueOf(i));
+((org.eclipse.emf.common.util.AbstractEList)get("", obj, "itsRmofClass", "b", "a", "bs")).remove(Integer.valueOf(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()));
+
+Case 53.
+b.a.bs.get(i);
+((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "b", "a", "bs")).get(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue());
+
+Case 54.
+b.a.bs.remove(d as int);
+((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "b", "a", "bs")).remove(((java.lang.Number)get("", obj, "itsRmofClass", "d")).intValue());
+
+Case 55.
+d = i;
+set(obj, get("", obj, "itsRmofClass", "i"), "itsRmofClass", "d");
+
+Case 56.
+d = i as double;
+set(obj, get("", obj, "itsRmofClass", "i"), "itsRmofClass", "d");
+
+Case 57.
+b.a.d as double;
+((java.lang.Number)get("", obj, "itsRmofClass", "b", "a", "d")).doubleValue();
+
+Case 58.
+b.a.d as Double;
+((java.lang.Double)get("", obj, "itsRmofClass", "b", "a", "d"));
+
+Case 59.
+(10 as int) + (d as int);
+(((int)10) + ((java.lang.Number)get("", obj, "itsRmofClass", "d")).intValue());
+
+Case 60.
+(10.0 as Double) + (d as double);
+(java.lang.Double.valueOf(10.0) + ((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue());
+
+Case 61.
+param2.classB.a = param2.classB.a.b.a;
+set(get("", obj, "param2", "classB"), get("", obj, "param2", "classB", "a", "b", "a"), "a");
+
+Case 62.
+classD.classB.a = classD.classB.a.b.a;
+set(get("", obj, "itsRmofClass", "classD", "classB"), get("", obj, "itsRmofClass", "classD", "classB", "a", "b", "a"), "a");
+
+Case 63.
+i = Integer.valueOf(10) as int;
+set(obj, Integer.valueOf(10), "itsRmofClass", "i");
+
+Case 64.
+c.b = b.a.c.opCA(i);
+opCall(get("", obj, "itsRmofClass", "b", "a", "c"), "opCA", new BasicEList<InoutAdapter>(), null, "itsRmofClass.c.b", ((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue());
+
+Case 65.
+b.a.c.opCA(b.a.i++);
+opCall(get("", obj, "itsRmofClass", "b", "a", "c"), "opCA", new BasicEList<InoutAdapter>(), null, null, ((java.lang.Number)get("++", obj, "itsRmofClass", "b", "a", "i")).intValue());
+
+Case 66.
+b.a.i++;
+((java.lang.Number)get("++", obj, "itsRmofClass", "b", "a", "i")).intValue();
+
+Case 67.
+b.a.bs.get(0).a.i++;
+((java.lang.Number)get("++", ((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "b", "a", "bs")).get(0), "a", "i")).intValue();
+
+Case 68.
+(10.0 as Double) + d;
+(java.lang.Double.valueOf(10.0) + ((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue());
+
+Case 69.
+i < d == d >= i;
+((((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue() < ((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue()) == (((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue() >= ((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()));
+
+Case 70.
+i-- < d++ == d >= i;
+((((java.lang.Number)get("--", obj, "itsRmofClass", "i")).intValue() < ((java.lang.Number)get("++", obj, "itsRmofClass", "d")).doubleValue()) == (((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue() >= ((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()));
+
+Case 71.
+Print(i++ < d-- == (d == i));
+print(((((java.lang.Number)get("++", obj, "itsRmofClass", "i")).intValue() < ((java.lang.Number)get("--", obj, "itsRmofClass", "d")).doubleValue()) == (((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue() == ((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue())));
+
+Case 72.
+(obj as java.util.List).get(0);
+((java.util.List)get("", obj, "itsRmofClass", "obj")).get(0);
+
+Case 73.
+((b as ClassB).a as ClassB).c.opCA(b.a.i++); 
+opCall(get("", obj, "itsRmofClass", "b", "a", "c"), "opCA", new BasicEList<InoutAdapter>(), null, null, ((java.lang.Number)get("++", obj, "itsRmofClass", "b", "a", "i")).intValue());
+
+Case 74.
+opAB;
+opCall(get("", obj, "itsRmofClass"), "opAB", new BasicEList<InoutAdapter>(), null, null);
+
+Case 75.
+opAB();
+opCall(get("", obj, "itsRmofClass"), "opAB", new BasicEList<InoutAdapter>(), null, null);
+
+Case 76.
+this.opAB;
+opCall(get("", obj, "itsRmofClass"), "opAB", new BasicEList<InoutAdapter>(), null, null);
+
+Case 77.
+b.a = (b.a.c.opCA(b.a.i++) as ClassA); // hier: cast intern nicht notwendig
+opCall(get("", obj, "itsRmofClass", "b", "a", "c"), "opCA", new BasicEList<InoutAdapter>(), null, "itsRmofClass.b.a", ((java.lang.Number)get("++", obj, "itsRmofClass", "b", "a", "i")).intValue());
+
+Case 78.
+this.b.a = this.b.a.c.opCA(b.a.i++);
+opCall(get("", obj, "itsRmofClass", "b", "a", "c"), "opCA", new BasicEList<InoutAdapter>(), null, "itsRmofClass.b.a", ((java.lang.Number)get("++", obj, "itsRmofClass", "b", "a", "i")).intValue());
+
+Case 79.
+cs.get(i).opCA(b.a.i++);
+opCall(((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "cs")).get(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()), "opCA", new BasicEList<InoutAdapter>(), null, null, ((java.lang.Number)get("++", obj, "itsRmofClass", "b", "a", "i")).intValue());
+
+Case 80.
+i = opAB;
+opCall(get("", obj, "itsRmofClass"), "opAB", new BasicEList<InoutAdapter>(), null, "itsRmofClass.i");
+
+Case 81.
+this.i = this.opAB;
+opCall(get("", obj, "itsRmofClass"), "opAB", new BasicEList<InoutAdapter>(), null, "itsRmofClass.i");
+
+Case 82.
+((obj as java.util.HashMap).get("key") as ClassA).b;
+get("", ((java.util.HashMap)get("", obj, "itsRmofClass", "obj")).get("key"), "b");
+
+Case 83.
+cs.get(i).opC(b.a.i);
+{
+EList<InoutAdapter> inAdapters = new BasicEList<InoutAdapter>();
+Object argTmp0 = inoutHelper("i", "",true, inAdapters, new Function<Object, Object>() {
+	public Object apply(Object notUsed) {
+		 return get("", obj, "itsRmofClass", "b", "a");
+	}
+}, false);
+opCall(((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "cs")).get(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()), "opC", inAdapters, null,null, argTmp0);
+};
+
+Case 84.
+cs.get(i).opC(b.a.i++);
+{
+EList<InoutAdapter> inAdapters = new BasicEList<InoutAdapter>();
+Object argTmp0 = inoutHelper("i", "++",true, inAdapters, new Function<Object, Object>() {
+	public Object apply(Object notUsed) {
+		 return get("", obj, "itsRmofClass", "b", "a");
+	}
+}, false);
+opCall(((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "cs")).get(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()), "opC", inAdapters, null,null, argTmp0);
+};
+
+Case 85.
+c.opC(((obj as java.util.HashMap).get("key") as ClassB).a.i);
+{
+EList<InoutAdapter> inAdapters = new BasicEList<InoutAdapter>();
+Object argTmp0 = inoutHelper("i", "",true, inAdapters, new Function<Object, Object>() {
+	public Object apply(Object notUsed) {
+		 return get("", ((java.util.HashMap)get("", obj, "itsRmofClass", "obj")).get("key"), "a");
+	}
+}, false);
+opCall(get("", obj, "itsRmofClass", "c"), "opC", inAdapters, null,null, argTmp0);
+};
+
+Case 86.
+cs.get(i).opC(b.i);
+{
+EList<InoutAdapter> inAdapters = new BasicEList<InoutAdapter>();
+Object argTmp0 = inoutHelper("i", "",true, inAdapters, new Function<Object, Object>() {
+	public Object apply(Object notUsed) {
+		 return get("", obj, "itsRmofClass", "b");
+	}
+}, false);
+opCall(((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "cs")).get(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()), "opC", inAdapters, null,null, argTmp0);
+};
+
+
+Case 87.
+cs.get(i).opC(i);
+{
+EList<InoutAdapter> inAdapters = new BasicEList<InoutAdapter>();
+Object argTmp0 = inoutHelper("i", "",true, inAdapters, new Function<Object, Object>() {
+	public Object apply(Object notUsed) {
+		 return get("", obj, "itsRmofClass");
+	}
+}, false);
+opCall(((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "cs")).get(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()), "opC", inAdapters, null,null, argTmp0);
+};
+
+Case 88.
+cs.get(i).opC(this.i);
+{
+EList<InoutAdapter> inAdapters = new BasicEList<InoutAdapter>();
+Object argTmp0 = inoutHelper("i", "",true, inAdapters, new Function<Object, Object>() {
+	public Object apply(Object notUsed) {
+		 return get("", obj, "itsRmofClass");
+	}
+}, false);
+opCall(((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "cs")).get(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()), "opC", inAdapters, null,null, argTmp0);
+};
+
+Case 89.
+c.opC(((obj as java.util.HashMap).get("key") as ClassA).i);
+{
+EList<InoutAdapter> inAdapters = new BasicEList<InoutAdapter>();
+Object argTmp0 = inoutHelper("i", "",true, inAdapters, new Function<Object, Object>() {
+	public Object apply(Object notUsed) {
+		 return ((java.util.HashMap)get("", obj, "itsRmofClass", "obj")).get("key");
+	}
+}, false);
+opCall(get("", obj, "itsRmofClass", "c"), "opC", inAdapters, null,null, argTmp0);
+};
+
+Case 90.
+cs.get(i).opC(this.b.a.i++);
+{
+EList<InoutAdapter> inAdapters = new BasicEList<InoutAdapter>();
+Object argTmp0 = inoutHelper("i", "++",true, inAdapters, new Function<Object, Object>() {
+	public Object apply(Object notUsed) {
+		 return get("", obj, "itsRmofClass", "b", "a");
+	}
+}, false);
+opCall(((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "cs")).get(((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue()), "opC", inAdapters, null,null, argTmp0);
+};
+
+Case 91. 
+this.opExtension2(this); 
+opCall(get("", obj, "itsRmofClass"), "opExtension2", new BasicEList<InoutAdapter>(), null, null, get("", obj, "itsRmofClass"), get("", obj, "itsRmofClass"));
+
+Case 92.
+b.a.classD.opExtension(101);
+opCall(get("", obj, "itsRmofClass"), "opExtension", new BasicEList<InoutAdapter>(), null, null, get("", obj, "itsRmofClass", "b", "a", "classD"), 101);
+
+Case 93.
+bs.get(0).a.classD.opExtension(12);
+opCall(get("", obj, "itsRmofClass"), "opExtension", new BasicEList<InoutAdapter>(), null, null, get("", ((org.eclipse.emf.common.util.BasicEList)get("", obj, "itsRmofClass", "bs")).get(0), "a", "classD"), 12);
+
+Case 94. 
+str = str.toFirstUpper;
+set(obj, org.eclipse.xtext.xbase.lib.StringExtensions.toFirstUpper(((java.lang.String)get("", obj, "itsRmofClass", "str"))), "itsRmofClass", "str");
+
+Case 95.
+str.toFirstUpper;
+org.eclipse.xtext.xbase.lib.StringExtensions.toFirstUpper(((java.lang.String)get("", obj, "itsRmofClass", "str")));
+
+Case 96.
+str.toFirstUpper.opExtension3(new ClassA, new ClassA);
+opCall(get("", obj, "itsRmofClass"), "opExtension3", new BasicEList<InoutAdapter>(), null, null, org.eclipse.xtext.xbase.lib.StringExtensions.toFirstUpper(((java.lang.String)get("", obj, "itsRmofClass", "str"))), createInstance("ClassA"), createInstance("ClassA"));
+
+Case 97.
+classD = str.toFirstUpper.opExtension3(new ClassA, new ClassA);
+opCall(get("", obj, "itsRmofClass"), "opExtension3", new BasicEList<InoutAdapter>(), null, "itsRmofClass.classD", org.eclipse.xtext.xbase.lib.StringExtensions.toFirstUpper(((java.lang.String)get("", obj, "itsRmofClass", "str"))), createInstance("ClassA"), createInstance("ClassA"));
+
+Case 98.
+opExtension4(str.toFirstUpper, obj.identityEquals(b));
+opCall(get("", obj, "itsRmofClass"), "opExtension4", new BasicEList<InoutAdapter>(), null, null, get("", obj, "itsRmofClass"), org.eclipse.xtext.xbase.lib.StringExtensions.toFirstUpper(((java.lang.String)get("", obj, "itsRmofClass", "str"))), org.eclipse.xtext.xbase.lib.ObjectExtensions.identityEquals(get("", obj, "itsRmofClass", "obj"), get("", obj, "itsRmofClass", "b")));
+
+Case 99.
+d as int;
+((java.lang.Number)get("", obj, "itsRmofClass", "d")).intValue();
+
+Case 100.
+d as Double;
+asd
+
+Case 101.
+d as double;
+((java.lang.Number)get("", obj, "itsRmofClass", "d")).doubleValue();
+
+Case 102.
+d as Integer;
+asd
+
+Case 103.
+d as Float;
+asd
+
+Case 104.
+d as Long;
+asd
+
+Case 105.
+i as int;
+((java.lang.Number)get("", obj, "itsRmofClass", "i")).intValue();
+
+Case 106.
+i as double;
+((java.lang.Number)get("", obj, "itsRmofClass", "i")).doubleValue();
+
+Case 107.
+1.0 as Double;
+java.lang.Double.valueOf(1.0);
+
+Case 108.
+1 as double;
+((double)1);
+
+Case 109.
+1.4 as int;
+((int)1.4);
+
+Case 110.
+d as int;
+((java.lang.Number)get("", obj, "itsRmofClass", "d")).intValue();
+
+Case 111.
+1 as int;
+((int)1);
+
+Case 112.
+1.3 as Integer;
+java.lang.Integer.valueOf(1.3);
+
+Case 113.
+(obj as Number) as Double;
+((java.lang.Double)get("", obj, "itsRmofClass", "obj"));
+
+Case 114.
+d = d as Long + 10;
+asdasd
+
+Case 115.
+i = (d as Integer).intValue;
+asd
+
+
+
+
+
+
+
+
+

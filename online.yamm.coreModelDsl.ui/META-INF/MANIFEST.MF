@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: online.yamm.coreModelDsl.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: online.yamm.coreModelDsl.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: online.yamm.coreModelDsl.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: online.yamm.coreModelDsl,
+ online.yamm.coreModelDsl.ide,
+ online.yamm.coreModelXmi,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.11.500",
+ org.eclipse.ui.ide;bundle-version="3.15.200",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.23.0",
+ org.eclipse.xtext.common.types.ui,
+ org.eclipse.ui,
+ org.eclipse.xtext.xbase.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder,
+ org.eclipse.xtend.lib;bundle-version="2.14.0";resolution:=optional,
+ org.eclipse.jdt.debug.ui,
+ org.eclipse.sirius;bundle-version="6.0.2",
+ org.eclipse.sirius.ui;bundle-version="6.0.2",
+ online.yamm.coreModelDiagram;bundle-version="0.1.0"
+Import-Package: org.apache.log4j,
+ org.eclipse.sirius.diagram;version="4.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: online.yamm.coreModelDsl.ui,
+ online.yamm.coreModelDsl.ui.contentassist,
+ online.yamm.coreModelDsl.ui.editor,
+ online.yamm.coreModelDsl.ui.internal,
+ online.yamm.coreModelDsl.ui.quickfix
+Bundle-Activator: online.yamm.coreModelDsl.ui.internal.CoreModelDslActivator

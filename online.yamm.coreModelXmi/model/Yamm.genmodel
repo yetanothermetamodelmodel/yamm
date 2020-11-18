@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/online.yamm.coreModelXmi/src" modelPluginID="online.yamm.coreModelXmi"
+    modelName="Yamm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types ../../org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase"
+    importOrganizing="true">
+  <foreignModel>Yamm.ecore</foreignModel>
+  <genPackages prefix="Yamm" basePackage="online.yamm.coreModelXmi" disposableProviderFactory="true"
+      ecorePackage="Yamm.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Yamm.ecore#//YAggregationKind">
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YAggregationKind/none"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YAggregationKind/shared"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YAggregationKind/composite"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Yamm.ecore#//YParameterDirectionKind">
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YParameterDirectionKind/in"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YParameterDirectionKind/inout"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YParameterDirectionKind/inDeep"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Yamm.ecore#//YRunToCompletion">
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YRunToCompletion/effect"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YRunToCompletion/transition"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YRunToCompletion/statemachine"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YRunToCompletion/observer"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Yamm.ecore#//ExecutionPhase">
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//ExecutionPhase/DESINIT"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//ExecutionPhase/DES"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//ExecutionPhase/NORMAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//ExecutionPhase/OBSERVER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Yamm.ecore#//YVisibilityKind">
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YVisibilityKind/public"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YVisibilityKind/private"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YVisibilityKind/protected"/>
+      <genEnumLiterals ecoreEnumLiteral="Yamm.ecore#//YVisibilityKind/package"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="Yamm.ecore#//EString2"/>
+    <genClasses ecoreClass="Yamm.ecore#//YClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YClass/isAbstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YClass/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YClass/package"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YClass/superClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YClass/ownedAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YClass/ownedOperation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YClass/insertLineSuperClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YClass/insertLineAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YClass/insertLineOperation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YClass/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YClass/posIsAbstract"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YClass/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YClass/posQualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YClass/posPackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YClass/observeQueue"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YClassifier"/>
+    <genClasses ecoreClass="Yamm.ecore#//YComment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YComment/body"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YComment/annotatedElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YComment/ownedComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YComment/ownedElement"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YConstraint/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YConstraint/constrainedElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YConstraint/ownedComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YConstraint/ownedElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YConstraint/specification"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YDataType"/>
+    <genClasses ecoreClass="Yamm.ecore#//YElement"/>
+    <genClasses ecoreClass="Yamm.ecore#//YElementImport">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YElementImport/importedElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YElementImport/importingNamespace"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YElementImport/ownedComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YElementImport/ownedElement"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YEnumeration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YEnumeration/isAbstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YEnumeration/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/member"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/elementImport"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/importedMember"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/packageImport"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/attribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/feature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/general"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/inheritedMember"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/package"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/ownedComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/ownedElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/ownedMember"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/ownedRule"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/ownedLiteral"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/posIsAbstract"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/posQualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumeration/posPackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YEnumeration/insertLineLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YEnumerationLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YEnumerationLiteral/qualifiedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumerationLiteral/ownedComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumerationLiteral/ownedElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumerationLiteral/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumerationLiteral/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEnumerationLiteral/posQualifiedName"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YFeature"/>
+    <genClasses ecoreClass="Yamm.ecore#//YNamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YNamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YNamespace"/>
+    <genClasses ecoreClass="Yamm.ecore#//YOperation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YOperation/qualifiedName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/ownedParameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/stateMachine"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/clazz"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/returnType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YOperation/lower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YOperation/upper"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/posClazz"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/posLower"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/posUpper"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/posStateMachine"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YOperation/posReturnType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YOperation/insertLineParameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YPackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YPackage/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPackage/package"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPackage/ownedMemberPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPackage/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPackage/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPackage/posQualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPackage/posPackage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YPackage/insertLineMember"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YPackageableElement">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Yamm.ecore#//YPackageableElement/parentElement"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YPackageImport">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPackageImport/importedPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPackageImport/importingNamespace"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPackageImport/ownedComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPackageImport/ownedElement"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YParameter/isOrdered"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YParameter/isUnique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YParameter/lower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YParameter/upper"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YParameter/qualifiedName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YParameter/direction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YParameter/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YParameter/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YParameter/signature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YParameter/upperboundWildcard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posOrdered"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posUnique"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posLower"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posUpper"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posUpperboundWildcard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posDirection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posDefaultValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YParameter/posQualifiedName"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YPrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YPrimitiveType/isAbstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YPrimitiveType/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/member"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/elementImport"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/importedMember"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/packageImport"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/attribute"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/feature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/general"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/inheritedMember"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/package"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/ownedComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/ownedElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/ownedMember"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrimitiveType/ownedRule"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/isOrdered"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/isDerived"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/isDerivedUnion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/association"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/qualifiedName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/isUnique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/lower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/upper"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/aggregation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/featuringClassifier"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/subsettedProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/opposite"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/ownedComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/ownedElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/clazz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/signature"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/visibility"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posOrdered"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posUnique"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posLower"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posUpper"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posDefaultValue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posClazz"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posDerived"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posDerivedUnion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posAssociation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posVisibility"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posOpposite"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posAggregation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YProperty/posQualifiedName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/observe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/invarinat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YProperty/static"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YType"/>
+    <genClasses ecoreClass="Yamm.ecore#//YStateMachine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachine/initialActive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachine/qualifiedName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachine/rtc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachine/maxEffectsToBeProcessed"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/calledOperation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/ownedComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/ownedElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/transition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/subvertex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/trAttach"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/operation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/posQualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/posInitialActive"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/posRtc"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachine/posMaxEffectsToBeProcessed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachine/insertLineTransition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachine/insertLineVertex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachine/insertLineAttachment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachine/desInitializer"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YTransition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YTransition/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/attachment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/ownedComment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/ownedElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/posQualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/posSource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/posTarget"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTransition/posAttachment"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YTrAttachment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YTrAttachment/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTrAttachment/transition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTrAttachment/effects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTrAttachment/guard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YTrAttachment/guardStringRep"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTrAttachment/posTransition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTrAttachment/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTrAttachment/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YTrAttachment/posQualifiedName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YTrAttachment/insertEffect"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YEffect">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEffect/body"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YEffect/breakpoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YEffect/effectStringRep"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEffect/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YEffect/posBreakpoint"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YVertex">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YVertex/outgoing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YVertex/incoming"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YPseudostate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YPseudostate/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPseudostate/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPseudostate/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPseudostate/posQualifiedName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YPseudostate/insertOutgoing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YPseudostate/insertIncoming"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YFinalState">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YFinalState/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YFinalState/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YFinalState/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YFinalState/posQualifiedName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YFinalState/insertOutgoing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YFinalState/insertIncoming"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YState">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YState/qualifiedName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YState/posObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YState/posName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YState/posQualifiedName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YState/insertOutgoing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YState/insertIncoming"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YModel/clazz"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YModel/enumerations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YModel/packages"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YModel/objects"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YModel/sharedEdges"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YModel/compositeEdges"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YModel/posObjectID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YModel/insertClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YModel/insertEnum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YModel/insertPackage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YModel/types"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YSharedEdge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YSharedEdge/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YSharedEdge/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YSharedEdge/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YCompositeEdge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YCompositeEdge/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YCompositeEdge/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YCompositeEdge/target"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YObject/ObjectID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YObject/dslInfo"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YStateMachineHandler">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachineHandler/state"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachineHandler/transition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/isSuspended"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/effectCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/effectNo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachineHandler/stateMachine"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/effect"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachineHandler/calledFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/itsClassID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YStateMachineHandler/operationInstance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/effectsProcessed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/maxEffectsToBeProcessed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/inAdapters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/objectsBindedWithInoutParameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/returnVar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/nameOfRetunVar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YStateMachineHandler/objectsToColor"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YGlobalStateMachine">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YGlobalStateMachine/stateMachines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YGlobalStateMachine/stateMachineHandlers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YGlobalStateMachine/stateMachineHandlerCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YGlobalStateMachine/constraintsAllTrue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YGlobalStateMachine/hasReturnParam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YGlobalStateMachine/paramCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YGlobalStateMachine/stateExitCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YGlobalStateMachine/stateExitNo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YGlobalStateMachine/o"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YGlobalStateMachine/observerActive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YGlobalStateMachine/desPhase"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YGlobalStateMachine/internal"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YGlobalStateMachine/notYetExecutedInitialActiveStatemachines"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YGlobalStateMachine/desinitStateMachine"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YGlobalStateMachine/executionPhase"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YCreateInstanceExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YCreateInstanceExpression/clazz"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YCreateInstanceExpression/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YPrintExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YPrintExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YSetReturnValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YSetReturnValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YGetInstancesOfExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YGetInstancesOfExpression/clazz"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YMemberFeatureCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YMemberFeatureCall/inheritanceType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YMemberFeatureCall/explicitInheritanceType"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YFeatureCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YFeatureCall/explicitInheritanceType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//YFeatureCall/inheritanceType"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YGetObjectManagement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YGetObjectManagement/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YGetLayerInformation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YGetLayerInformation/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YColorDFAObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YColorDFAObject/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YGetInstances">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YGetInstances/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YCountFinalStates">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YCountFinalStates/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YCountInitialStates">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YCountInitialStates/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YCountStates">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YCountStates/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YSetAbsoluteNodePropability">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YSetAbsoluteNodePropability/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YCountReachableStates">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YCountReachableStates/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YCountInValidTransitions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YCountInValidTransitions/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YSetPopulationSize">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YSetPopulationSize/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YLoadModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YLoadModel/relModelPath"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//DslInfo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//DslInfo/features"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference Yamm.ecore#//DslInfo/firstLine"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference Yamm.ecore#//DslInfo/lastLine"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//FeatureInfo"/>
+    <genClasses ecoreClass="Yamm.ecore#//SingleLinePropertyInfo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//SingleLinePropertyInfo/line"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//GuardInfo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//GuardInfo/firstLineGuard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//GuardInfo/lastLineGuard"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//GuardInfo/ignoreNotification"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//EffectInfo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//EffectInfo/firstLineEffect"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//EffectInfo/lastLineEffect"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//EffectInfo/ignoreNotification"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//ContainmentInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference Yamm.ecore#//ContainmentInfo/insertionLine"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//EStructuralFeatureToFeatureInfoMap">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//EStructuralFeatureToFeatureInfoMap/key"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Yamm.ecore#//EStructuralFeatureToFeatureInfoMap/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//Line">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//Line/pos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//Line/processedOffsets"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YStructure"/>
+    <genClasses ecoreClass="Yamm.ecore#//YInternal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Yamm.ecore#//YInternal/simulationTime"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Yamm.ecore#//YInternal/globalStateMachine"/>
+    </genClasses>
+    <genClasses ecoreClass="Yamm.ecore#//YTimeStep"/>
+    <genClasses ecoreClass="Yamm.ecore#//YObserverAddValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Yamm.ecore#//YObserverAddValue/parameter"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

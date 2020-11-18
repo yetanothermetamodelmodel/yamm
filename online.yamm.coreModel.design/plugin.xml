@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension
+        point="org.eclipse.ui.preferencePages">
+     <page
+            class="online.yamm.coreModel.design.preferences.EditorPreferencePage"
+            id="YAMM Preferences.Editor"
+            name="YAMM Editor">
+      </page>
+  </extension>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="online.yamm.coreModel.design.Activator"
+               id="online.yamm.coreModel.design"
+	       name="yammViewpoint">
+    </component>
+  </extension>
+  <extension
+        point="org.eclipse.gmf.runtime.diagram.ui.editpolicyProviders">
+     <editpolicyProvider
+           class="online.yamm.coreModel.design.providers.ListContainerEditPolicyProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpolicyProvider>
+  </extension>
+  <extension
+        point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+     <editpartProvider
+           class="online.yamm.coreModel.design.providers.TrAttachmentEditPartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+     <editpartProvider
+           class="online.yamm.coreModel.design.providers.TransitionEdgeEditPartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+     <editpartProvider
+           class="online.yamm.coreModel.design.providers.EditableBiAssociationLabelEditPartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+     <editpartProvider
+           class="online.yamm.coreModel.design.providers.StateContainerEditPartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+  </extension>
+  <extension
+        point="org.eclipse.gmf.runtime.common.ui.services.editorProviders">
+  </extension>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated RmofDiagramExtension -->
+      <package
+            uri="RmofDiagramExtension"
+            class="RmofDiagramExtension.RmofDiagramExtensionPackage"
+            genModel="model/RmofDiagramExtension.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.sirius.sessionManagerListener">
+      <listener
+            class="online.yamm.coreModel.design.RmofSessionManagerListener">
+      </listener>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="YAMM Views"
+            class="online.yamm.coreModel.design.views.EffectView"
+            id="online.yamm.ui.effectView"
+            inject="true"
+            name="Effect View">
+      </view>
+   </extension>
+
+</plugin>
