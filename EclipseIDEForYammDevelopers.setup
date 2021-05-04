@@ -18,39 +18,12 @@
       <value>Eclipse</value>
     </detail>
   </annotation>
-  <version name="photon"
-      label="Photon"
-      requiredJavaVersion="1.8">
+  <version name="2021-03"
+      label="2021-03"
+      requiredJavaVersion="1.11">
     <setupTask
         xsi:type="setup:CompoundTask"
         name="User Preferences">
-      <annotation
-          source="http://www.eclipse.org/oomph/setup/UserPreferences">
-        <detail
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF_ECORE">
-          <value>record</value>
-        </detail>
-        <detail
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF_COMMON">
-          <value>record</value>
-        </detail>
-        <detail
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF_ECORE_XMI">
-          <value>record</value>
-        </detail>
-        <detail
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF">
-          <value>record</value>
-        </detail>
-        <detail
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF_CDO_COMMON">
-          <value>record</value>
-        </detail>
-        <detail
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF_CDO">
-          <value>record</value>
-        </detail>
-      </annotation>
       <setupTask
           xsi:type="setup:CompoundTask"
           name="org.eclipse.jdt.core">
@@ -60,40 +33,16 @@
             value="warning"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF"
-            value="${Enter Path to Plugins Directory (Bundle Pool: &quot;*\.p2\pool\plugins&quot; else: &quot;*\eclipse\plugins&quot;)}/org.eclipse.emf_2.7.0.v20180123-1048.jar"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF_CDO"
-            value="${Enter Path to Plugins Directory (Bundle Pool: &quot;*\.p2\pool\plugins&quot; else: &quot;*\eclipse\plugins&quot;)}/org.eclipse.emf.cdo_4.6.100.v20180529-1130.jar"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF_CDO_COMMON"
-            value="${Enter Path to Plugins Directory (Bundle Pool: &quot;*\.p2\pool\plugins&quot; else: &quot;*\eclipse\plugins&quot;)}/org.eclipse.emf.cdo.common.db_3.0.700.v20180529-1130.jar"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF_COMMON"
-            value="${Enter Path to Plugins Directory (Bundle Pool: &quot;*\.p2\pool\plugins&quot; else: &quot;*\eclipse\plugins&quot;)}/org.eclipse.emf.common_2.14.0.v20180527-1134.jar"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF_ECORE"
-            value="${Enter Path to Plugins Directory (Bundle Pool: &quot;*\.p2\pool\plugins&quot; else: &quot;*\eclipse\plugins&quot;)}/org.eclipse.emf.ecore_2.14.0.v20180529-1144.jar"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
-            key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.EMF_ECORE_XMI"
-            value="${Enter Path to Plugins Directory (Bundle Pool: &quot;*\.p2\pool\plugins&quot; else: &quot;*\eclipse\plugins&quot;)}/org.eclipse.emf.ecore.xmi_2.14.0.v20180129-1548.jar"/>
-        <setupTask
-            xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform"
-            value="1.8"/>
+            value="1.11"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance"
-            value="1.8"/>
+            value="1.11"/>
         <setupTask
             xsi:type="setup:PreferenceTask"
             key="/instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.source"
-            value="1.8"/>
+            value="1.11"/>
       </setupTask>
       <setupTask
           xsi:type="setup:CompoundTask"
@@ -108,14 +57,11 @@
         xsi:type="setup.p2:P2Task"
         label="${scope.product.label} (${scope.product.version.label})">
       <requirement
-          name="epp.package.java"
-          versionRange="[4.10.0,5.0.0)"/>
+          name="epp.package.java"/>
       <requirement
-          name="org.eclipse.platform.feature.group"
-          versionRange="[4.10.0,5.0.0)"/>
+          name="org.eclipse.platform.feature.group"/>
       <requirement
-          name="org.eclipse.rcp.feature.group"
-          versionRange="[4.10.0,5.0.0)"/>
+          name="org.eclipse.rcp.feature.group"/>
       <requirement
           name="org.eclipse.buildship.feature.group"/>
       <requirement
@@ -159,111 +105,6 @@
       <requirement
           name="org.eclipse.xtext.sdk.feature.group"/>
       <requirement
-          name="org.eclipse.sirius.doc.feature.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.diagram.elk.feature.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ide.ui.acceleo.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.specifier.properties.feature.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ide.ui.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.properties.feature.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.specifier.properties.feature.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.specifier.ide.ui.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.interpreter.feature.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.specifier.ide.ui.aql.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ocl.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.specifier.ide.ui.acceleo.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.samples.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.acceleo.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.aql.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ide.ui.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.acceleo.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ocl.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ide.xtext.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ide.eef.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ide.ui.acceleo.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.doc.feature.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.samples.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.tests.support.source.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.tests.support.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.specifier.ide.ui.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.specifier.ide.ui.acceleo.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.specifier.ide.ui.aql.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.aql.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.interpreter.feature.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.properties.feature.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ide.xtext.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.ide.eef.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
-          name="org.eclipse.sirius.runtime.feature.group"
-          versionRange="[6.0.2,6.0.3)"/>
-      <requirement
           name="org.eclipse.pde.feature.group"/>
       <requirement
           name="org.eclipse.wst.xml_ui.feature.feature.group"/>
@@ -277,6 +118,10 @@
           name="org.eclipse.nebula.widgets.nattable.extension.e4.source.feature.feature.group"/>
       <requirement
           name="org.eclipse.nebula.widgets.nattable.extension.glazedlists.feature.feature.group"/>
+      <requirement
+          name="org.eclipse.sirius.specifier.feature.group"/>
+      <requirement
+          name="org.eclipse.sirius.diagram.elk.feature.feature.group"/>
       <requirement
           name="org.eclipse.nebula.widgets.nattable.extension.glazedlists.source.feature.feature.group"/>
       <requirement
@@ -296,22 +141,19 @@
       <requirement
           name="org.eclipse.swtchart.feature.feature.group"/>
       <requirement
-          name="org.eclipse.emf.sdk.feature.group"
-          versionRange="[2.14.0.v20180529-1157,2.14.0.v20180529-1157]"/>
+          name="org.eclipse.emf.sdk.feature.group"/>
       <requirement
           name="org.eclipse.jdt.source.feature.group"/>
       <repository
-          url="http://download.eclipse.org/technology/epp/packages/2018-12"/>
+          url="http://download.eclipse.org/releases/2021-03"/>
       <repository
-          url="http://download.eclipse.org/sirius/updates/releases/6.0.2/photon/"/>
+          url="http://download.eclipse.org/eclipse/updates/4.19"/>
       <repository
-          url="http://download.eclipse.org/releases/photon"/>
+          url="https://download.eclipse.org/sirius/updates/releases/6.4.2/2020-09/"/>
       <repository
-          url="http://download.eclipse.org/eclipse/updates/4.10"/>
+          url="https://download.eclipse.org/swtchart/releases/0.12.0/repository/"/>
       <repository
-          url="https://download.eclipse.org/swtchart/releases/0.7.0/update"/>
-      <repository
-          url="http://download.eclipse.org/nattable/releases/1.5.0/repository/"/>
+          url="http://download.eclipse.org/nattable/releases/1.6.0/repository/"/>
     </setupTask>
     <setupTask
         xsi:type="setup:EclipseIniTask"
