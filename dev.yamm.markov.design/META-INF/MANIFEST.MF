@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Eclipse-RegisterBuddy: dev.yamm.coreModelDsl, dev.yamm
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: dev.yamm.markov.design;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: dev.yamm.markov.design.Activator
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.sirius;bundle-version="6.0.2",
+ org.eclipse.sirius.common.acceleo.aql,
+ dev.yamm.markov;bundle-version="0.1.0",
+ dev.yamm.coreModelDsl;bundle-version="1.0.0",
+ org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.8.0",
+ org.eclipse.sirius.diagram;bundle-version="6.0.2",
+ dev.yamm;bundle-version="1.0.42",
+ org.eclipse.sirius.diagram.ui;bundle-version="6.0.2"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: %providerName
+Automatic-Module-Name: dev.yamm.markov.design
+Export-Package: dev.yamm.markov.design

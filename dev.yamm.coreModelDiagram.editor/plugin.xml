@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated YammDiagram -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="dev.yamm.coreModelDiagram.yammDiagram.presentation.YammDiagramModelWizardID"
+            name="%_UI_YammDiagramModelWizard_label"
+            class="dev.yamm.coreModelDiagram.yammDiagram.presentation.YammDiagramModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/YammDiagramModelFile.gif">
+         <description>%_UI_YammDiagramModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated YammDiagram -->
+      <editor
+            id="dev.yamm.coreModelDiagram.yammDiagram.presentation.YammDiagramEditorID"
+            name="%_UI_YammDiagramEditor_label"
+            icon="icons/full/obj16/YammDiagramModelFile.gif"
+            extensions="yammdiagram"
+            class="dev.yamm.coreModelDiagram.yammDiagram.presentation.YammDiagramEditor"
+            contributorClass="dev.yamm.coreModelDiagram.yammDiagram.presentation.YammDiagramActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

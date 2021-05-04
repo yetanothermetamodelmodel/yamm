@@ -1,0 +1,573 @@
+grammar dev.yamm.coreModelDsl.XYamm with org.eclipse.xtext.xbase.Xbase
+
+import "http://www.yamm.dev/coreModelXmi/Yamm" 
+
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.eclipse.org/xtext/xbase/Xbase"
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as types
+
+YModel returns YModel:
+	{YModel}
+	'yModel'
+	ObjectID=EString
+	'{'
+		'yClazz' '{' ( "," clazz+=YClass ( "," clazz+=YClass)* )? '}' 
+		'yEnumerations' '{' ( "," enumerations+=YEnumeration ( "," enumerations+=YEnumeration)* )? '}'
+		'yPackages' '{' ( "," packages+=YPackage ( "," packages+=YPackage)* )? '}'
+		('yObjects' '{' objects+=EObject ( "," objects+=EObject)* '}' )?
+		('ySharedEdges' '{' sharedEdges+=YSharedEdge ( "," sharedEdges+=YSharedEdge)* '}' )?
+		('yCompositeEdges' '{' compositeEdges+=YCompositeEdge ( "," compositeEdges+=YCompositeEdge)* '}' )?
+	'}';
+
+@Override
+XBlockExpression returns XExpression:
+	{XBlockExpression}
+	'{'
+		(expressions+=XExpression ';')*
+	'}';
+	
+
+@Override
+XFeatureCall returns XExpression:
+		{YFeatureCall}
+	feature=[types::JvmIdentifiableElement|IdOrSuper]
+	(=>explicitOperationCall?='('	
+		(
+		    featureCallArguments+=XExpression (',' featureCallArguments+=XExpression)*
+		)?
+	')'(->explicitInheritanceType?='[' inheritanceType=[types::JvmGenericType|EString2] ']')?)?
+	;
+	
+	
+//	@Override
+//XFeatureCall returns XExpression:
+//	YFeatureCall;
+//;
+//	
+//YFeatureCall returns XExpression:
+//	{YFeatureCall}
+//	feature=[types::JvmIdentifiableElement|IdOrSuper]
+//	(=>explicitOperationCall?='('
+//		(
+// 			featureCallArguments+=XExpression (',' featureCallArguments+=XExpression)*
+//		)?
+//	')'
+//	|=>explicitInheritanceType?='[' inheritanceType=[types::JvmGenericType|EString2] ']' '('
+//		(
+//			featureCallArguments+=XExpression (',' featureCallArguments+=XExpression)*
+//		)?
+//	')')?;	
+
+	
+@Override
+XMemberFeatureCall returns XExpression:	
+		XPrimaryExpression
+	(=>({XAssignment.assignable=current} ('.') feature=[types::JvmIdentifiableElement|FeatureCallID] OpSingleAssign) value=XAssignment
+	|=>({YMemberFeatureCall.memberCallTarget=current} ("."))
+		
+		feature=[types::JvmIdentifiableElement|IdOrSuper] (
+			=>explicitOperationCall?='('
+				(
+				    memberCallArguments+=XExpression (',' memberCallArguments+=XExpression)*
+				)?
+			')'(->explicitInheritanceType?='[' inheritanceType=[types::JvmGenericType|EString2] ']')?)?
+		)*;
+	
+	
+	
+	
+//@Override
+//XMemberFeatureCall returns XExpression:
+//	YMemberFeatureCall;
+
+//YMemberFeatureCall returns XExpression:
+//	XPrimaryExpression
+//	(=>({XAssignment.assignable=current} ('.') feature=[types::JvmIdentifiableElement|FeatureCallID] OpSingleAssign) value=XAssignment
+//	|=>({YMemberFeatureCall.memberCallTarget=current} ("."))
+//		(feature=[types::JvmIdentifiableElement|IdOrSuper]) ((
+//			=>explicitOperationCall?='('
+//				(
+//				   memberCallArguments+=XExpression (',' memberCallArguments+=XExpression)*
+//				)?
+//			')'
+//			|
+//			=>explicitInheritanceType?='[' inheritanceType=[types::JvmGenericType|EString2] ']' '('
+//				(
+//				   memberCallArguments+=XExpression (',' memberCallArguments+=XExpression)*
+//				)?
+//			')')?)
+//		)*;
+
+
+
+
+@Override
+XPrimaryExpression returns XExpression:
+	YPrintExpression
+	| YSetReturnValue
+	| XBlockExpression
+	| XConstructorCall
+	| XFeatureCall
+	| XLiteral 
+	| XParenthesizedExpression
+	| YColorDFAObject
+	| YGetInstances
+//	| YCountFinalStates
+//	| YCountInitialStates
+//	| YSetAbsoluteNodePropability
+//	| YCountStates
+//	| YCountReachableStates
+//	| YCountInValidTransitions
+//	| YSetPopulationSize
+	| YGetLayerInformation
+	| YGetObjectManagement
+	| YLoadModel
+	| YTimeStep
+	| YObserverAddValue
+	
+;
+@Override
+XAssignment returns XExpression :
+	{XAssignment} feature=[types::JvmIdentifiableElement|FeatureCallID] OpSingleAssign value=XAssignment 
+	| YCreateInstanceExpression | YGetInstancesOfExpression |
+	XOrExpression (
+		=>({XBinaryOperation.leftOperand=current} feature=[types::JvmIdentifiableElement|OpMultiAssign]) rightOperand=XAssignment
+	)?;
+
+YGetInstancesOfExpression returns YGetInstancesOfExpression: 
+	'getInstancesOf' '(' (clazz=[YClass|EString2])? ')'
+;
+
+YObserverAddValue returns YObserverAddValue:
+	'observerAddValue(' (parameter+=XExpression ( "," parameter+=XExpression)*)? ')'
+;
+
+YCreateInstanceExpression returns YCreateInstanceExpression:
+	'createInstance(' (clazz=[YClass|EString2])? ')'
+;
+
+YLoadModel returns YLoadModel:
+	{YLoadModel}
+	'loadModel' '(' (relModelPath=XExpression) ')'	
+;
+
+YTimeStep returns YTimeStep:
+	{YTimeStep}
+	'yTimeStep'
+;
+
+
+YGetLayerInformation returns YGetLayerInformation:
+	{YGetLayerInformation} 
+	'getLayerInformation' '('  (parameter+=XExpression ( "," parameter+=XExpression)*)? ')'
+;
+
+YGetObjectManagement returns YGetObjectManagement:
+	{YGetObjectManagement}
+	'getObjectManagement' '('  (parameter+=XExpression ( "," parameter+=XExpression)*)?')'
+;
+
+YPrintExpression returns YPrintExpression:
+	'Print(' expression=XExpression')'
+;
+
+YSetReturnValue returns YSetReturnValue:
+	'setReturnValue' '(' value=XExpression ')'
+;
+
+YColorDFAObject returns YColorDFAObject:
+	'colorDFAObject(' id=XExpression ')'
+;
+
+YGetInstances returns YGetInstances:
+	'getInstances' '('  parameter+=XExpression ( "," parameter+=XExpression)* ')'
+;
+
+//YCountFinalStates returns YCountFinalStates:
+//	'countFinalStates' '('  parameter+=XExpression ( "," parameter+=XExpression)* ')'
+//;
+//
+//YCountInitialStates returns YCountInitialStates:
+//	'countInitialStates' '('  parameter+=XExpression ( "," parameter+=XExpression)* ')'
+//;
+//
+//YCountStates returns YCountStates:
+//	'countStates' '('  parameter+=XExpression ( "," parameter+=XExpression)* ')'
+//;
+//
+//YSetAbsoluteNodePropability returns YSetAbsoluteNodePropability:
+//	'setAbsoluteNodePropability' '('  parameter+=XExpression ( "," parameter+=XExpression)* ')'
+//;
+//
+//YCountReachableStates returns YCountReachableStates:
+//	'countReachableStates' '('  parameter+=XExpression ( "," parameter+=XExpression)* ')'
+//;
+//
+//YSetPopulationSize returns YSetPopulationSize:
+//	'setPopulationSize' '('  parameter+=XExpression ( "," parameter+=XExpression)* ')'
+//;
+//
+//YCountInValidTransitions returns YCountInValidTransitions:
+//	'countInValidTransitions' '('  parameter+=XExpression ( "," parameter+=XExpression)* ')'
+//;
+
+YElement returns YElement:
+	YClass | YComment | YConstraint | YElementImport | YEnumeration | YEnumerationLiteral | YOperation | YPackage | YPackageImport | YParameter | YPrimitiveType | YProperty | YFinalState | YPseudostate | YStateMachine | YTransition | YTrAttachment | YState;
+
+YNamedElement returns YNamedElement:
+	YClass | YConstraint | YEnumeration | YEnumerationLiteral | YOperation | YPackage | YParameter | YPrimitiveType | YProperty | YFinalState | YPseudostate | YStateMachine | YTransition | YTrAttachment | YState;
+
+YPackageableElement returns YPackageableElement:
+	YClass | YConstraint | YEnumeration | YEnumerationLiteral | YPackage | YPrimitiveType;
+
+
+
+YFeature returns YFeature:
+	YOperation | YProperty;
+
+YClassifier returns YClassifier:
+	YClass | YEnumeration | YPrimitiveType;
+
+
+
+YType returns YType:
+	YClass | YEnumeration | YPrimitiveType;
+
+
+
+YNamespace returns YNamespace:
+	YClass | YEnumeration | YOperation | YPackage | YPrimitiveType | YState;
+
+
+
+YVertex returns YVertex:
+	YFinalState | YPseudostate | YState;
+
+
+EString returns ecore::EString:
+	STRING | ID | 'yClass';
+	
+EString2 returns ecore::EString:
+	ID + ('.' + ID)*;
+	
+@Override
+ValidID:
+	ID | 'yClass';
+
+YClass returns YClass:
+	(isAbstract?='yIsAbstract')?
+	'yClass'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString2)?
+		( observeQueue?='yObserveQueue')?
+		('yPackage' package=[YNamedElement|EString2])?
+		'ySuperClass' '(' ( superClass+=[YClass|EString2] ( "," superClass+=[YClass|EString2])*  )? ')'
+		
+		'yOwnedAttribute' '{' ( "," ownedAttribute+=YProperty ( "," ownedAttribute+=YProperty)* )? '}'
+		'yOwnedOperation' '{' ( "," ownedOperation+=YOperation ( "," ownedOperation+=YOperation)* )? '}'
+	'}';
+
+YEnumeration returns YEnumeration:
+	(isAbstract?='yIsAbstract')?
+	'yEnumeration'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString2)?
+		('yMember' '(' member+=[YNamedElement|EString] ( "," member+=[YNamedElement|EString])* ')' )?
+		('yElementImport' '(' elementImport+=[YPackageableElement|EString] ( "," elementImport+=[YPackageableElement|EString])* ')' )?
+		('yImportedMember' '(' importedMember+=[YPackageableElement|EString] ( "," importedMember+=[YPackageableElement|EString])* ')' )?
+		('yPackageImport' '(' packageImport+=[YPackageableElement|EString] ( "," packageImport+=[YPackageableElement|EString])* ')' )?
+		('yAttribute' '(' attribute+=[YProperty|EString] ( "," attribute+=[YProperty|EString])* ')' )?
+		('yFeature' '(' feature+=[YFeature|EString] ( "," feature+=[YFeature|EString])* ')' )?
+		('yGeneral' '(' general+=[YClassifier|EString] ( "," general+=[YClassifier|EString])* ')' )?
+		('yInheritedMember' '(' inheritedMember+=[YNamedElement|EString] ( "," inheritedMember+=[YNamedElement|EString])* ')' )?
+		('yPackage' package=[YNamedElement|EString])?
+		('yOwnedComment' ownedComment=YComment)?
+		('yOwnedElement' '{' ownedElement+=YElement ( "," ownedElement+=YElement)* '}' )?
+		('yOwnedMember' '{' ownedMember+=YNamedElement ( "," ownedMember+=YNamedElement)* '}' )?
+		('yOwnedRule' '{' ownedRule+=YConstraint ( "," ownedRule+=YConstraint)* '}' )?
+		'yOwnedLiteral' '{' ( "," ownedLiteral+=YEnumerationLiteral ( "," ownedLiteral+=YEnumerationLiteral)* )? '}'
+	'}';
+
+YPackage returns YPackage:
+	{YPackage}
+	'yPackage'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		('yPackage' package=[YPackage|EString2])?
+		'yOwnedMemberPackage' '{' ( "," ownedMemberPackage+=YPackageableElement ( "," ownedMemberPackage+=YPackageableElement)* )? '}'
+	'}';
+
+EObject returns ecore::EObject:
+	{ecore::EObject}
+	'yEObject'
+	;
+
+YSharedEdge returns YSharedEdge:
+	'ySharedEdge'
+	ObjectID=EString
+	'{'
+		('yDescription' description=EString)?
+		'ySource' source=[YClass|EString]
+		'yTarget' target=[YClass|EString]
+	'}';
+
+YCompositeEdge returns YCompositeEdge:
+	'yCompositeEdge'
+	ObjectID=EString
+	'{'
+		('yDescription' description=EString)?
+		'ySource' source=[YClass|EString]
+		'yTarget' target=[YClass|EString]
+	'}';
+
+YComment returns YComment:
+	'yComment'
+	ObjectID=EString
+	'{'
+		'yBody' body=EString
+		('yAnnotatedElement' '(' annotatedElement+=[YElement|EString] ( "," annotatedElement+=[YElement|EString])* ')' )?
+		('yOwnedComment' ownedComment=YComment)?
+		('yOwnedElement' '{' ownedElement+=YElement ( "," ownedElement+=YElement)* '}' )?
+	'}';
+
+YConstraint returns YConstraint:
+	{YConstraint}
+	'yConstraint'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		('yConstrainedElement' '(' constrainedElement+=[YElement|EString] ( "," constrainedElement+=[YElement|EString])* ')' )?
+		('yOwnedComment' ownedComment=YComment)?
+		('yOwnedElement' '{' ownedElement+=YElement ( "," ownedElement+=YElement)* '}' )?
+		('ySpecification' specification=YOperation)?
+	'}';
+
+EBoolean returns ecore::EBoolean:
+	'true' | 'false';
+
+YProperty returns YProperty:
+	(isOrdered?='yIsOrdered')?
+	(isDerived?='yIsDerived')?
+	(isDerivedUnion?='yIsDerivedUnion')?
+	(association?='yAssociation')?
+	(isUnique?='yIsUnique')?
+	'yProperty'
+	ObjectID=EString
+	'{'
+		('yClazz' clazz=[YClass])?
+		('yVisibility' visibility=YVisibilityKind)?
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		( static?='yStatic')?
+		('yLower' lower=EInt)?
+		('yUpper' upper=EInt)?
+		('yAggregation' aggregation=YAggregationKind)?
+		('yDefaultValue' defaultValue=EString)?
+		('yDescription' description=EString)?
+		('yInvariant' invarinat=EString)?
+		('yFeaturingClassifier' '(' featuringClassifier+=[YClass|EString] ( "," featuringClassifier+=[YClass|EString])* ')' )?
+		('yType' type=[YType|EString2])?
+		('ySubsettedProperty' '(' subsettedProperty+=[YProperty|EString] ( "," subsettedProperty+=[YProperty|EString])* ')' )?
+		('yOpposite' opposite=[YProperty|EString2])?
+		( observe?='yObserve')?
+		('yOwnedComment' ownedComment=YComment)?
+		('yOwnedElement' '{' ownedElement+=YElement ( "," ownedElement+=YElement)* '}' )?
+	'}';
+
+YOperation returns YOperation:
+	'yOperation'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yClazz' clazz=[YClass])?
+		('yReturnType' returnType=[YType|EString2])?
+		('yLower' lower=EInt)?
+		('yUpper' upper=EInt)?
+		'yOwnedParameter' '{' ( "," ownedParameter+=YParameter ( "," ownedParameter+=YParameter)*) ? '}' 
+		('yStateMachine' stateMachine=YStateMachine)?
+		'yStateMachineEnd'
+	'}';
+
+YElementImport returns YElementImport:
+	'yElementImport'
+	ObjectID=EString
+	'{'
+		'yImportedElement' importedElement=[YPackageableElement|EString]
+		'yImportingNamespace' importingNamespace=[YNamespace|EString]
+		('yOwnedComment' ownedComment=YComment)?
+		('yOwnedElement' '{' ownedElement+=YElement ( "," ownedElement+=YElement)* '}' )?
+	'}';
+
+YEnumerationLiteral returns YEnumerationLiteral:
+	{YEnumerationLiteral}
+	'yEnumerationLiteral'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		('yOwnedComment' ownedComment=YComment)?
+		('yOwnedElement' '{' ownedElement+=YElement ( "," ownedElement+=YElement)* '}' )?
+	'}';
+
+YPackageImport returns YPackageImport:
+	'yPackageImport'
+	ObjectID=EString
+	'{'
+		'yImportedPackage' importedPackage=[YPackage|EString]
+		'yImportingNamespace' importingNamespace=[YNamespace|EString]
+		('yOwnedComment' ownedComment=YComment)?
+		('yOwnedElement' '{' ownedElement+=YElement ( "," ownedElement+=YElement)* '}' )?
+	'}';
+
+YParameter returns YParameter:
+	(isOrdered?='yIsOrdered')?
+	(isUnique?='yIsUnique')?
+	(upperboundWildcard?='yUpperboundWildcard')?
+	'yParameter'
+	ObjectID=EString
+	'{'
+		('yLower' lower=EInt)?
+		('yUpper' upper=EInt)?
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		('yDirection' direction=ParameterDirectionKind)?
+		('yDefaultValue' defaultValue=EString)?
+		('yDescription' description=EString)?		
+		('yType' type=[YType|EString2])?
+
+	'}';
+
+YPrimitiveType returns YPrimitiveType:
+	isAbstract?='yIsAbstract'
+	'yPrimitiveType'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		('yMember' '(' member+=[YNamedElement|EString] ( "," member+=[YNamedElement|EString])* ')' )?
+		('yElementImport' '(' elementImport+=[YPackageableElement|EString] ( "," elementImport+=[YPackageableElement|EString])* ')' )?
+		('yImportedMember' '(' importedMember+=[YPackageableElement|EString] ( "," importedMember+=[YPackageableElement|EString])* ')' )?
+		('yPackageImport' '(' packageImport+=[YPackageableElement|EString] ( "," packageImport+=[YPackageableElement|EString])* ')' )?
+		('yAttribute' '(' attribute+=[YProperty|EString] ( "," attribute+=[YProperty|EString])* ')' )?
+		('yFeature' '(' feature+=[YFeature|EString] ( "," feature+=[YFeature|EString])* ')' )?
+		('yGeneral' '(' general+=[YClassifier|EString] ( "," general+=[YClassifier|EString])* ')' )?
+		('yInheritedMember' '(' inheritedMember+=[YNamedElement|EString] ( "," inheritedMember+=[YNamedElement|EString])* ')' )?
+		('yPackage' package=[YNamedElement|EString])?
+		('yOwnedComment' ownedComment=YComment)?
+		('yOwnedElement' '{' ownedElement+=YElement ( "," ownedElement+=YElement)* '}' )?
+		('yOwnedMember' '{' ownedMember+=YNamedElement ( "," ownedMember+=YNamedElement)* '}' )?
+		('yOwnedRule' '{' ownedRule+=YConstraint ( "," ownedRule+=YConstraint)* '}' )?
+	'}';
+
+YFinalState returns YFinalState:
+	{YFinalState}
+	'yFinalState'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		'yOutgoing' '(' ( outgoing+=[YTransition|EString] ( "," outgoing+=[YTransition|EString])* )? ')'
+		'yIncoming' '(' ( incoming+=[YTransition|EString] ( "," incoming+=[YTransition|EString])* )? ')'
+	'}';
+
+YPseudostate returns YPseudostate:
+	{YPseudostate}
+	'yPseudostate'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		'yOutgoing' '(' ( outgoing+=[YTransition|EString] ( "," outgoing+=[YTransition|EString])* )? ')'
+		'yIncoming' '(' ( incoming+=[YTransition|EString] ( "," incoming+=[YTransition|EString])* )? ')'
+	'}';
+
+YStateMachine returns YStateMachine:
+	'yStateMachine'
+	ObjectID=EString
+	'{'
+		(initialActive?='yInitialActive')?
+		(desInitializer?='yDesInitializer')?
+		//do not use:
+//		('yInitialActive' initialActive=EBoolean)?
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		'yRtc' rtc=RunToCompletion
+		('yMaxEffectsToBeProcessed' maxEffectsToBeProcessed=EInt)?
+		('yCalledOperation' calledOperation=[YOperation|EString])?
+		('yOwnedComment' ownedComment=YComment)?
+		('yOwnedElement' '{' ownedElement+=YElement ( "," ownedElement+=YElement)* '}' )?
+		'yTransition' '{' ( "," transition+=YTransition ( "," transition+=YTransition)* )? '}'
+		'ySubvertex' '{' ( "," subvertex+=YVertex ( "," subvertex+=YVertex)* )? '}'
+		'yTrAttach' '{' ( "," trAttach+=YTrAttachment ( "," trAttach+=YTrAttachment)* )? '}'
+	'}';
+
+YTransition returns YTransition:
+	'yTransition'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		'ySource' source=[YVertex|EString]
+		'yTarget' target=[YVertex|EString]
+		('yAttachment' attachment=[YTrAttachment|EString])?
+		('yOwnedComment' ownedComment=YComment)?
+		('yOwnedElement' '{' ownedElement+=YElement ( "," ownedElement+=YElement)* '}' )?
+	'}';
+
+YTrAttachment returns YTrAttachment:
+	{YTrAttachment}
+	'yTrAttachment'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?	
+		'yGuard' guard=XExpression
+		('yTransition' transition=[YTransition|EString])?
+		'yEffects' '{' ( "," effects+=YEffect ( "," effects+=YEffect)* )? '}'
+	'}';
+
+YState returns YState:
+	{YState}
+	'yState'
+	ObjectID=EString
+	'{'
+		('yName' name=EString)?
+		('yQualifiedName' qualifiedName=EString)?
+		'yOutgoing' '(' ( outgoing+=[YTransition|EString] ( "," outgoing+=[YTransition|EString])* )? ')'
+		'yIncoming' '(' ( incoming+=[YTransition|EString] ( "," incoming+=[YTransition|EString])* )? ')'
+	'}';
+
+EInt returns ecore::EInt:
+	'-'? INT;
+
+enum ParameterDirectionKind returns YParameterDirectionKind:
+				in = 'yIn' | inout = 'yInout' | inDeep = 'yInDeep';
+
+enum RunToCompletion returns YRunToCompletion:
+				effect = 'yEffect' | transition = 'yTransition' | statemachine = 'yStatemachine' | observer = 'yObserver';
+
+YEffect returns YEffect:
+	{YEffect}
+	'yEffect'
+	(breakpoint?='yBreakpoint')?
+	ObjectID=EString
+	'{'
+		(body = XBlockExpression)?
+	'}';
+
+enum YAggregationKind returns YAggregationKind:
+	none = 'yNone' | shared = 'yShared' | composite = 'yComposite';
+				
+enum YVisibilityKind returns YVisibilityKind:
+	public = 'yPublic' | private = 'yPrivate' | protected = 'yProtected' | package = 'yPackage';
+
+EBooleanObject returns ecore::EBooleanObject:
+	'true' | 'false';

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yammDiagram:YModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yammDiagram="http://www.yamm.online/coreModelDiagram/YammDiagram">
+<yammDiagram:YModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yammDiagram="http://www.yamm.dev/coreModelDiagram/YammDiagram">
   <clazz ObjectID="f5e24a2" name="RObject">
     <ownedAttribute ObjectID="f2bd771" name="rContainer" type="//@clazz.0" clazz="//@clazz.0"/>
     <ownedAttribute ObjectID="f55ebef" name="yClass" type="//@packages.0/@ownedMemberPackage.4" clazz="//@clazz.0"/>
@@ -199,10 +199,10 @@
         <subvertex xsi:type="yammDiagram:YPseudostate" ObjectID="f756e1a" name="YPseudostatef28bab9" outgoing="//@clazz.5/@ownedOperation.0/@stateMachine/@transition.0"/>
         <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f3c64e5" name="YFinalStatef2d52ea" incoming="//@clazz.5/@ownedOperation.0/@stateMachine/@transition.0"/>
         <trAttach ObjectID="f5310d2" name="YTrAttachmentf609325" transition="//@clazz.5/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
-          <effects ObjectID="f23277e" effectStringRep="chartView = new online.yamm.util.YammChartView(&quot;QueueWeighingStation&quot;);"/>
-          <effects ObjectID="f261d9f" effectStringRep="(chartView as online.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;queue&quot;, &quot;queueWS&quot;);"/>
-          <effects ObjectID="f1ee59c" effectStringRep="(chartView as online.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;delayed&quot;, &quot;delayed&quot;);"/>
-          <effects ObjectID="f3d4bbb" effectStringRep="(chartView as online.yamm.util.YammChartView).showCharts;"/>
+          <effects ObjectID="f23277e" effectStringRep="chartView = new dev.yamm.util.YammChartView(&quot;QueueWeighingStation&quot;);"/>
+          <effects ObjectID="f261d9f" effectStringRep="(chartView as dev.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;queue&quot;, &quot;queueWS&quot;);"/>
+          <effects ObjectID="f1ee59c" effectStringRep="(chartView as dev.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;delayed&quot;, &quot;delayed&quot;);"/>
+          <effects ObjectID="f3d4bbb" effectStringRep="(chartView as dev.yamm.util.YammChartView).showCharts;"/>
         </trAttach>
       </stateMachine>
     </ownedOperation>
@@ -457,14 +457,14 @@
           <effects ObjectID="f312ccd" effectStringRep="deactivateTruckGenerator.gravelShipping = this;"/>
         </trAttach>
         <trAttach ObjectID="f19f3e4" name="YTrAttachmentf19f3e4" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.10" guardStringRep="true;">
-          <effects ObjectID="f599212" effectStringRep="chartView = new online.yamm.util.YammChartView(&quot;GravelToShip&quot;);"/>
-          <effects ObjectID="f7a5c95" effectStringRep="(chartView as online.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;_gravelToShip&quot;, &quot;gravelToShip&quot;);"/>
+          <effects ObjectID="f599212" effectStringRep="chartView = new dev.yamm.util.YammChartView(&quot;GravelToShip&quot;);"/>
+          <effects ObjectID="f7a5c95" effectStringRep="(chartView as dev.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;_gravelToShip&quot;, &quot;gravelToShip&quot;);"/>
           <effects ObjectID="f5ec49c"/>
           <effects ObjectID="f70a348"/>
-          <effects ObjectID="f4dd3cc" effectStringRep="(chartView as online.yamm.util.YammChartView).showCharts;"/>
+          <effects ObjectID="f4dd3cc" effectStringRep="(chartView as dev.yamm.util.YammChartView).showCharts;"/>
         </trAttach>
         <trAttach ObjectID="f358143" name="YTrAttachmentf358143" transition="//@clazz.12/@ownedOperation.0/@stateMachine/@transition.11" guardStringRep="true;">
-          <effects ObjectID="f7f8901" effectStringRep="online.yamm.gui.Progress.setProgressValue(this, &quot;_gravelToShip&quot;, _gravelToShip, 0);"/>
+          <effects ObjectID="f7f8901" effectStringRep="dev.yamm.gui.Progress.setProgressValue(this, &quot;_gravelToShip&quot;, _gravelToShip, 0);"/>
         </trAttach>
       </stateMachine>
     </ownedOperation>
@@ -546,10 +546,10 @@
         <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f2d52ea" name="YFinalStatef2d52ea" incoming="//@clazz.14/@ownedOperation.0/@stateMachine/@transition.0"/>
         <trAttach ObjectID="f609325" name="YTrAttachmentf609325" transition="//@clazz.14/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
           <effects ObjectID="f72077c" effectStringRep="Print(&quot;------------------------------------------------------&quot;);"/>
-          <effects ObjectID="f7675a9" effectStringRep="chartView = new online.yamm.util.YammChartView(&quot;QueueLoadingDock&quot;);"/>
-          <effects ObjectID="f69a05e" effectStringRep="(chartView as online.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;queue&quot;, &quot;queueLD&quot;);"/>
-          <effects ObjectID="f45f43d" effectStringRep="(chartView as online.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;delayed&quot;, &quot;delayed&quot;);"/>
-          <effects ObjectID="f1cbeb7" effectStringRep="(chartView as online.yamm.util.YammChartView).showCharts;"/>
+          <effects ObjectID="f7675a9" effectStringRep="chartView = new dev.yamm.util.YammChartView(&quot;QueueLoadingDock&quot;);"/>
+          <effects ObjectID="f69a05e" effectStringRep="(chartView as dev.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;queue&quot;, &quot;queueLD&quot;);"/>
+          <effects ObjectID="f45f43d" effectStringRep="(chartView as dev.yamm.util.YammChartView).addChart(yammInternal as org.eclipse.emf.ecore.EObject, &quot;simulationTime&quot;, &quot;time&quot;, this, &quot;delayed&quot;, &quot;delayed&quot;);"/>
+          <effects ObjectID="f1cbeb7" effectStringRep="(chartView as dev.yamm.util.YammChartView).showCharts;"/>
         </trAttach>
       </stateMachine>
     </ownedOperation>
@@ -616,7 +616,7 @@
           <trAttach ObjectID="f529472" name="YTrAttachmentf529472" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.0/@stateMachine/@transition.0" guardStringRep="true;">
             <effects ObjectID="f3d0304" effectStringRep="queue.add(object);"/>
             <effects ObjectID="f160b70" effectStringRep="var_objectManagment = getObjectManagement();"/>
-            <effects ObjectID="f6420ae" effectStringRep="(var_objectManagment as online.yamm.ObjectManagement).addQueueElement(this, object, 1);"/>
+            <effects ObjectID="f6420ae" effectStringRep="(var_objectManagment as dev.yamm.ObjectManagement).addQueueElement(this, object, 1);"/>
           </trAttach>
         </stateMachine>
       </ownedOperation>
@@ -638,7 +638,7 @@
           <subvertex xsi:type="yammDiagram:YFinalState" ObjectID="f5e46aa" name="YFinalStatef5e46aa" incoming="//@packages.1/@ownedMemberPackage.1/@ownedOperation.3/@stateMachine/@transition.0"/>
           <trAttach ObjectID="f459b0" name="YTrAttachmentf459b0" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.3/@stateMachine/@transition.0" guardStringRep="true;">
             <effects ObjectID="f3af920" effectStringRep="var_objectManagment = getObjectManagement();"/>
-            <effects ObjectID="f3726ea" effectStringRep="(var_objectManagment as online.yamm.ObjectManagement).addDelayedQueueElement(this, object, 1);"/>
+            <effects ObjectID="f3726ea" effectStringRep="(var_objectManagment as dev.yamm.ObjectManagement).addDelayedQueueElement(this, object, 1);"/>
             <effects ObjectID="f59be5a" effectStringRep="delayed.add(object);"/>
             <effects ObjectID="f6f18ad" effectStringRep="event = new Delay;"/>
             <effects ObjectID="f28d54b" effectStringRep="event.timeStep = timeStep + delay;"/>
@@ -665,7 +665,7 @@
           <trAttach ObjectID="f1e9b4e" name="YTrAttachmentf1e9b4e" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.1" guardStringRep="event != null;"/>
           <trAttach ObjectID="f5eb936" name="YTrAttachmentf5eb936" transition="//@packages.1/@ownedMemberPackage.1/@ownedOperation.4/@stateMachine/@transition.2" guardStringRep="event instanceof Delay;">
             <effects ObjectID="f2c724a" effectStringRep="DES.EventQueue.consume(timeStep, true, null, this, null);"/>
-            <effects ObjectID="fe6655" effectStringRep="(var_objectManagment as online.yamm.ObjectManagement).removeDelayedQueueElement(this, event.objectAttached, 1);"/>
+            <effects ObjectID="fe6655" effectStringRep="(var_objectManagment as dev.yamm.ObjectManagement).removeDelayedQueueElement(this, event.objectAttached, 1);"/>
             <effects ObjectID="fb8378" effectStringRep="add(event.objectAttached);"/>
             <effects ObjectID="f271ec5" effectStringRep="setReturnValue(true);"/>
           </trAttach>

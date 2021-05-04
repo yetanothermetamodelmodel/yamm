@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: dev.yamm.util.evalGrammar.tests
+Bundle-ManifestVersion: 2
+Bundle-Name: dev.yamm.util.evalGrammar.tests
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: dev.yamm.util.evalGrammar.tests;singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: dev.yamm.util.evalGrammar,
+ org.junit;bundle-version="4.12.0",
+ org.eclipse.xtext.testing,
+ org.eclipse.xtext.xbase.testing,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.23.0",
+ org.objectweb.asm;bundle-version="[6.1.1,6.2.0)";resolution:=optional
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: dev.yamm.util.evalGrammar.tests;x-internal=true
+

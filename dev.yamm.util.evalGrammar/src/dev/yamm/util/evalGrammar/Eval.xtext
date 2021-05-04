@@ -1,0 +1,6 @@
+grammar dev.yamm.util.evalGrammar.Eval with org.eclipse.xtext.xbase.Xbase
+
+generate eval "http://www.yamm.dev/util/evalGrammar/Eval"
+
+Model:
+	expression=XBlockExpression;

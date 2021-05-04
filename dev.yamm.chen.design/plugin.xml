@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="dev.yamm.chen.design.Activator"
+               id="dev.yamm.chen.design"
+	       name="chen">
+    </component>
+  </extension>
+  <extension
+        point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+     <editpartProvider
+           class="dev.yamm.chen.design.provider.ConnectionEditpartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+     <editpartProvider
+           class="dev.yamm.chen.design.provider.AttributeEditpartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+     <editpartProvider
+           class="dev.yamm.chen.design.provider.ConnectionLabelEditProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+     <editpartProvider
+           class="dev.yamm.chen.design.provider.RelationshipEditpartProvider">
+        <Priority
+              name="Lowest">
+        </Priority>
+     </editpartProvider>
+  </extension>
+  <extension
+        id="customide"
+        point="org.eclipse.core.runtime.products">
+     <product
+           application="org.eclipse.ui.ide.workbench"
+           name="Custom IDE">
+        <property
+              name="appName"
+              value="Custom IDE">
+        </property>
+     </product>
+  </extension>
+</plugin>

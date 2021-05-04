@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<yamm:YModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.eclipse.org/xtext/common/JavaVMTypes" xmlns:xbase="http://www.eclipse.org/xtext/xbase/Xbase" xmlns:yamm="http://www.yamm.online/coreModelXmi/Yamm" ObjectID="e">
+<yamm:YModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.eclipse.org/xtext/common/JavaVMTypes" xmlns:xbase="http://www.eclipse.org/xtext/xbase/Xbase" xmlns:yamm="http://www.yamm.dev/coreModelXmi/Yamm" ObjectID="e">
   <clazz ObjectID="f5e24a2" name="RObject">
     <ownedAttribute ObjectID="f2bd771" name="rContainer" type="//@clazz.0" clazz="//@clazz.0"/>
     <ownedAttribute ObjectID="f55ebef" name="yClass" type="//@packages.0/@ownedMemberPackage.4" clazz="//@clazz.0"/>
@@ -3354,7 +3354,7 @@
                   <feature xsi:type="types:JvmVoid" href="gravelShipping__TMP__.xyamm#|1214"/>
                   <memberCallTarget xsi:type="xbase:XCastedExpression">
                     <type xsi:type="types:JvmParameterizedTypeReference">
-                      <type xsi:type="types:JvmGenericType" href="java:/Objects/online.yamm.ObjectManagement#online.yamm.ObjectManagement"/>
+                      <type xsi:type="types:JvmGenericType" href="java:/Objects/dev.yamm.ObjectManagement#dev.yamm.ObjectManagement"/>
                     </type>
                     <target xsi:type="yamm:YFeatureCall">
                       <feature xsi:type="types:JvmVoid" href="gravelShipping__TMP__.xyamm#|1216"/>
@@ -3407,7 +3407,7 @@
                   <feature xsi:type="types:JvmVoid" href="gravelShipping__TMP__.xyamm#|1236"/>
                   <memberCallTarget xsi:type="xbase:XCastedExpression">
                     <type xsi:type="types:JvmParameterizedTypeReference">
-                      <type xsi:type="types:JvmGenericType" href="java:/Objects/online.yamm.ObjectManagement#online.yamm.ObjectManagement"/>
+                      <type xsi:type="types:JvmGenericType" href="java:/Objects/dev.yamm.ObjectManagement#dev.yamm.ObjectManagement"/>
                     </type>
                     <target xsi:type="yamm:YFeatureCall">
                       <feature xsi:type="types:JvmVoid" href="gravelShipping__TMP__.xyamm#|1238"/>
@@ -3579,7 +3579,7 @@
                   <feature xsi:type="types:JvmVoid" href="gravelShipping__TMP__.xyamm#|1301"/>
                   <memberCallTarget xsi:type="xbase:XCastedExpression">
                     <type xsi:type="types:JvmParameterizedTypeReference">
-                      <type xsi:type="types:JvmGenericType" href="java:/Objects/online.yamm.ObjectManagement#online.yamm.ObjectManagement"/>
+                      <type xsi:type="types:JvmGenericType" href="java:/Objects/dev.yamm.ObjectManagement#dev.yamm.ObjectManagement"/>
                     </type>
                     <target xsi:type="yamm:YFeatureCall">
                       <feature xsi:type="types:JvmVoid" href="gravelShipping__TMP__.xyamm#|1303"/>

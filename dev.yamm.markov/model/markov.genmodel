@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/dev.yamm.markov/src" modelPluginID="dev.yamm.markov"
+    modelName="Markov" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>markov.ecore</foreignModel>
+  <genPackages prefix="Markov" basePackage="dev.yamm.markov" disposableProviderFactory="true"
+      ecorePackage="markov.ecore#/">
+    <genClasses ecoreClass="markov.ecore#//RObject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute markov.ecore#//RObject/ObjectID"/>
+    </genClasses>
+    <genClasses ecoreClass="markov.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute markov.ecore#//State/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference markov.ecore#//State/incoming"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference markov.ecore#//State/outgoing"/>
+    </genClasses>
+    <genClasses ecoreClass="markov.ecore#//Diagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference markov.ecore#//Diagram/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference markov.ecore#//Diagram/transitions"/>
+    </genClasses>
+    <genClasses ecoreClass="markov.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute markov.ecore#//Transition/probability"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference markov.ecore#//Transition/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference markov.ecore#//Transition/to"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2019 yamm.online, Ralf Buschermöhle
+ * Copyright (C) 2019 yamm.dev, Ralf Buschermöhle
  * 	
  * YAMM is made available under the terms of the Eclipse Public License 2.0
  * which is available at https://www.eclipse.org/legal/epl-2.0/
@@ -44,10 +44,10 @@ import org.eclipse.xtext.resource.XtextResourceSet;
 
 import com.google.inject.Injector;
 
-import online.yamm.coreModelDiagram.yammDiagram.YammDiagramPackage;
-import online.yamm.coreModelDiagram.yammDiagram.xmiToText.DslConverter;
-import online.yamm.coreModelDsl.XYammStandaloneSetup;
-import online.yamm.coreModelXmi.yamm.YModel;
+import dev.yamm.coreModelDiagram.yammDiagram.YammDiagramPackage;
+import dev.yamm.coreModelDiagram.yammDiagram.xmiToText.DslConverter;
+import dev.yamm.coreModelXmi.yamm.YModel;
+import dev.yamm.coreModelDsl.XYammStandaloneSetup;
 
 public class XMIConverter
 {
@@ -64,7 +64,7 @@ public class XMIConverter
 		Resource resource = resSet.getResource(URI.createFileURI(path), true);
 		
 		DslConverter dslConverter = new DslConverter();
-		List<String> dslCode = dslConverter.createFullDsl((online.yamm.coreModelDiagram.yammDiagram.YModel) resource.getContents().get(0));		
+		List<String> dslCode = dslConverter.createFullDsl((dev.yamm.coreModelDiagram.yammDiagram.YModel) resource.getContents().get(0));		
 		String source = "";
 		for (String line : dslCode)
 			source += line + " \n";

@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2019 yamm.online, Ralf Buschermöhle
+ * Copyright (C) 2019 yamm.dev, Ralf Buschermöhle
  * 	
  * YAMM is made available under the terms of the Eclipse Public License 2.0
  * which is available at https://www.eclipse.org/legal/epl-2.0/
@@ -42,15 +42,15 @@ import java.util.stream.Collectors;
 
 import org.apache.log4j.Level;
 
-import online.yamm.ConfigurationManagement;
-import online.yamm.ObjectManagement;
-import online.yamm.ResourceManagement;
-import online.yamm.communication.Command;
-import online.yamm.communication.MarkedPropertiesCommand;
-import online.yamm.communication.ProgressCommand;
-import online.yamm.communication.ResultQueueCommand;
-import online.yamm.communication.ResultSimObjectActiveCommand;
-import online.yamm.communication.TestCommand;
+import dev.yamm.ConfigurationManagement;
+import dev.yamm.ObjectManagement;
+import dev.yamm.ResourceManagement;
+import dev.yamm.communication.Command;
+import dev.yamm.communication.MarkedPropertiesCommand;
+import dev.yamm.communication.ProgressCommand;
+import dev.yamm.communication.ResultQueueCommand;
+import dev.yamm.communication.ResultSimObjectActiveCommand;
+import dev.yamm.communication.TestCommand;
 
 /**
  * Parameter Syntax: <loggingOn:int/String> <threads:int> <iterations:int> <workspacePath:string> <layerfile:string> <externalJarDir:string> <projectName:string>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="dfa" version="12.0.0.2017041100">
+  <ownedViewpoints name="DFAViewpoint" modelFileExtension="dfa">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="DFA Diagram" domainClass="dfa::DFA" enablePopupBars="true">
+      <metamodel href="../../dev.yamm.example.dfa/model/dfa.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="initialStateNode" labelDirectEdit="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editState']" semanticCandidatesExpression="aql:self.initialState->select(i | i.oclIsTypeOf(dfa::DInitialState))" domainClass="dfa::DInitialState">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="feature:stateName" sizeComputationExpression="10" labelPosition="node" workspacePath="/dev.yamm.example.dfa.design/icons/initialstate.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="stateNode" labelDirectEdit="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editState']" semanticCandidatesExpression="aql:self.states->select(i | i.oclIsTypeOf(dfa::DState))" domainClass="dfa::DState">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="feature:stateName" sizeComputationExpression="5" labelPosition="node" workspacePath="/dev.yamm.example.dfa.design/icons/state.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="finalStateNode" labelDirectEdit="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editState']" semanticCandidatesExpression="aql:self.states->select(i | i.oclIsTypeOf(dfa::DFinalState))" domainClass="dfa::DFinalState">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="feature:stateName" sizeComputationExpression="5" labelPosition="node" workspacePath="/dev.yamm.example.dfa.design/icons/finalstate.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="initialFinalStateNode" labelDirectEdit="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editState']" semanticCandidatesExpression="aql:self.initialState->select(i | i.oclIsTypeOf(dfa::DInitialFinalState))" domainClass="dfa::DInitialFinalState">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="feature:stateName" sizeComputationExpression="10" labelPosition="node" workspacePath="/dev.yamm.example.dfa.design/icons/initialfinalstate.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="transitionEdge" labelDirectEdit="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='editTransition']" semanticCandidatesExpression="feature:transitions" sourceMapping="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='initialStateNode'] //@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='finalStateNode'] //@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='stateNode'] //@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='initialFinalStateNode']" targetMapping="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='initialStateNode'] //@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='finalStateNode'] //@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='stateNode'] //@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='initialFinalStateNode']" targetFinderExpression="feature:dTarget" sourceFinderExpression="feature:dSource" domainClass="dfa::DTransition" useDomainElement="true" reconnections="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnectTransitionSource'] //@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnectTransitionTarget']">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="feature:transitionName">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="creationToolPalette">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createInitialState" label="Initial State" nodeMappings="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='initialStateNode']" iconPath="/dev.yamm.example.dfa.design/icons/initialPalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:Switch">
+                  <cases conditionExpression="aql:self.initialState&lt;>null">
+                    <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Message">
+                      <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                        <initialOperation/>
+                      </buttons>
+                      <page name="defPageInit" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createInitialFinalState']/@initialOperation/@firstModelOperations/@subModelOperations.0/@cases.0/@subModelOperations.0/@groups.0"/>
+                    </subModelOperations>
+                  </cases>
+                  <default>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="dfa::DInitialState" referenceName="states"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="initialState" valueExpression="var:instance"/>
+                  </default>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createState" label="State" nodeMappings="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='stateNode']" iconPath="/dev.yamm.example.dfa.design/icons/statePalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="dfa::DState" referenceName="states"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createFinalState" label="Final State" nodeMappings="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='finalStateNode']" iconPath="/dev.yamm.example.dfa.design/icons/finalPalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="dfa::DFinalState" referenceName="states"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createInitialFinalState" label="Initial-Final State" nodeMappings="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@nodeMappings[name='initialFinalStateNode']" iconPath="/dev.yamm.example.dfa.design/icons/initialfinalPalette.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:Switch">
+                  <cases conditionExpression="aql:self.initialState&lt;>null">
+                    <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Message">
+                      <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                        <initialOperation/>
+                      </buttons>
+                      <page name="defPageInitFin" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createInitialFinalState']/@initialOperation/@firstModelOperations/@subModelOperations.0/@cases.0/@subModelOperations.0/@groups.0"/>
+                      <groups name="defGroup" labelExpression="Operation not allowed" semanticCandidateExpression="var:self">
+                        <controls xsi:type="properties:LabelDescription" name="lblInitFin" labelExpression="There can be only one initial or initial final state."/>
+                        <style barStyle="SHORT_TITLE_BAR" expandedByDefault="true"/>
+                      </groups>
+                    </subModelOperations>
+                  </cases>
+                  <default>
+                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="dfa::DInitialFinalState" referenceName="states"/>
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="initialState" valueExpression="var:instance"/>
+                  </default>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createTransition" label="Transition" edgeMappings="//@ownedViewpoints[name='DFAViewpoint']/@ownedRepresentations[name='DFA%20Diagram']/@defaultLayer/@edgeMappings[name='transitionEdge']" iconPath="/dev.yamm.example.dfa.design/icons/transitionPalette.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="dfa::DTransition" referenceName="transitions"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="dOut" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="dIn" valueExpression="var:instance"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="dSource" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="dTarget" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="modifyTool">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editState">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="stateName" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editTransition">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="transitionName" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnectTransitionSource" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="dSource" elementExpression="var:element"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="dSource" valueExpression="var:source"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                  <subModelOperations xsi:type="tool_1:Unset" featureName="dOut" elementExpression="var:element"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="dOut" valueExpression="var:element"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnectTransitionTarget">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="dTarget" elementExpression="var:element"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="dTarget" valueExpression="var:target"/>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                  <subModelOperations xsi:type="tool_1:Unset" featureName="dIn" elementExpression="var:element"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="dIn" valueExpression="var:element"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="dev.yamm.example.dfa.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

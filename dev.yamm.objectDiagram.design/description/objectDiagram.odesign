@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="objectDiagram" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint" modelFileExtension="objectdiagram">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ObjectDiagram" domainClass="ObjectDiagram::ObjectDiagram" enablePopupBars="true">
+      <metamodel href="../../dev.yamm.objectDiagram/model/ObjectDiagram.ecore#/"/>
+      <layout xsi:type="description_1:CustomLayoutConfiguration" id="org.eclipse.elk.layered" label="ELK Layered" description="Layer-based algorithm provided by the Eclipse Layout Kernel. Arranges as many edges as possible into one direction by placing nodes into subsequent layers. This implementation supports different routing styles (straight, orthogonal, splines); if orthogonal routing is selected, arbitrary port constraints are respected, thus enabling the layout of block diagrams such as actor-oriented models or circuit schematics. Furthermore, full layout of compound graphs with cross-hierarchy edges is supported when the respective option is activated on the top level."/>
+      <defaultLayer name="Default">
+        <edgeMappings name="OD_Reference" semanticCandidatesExpression="service:candidatesReference()" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@containerMappings[name='OD_Object']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@containerMappings[name='OD_Object']" targetFinderExpression="feature:value" sourceFinderExpression="feature:eContainer" domainClass="ObjectDiagram::ODReference" useDomainElement="true">
+          <conditionnalStyles predicateExpression="aql: self.containment">
+            <style sourceArrow="Diamond" targetArrow="NoDecoration" sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <endLabelStyleDescription showIcon="false" labelExpression="service:getLabelForReference(view)">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.containment">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <endLabelStyleDescription showIcon="false" labelExpression="service:getLabelForReference(view)">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="OD_ReferenceParameter" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@containerMappings[name='OD_Stackframe']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@containerMappings[name='OD_Object']" targetFinderExpression="feature:value" sourceFinderExpression="feature:eContainer" domainClass="ObjectDiagram::ODReference" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <endLabelStyleDescription showIcon="false" labelExpression="service:getLabelForReference(view)">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="OD_StackframeContainingObject" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@containerMappings[name='OD_Stackframe']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@containerMappings[name='OD_Object']" targetFinderExpression="feature:containingObject">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="OD_Reference_Biassoziation" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='deleteBiAssoziation']" semanticCandidatesExpression="service:candidatesReferenceBiassoziation()" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@containerMappings[name='OD_Object']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@containerMappings[name='OD_Object']" targetFinderExpression="feature:value" sourceFinderExpression="feature:eContainer" domainClass="ObjectDiagram::ODReference" useDomainElement="true">
+          <style sourceArrow="InputArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <beginLabelStyleDescription showIcon="false" labelExpression="service:getLabelForReferenceOpposite(view)">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="service:getLabelForReference(view)">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="OD_Object" semanticCandidatesExpression="feature:objects" domainClass="ObjectDiagram::ODObject" childrenPresentation="VerticalStack">
+          <subContainerMappings name="OD_Attribute_Container" semanticCandidatesExpression="var:self" domainClass="ObjectDiagram::ODObject" childrenPresentation="List">
+            <subNodeMappings name="OD_Attribute" deletionDescription="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='deleteAttribute']" semanticCandidatesExpression="feature:attributes" domainClass="ObjectDiagram::ODAttribute">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql: self.name + ' = ' + self.value" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="" labelAlignment="LEFT" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql:self.ObjectID + ': ' +  self.type.qualifiedName" labelAlignment="LEFT">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="OD_Stackframe" semanticCandidatesExpression="feature:stackframes" domainClass="ObjectDiagram::ODStackframe" childrenPresentation="VerticalStack">
+          <subContainerMappings name="OD_Attribute_Container" semanticCandidatesExpression="var:self" domainClass="objectDiagram::ODStackframe" childrenPresentation="List">
+            <subNodeMappings name="OD_Attribute" semanticCandidatesExpression="feature:parameterPrimitive" domainClass="objectDiagram::ODAttribute">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql: self.name + ' = ' + self.value " labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="" labelAlignment="LEFT" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="aql: self.operationName" labelAlignment="LEFT">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Create">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createObject" label="Object" containerMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@containerMappings[name='OD_Object']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:typeObjectCreate">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:createObject(container)"/>
+                        </subModelOperations>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <page name="Default Page" labelExpression="Create Object" domainClass="ObjectDiagram::ObjectDiagram" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createObject']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                  <groups name="Default Group" labelExpression="select type" domainClass="ObjectDiagram::ObjectDiagram" semanticCandidateExpression="var:self">
+                    <controls xsi:type="properties:SelectDescription" name="selectType" labelExpression="aql:'type'" valueExpression="service:getSelectedType()" candidatesExpression="service:getTypes()" candidateDisplayExpression="service:getQualifiedNameObjectCandidate(candidate)">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="typeObjectCreate" valueExpression="var:newValue"/>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </controls>
+                  </groups>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createReference" label="Reference" edgeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@edgeMappings[name='OD_Reference']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ObjectDiagram::ODReference" referenceName="references" variableName="reference"/>
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Select Reference">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:reference">
+                        <subModelOperations xsi:type="tool_1:RemoveElement"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:initReference(reference, source, target)"/>
+                    </initialOperation>
+                  </buttons>
+                  <page name="Default Pagea" labelExpression="Page" domainClass="ObjectDiagram::ODObject" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createReference']/@initialOperation/@firstModelOperations/@subModelOperations.1/@groups.0"/>
+                  <groups name="Default Groupa" labelExpression="Group" domainClass="ObjectDiagram::ODObject" semanticCandidateExpression="var:self">
+                    <controls xsi:type="properties:SelectDescription" labelExpression="aql:'reference'" valueExpression="service:getSelectedReference(reference, target)" candidatesExpression="service:getReferences(source, target)" candidateDisplayExpression="service:getNameReferenceCandidate(candidate)">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:reference">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:createReference(newValue, target)"/>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </controls>
+                  </groups>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="loadMetadata">
+          <ownedTools xsi:type="tool_1:OperationAction" name="loadYammModel" label="loadYammModel">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:Let" variableName="modelPath" valueExpression="aql:''">
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
+                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                      <initialOperation/>
+                    </buttons>
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:loadYammModel()"/>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </buttons>
+                    <page name="Default Page" labelExpression="Page" domainClass="ObjectDiagram::ObjectDiagram" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='ObjectDiagram']/@defaultLayer/@toolSections.1/@ownedTools[name='loadYammModel']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                    <groups name="Default Group" labelExpression="Group" domainClass="ObjectDiagram::ObjectDiagram" semanticCandidateExpression="var:self">
+                      <controls xsi:type="properties:TextAreaDescription" name="selectYammModel" labelExpression="...yammdiagram" lineCount="1">
+                        <initialOperation>
+                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                            <subModelOperations xsi:type="tool_1:SetValue" featureName="yammModelPath" valueExpression="var:newValue"/>
+                          </firstModelOperations>
+                        </initialOperation>
+                      </controls>
+                    </groups>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Delete">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteBiAssoziation">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deleteBiassoziation(elementView)"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteAttribute">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="other">
+          <ownedTools xsi:type="tool_1:OperationAction" name="saveAsInitialModel" label="save as initial model">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:saveAsInitialModel()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:OperationAction" name="loadInitialModel" label="load initial model">
+            <view name="views"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:loadInitialModel()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="dev.yamm.objectDiagram.design.Services"/>
+  </ownedViewpoints>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="ObjectDiagramPropertiesView">
+    <categories name="CategoryA">
+      <pages name="ObjectDiagramPage" labelExpression="Main" domainClass="ObjectDiagram::ObjectDiagram" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <pages name="ObjectPage" labelExpression="Main" domainClass="ObjectDiagram::ODObject" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.1"/>
+      <pages name="AttributePage" labelExpression="Main" domainClass="ObjectDiagram::ODAttribute" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.2"/>
+      <pages name="ReferencePage" labelExpression="Main" domainClass="ObjectDiagram::ODReference" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.4"/>
+      <groups name="ObjectDiagramGroup" labelExpression="ObjectDiagram" domainClass="ObjectDiagram::ObjectDiagram" semanticCandidateExpression="var:self"/>
+      <groups name="ObjectGroup" labelExpression="Object" domainClass="ObjectDiagram::ODObject" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="PropertiesViewObjectGroupObjectIDTextField" labelExpression="ObjectID (hex):" valueExpression="feature:ObjectID">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="ObjectID" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="AttributeGroup" labelExpression="Attribute" domainClass="ObjectDiagram::ODAttribute" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="attributeGoupType" labelExpression="Type:" isEnabledExpression="aql: false" valueExpression="service:getAttributeType()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="atrLowerBound" labelExpression="Lower Bound:" isEnabledExpression="aql: false" valueExpression="feature:lower">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="atrUpperBound" labelExpression="Upper Bound:" isEnabledExpression="aql: false" valueExpression="feature:upper">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="atrValue" labelExpression="value:" valueExpression="feature:value">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+              <subModelOperations xsi:type="tool_1:SetValue" featureName="value" valueExpression="var:newValue"/>
+            </firstModelOperations>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="ReferenceGroup" labelExpression="Reference" domainClass="ObjectDiagram::ODReference" semanticCandidateExpression="var:self">
+        <controls xsi:type="properties:TextDescription" name="refNameA" labelExpression="Name:" isEnabledExpression="aql: false" valueExpression="feature:name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="refLowerBoundA" labelExpression="Lower Bound:" isEnabledExpression="aql: false" valueExpression="feature:lower">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="refUppreBoundA" labelExpression="Upper Bound:" isEnabledExpression="aql: false" valueExpression="feature:upper">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="ReferenceGroupOpposite" labelExpression="Reference" domainClass="ObjectDiagram::ODReference" semanticCandidateExpression="service:getOppositeRef(input)">
+        <controls xsi:type="properties:TextDescription" name="refNameB" labelExpression="Name:" isEnabledExpression="aql: false" valueExpression="feature:name">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="refLowerBoundB" labelExpression="Lower Bound:" isEnabledExpression="aql: false" valueExpression="feature:lower">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextDescription" name="refUppreBoundB" labelExpression="Upper Bound:" isEnabledExpression="aql: false" valueExpression="feature:upper">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+      </groups>
+    </categories>
+    <categories name="default"/>
+  </extensions>
+</description:Group>

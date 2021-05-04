@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:properties-ext-widgets-reference="http://www.eclipse.org/sirius/properties/1.0.0/ext/widgets/reference" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="chen" version="12.0.0.2017041100">
+  <ownedViewpoints name="Chen" modelFileExtension="chen">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Chen Diagram" domainClass="chen::Chen" enablePopupBars="true">
+      <metamodel href="../../dev.yamm.chen/model/chen.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Relationship" deletionDescription="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='deleteEntityRelationshipGeneralizationAttribute']" labelDirectEdit="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='labelEditRelationship']" semanticCandidatesExpression="feature:realtionships" doubleClickDescription="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='changeRelationshipType']" domainClass="chen::Relationship">
+          <conditionnalStyles predicateExpression="aql: not self.indentifyingRelationship">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/relationship.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.indentifyingRelationship">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/relationshipIndentifying.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="Entity" deletionDescription="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='deleteEntityRelationshipGeneralizationAttribute']" labelDirectEdit="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='labelEditEntity']" semanticCandidatesExpression="feature:entities" doubleClickDescription="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='changeEntityType']" domainClass="chen::Entity">
+          <conditionnalStyles predicateExpression="aql: self.weakEntityType">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/entityWeak.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.weakEntityType">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/entity.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="Attribute" deletionDescription="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='deleteEntityRelationshipGeneralizationAttribute']" labelDirectEdit="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='labelEditAttribute']" semanticCandidatesExpression="feature:attributes" domainClass="chen::Attribute">
+          <conditionnalStyles predicateExpression="aql: self.derived and self.multivalued and self.key=chen::Key::None">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attributeDerivedMultivalue.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.derived and not self.multivalued and self.key=chen::Key::None">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attribute.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:  self.derived and not self.multivalued and self.key=chen::Key::None">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attributeDerived.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.derived and self.multivalued and self.key=chen::Key::None">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attributeMultivalue.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.derived and self.multivalued and self.key=chen::Key::Strong">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attributeDerivedMultivalue.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.derived and not self.multivalued and self.key=chen::Key::Strong">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attribute.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:  self.derived and not self.multivalued and self.key=chen::Key::Strong">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attributeDerived.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.derived and self.multivalued and self.key=chen::Key::Strong">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attributeMultivalue.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.derived and self.multivalued and self.key=chen::Key::Weak">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attributeDerivedMultivalue.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.derived and not self.multivalued and self.key=chen::Key::Weak">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attribute.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql:  self.derived and not self.multivalued and self.key=chen::Key::Weak">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attributeDerived.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.derived and self.multivalued and self.key=chen::Key::Weak">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:attributeLabel()" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW" workspacePath="/dev.yamm.chen.design/images/attributeMultivalue.svg">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </conditionnalStyles>
+        </nodeMappings>
+        <nodeMappings name="Generalization" deletionDescription="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='deleteEntityRelationshipGeneralizationAttribute']" semanticCandidatesExpression="feature:generalizations" doubleClickDescription="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='changeGeneralizationType']" domainClass="chen::Generalization">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="10" showIcon="false" labelExpression="service:getGeneralizationLabel()" labelPosition="node" workspacePath="/dev.yamm.chen.design/images/generalization.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ConnectionEntityRelationship" labelDirectEdit="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='labelEditConnection']" semanticCandidatesExpression="feature:connections" doubleClickDescription="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='changeConnectionType']" sourceMapping="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Entity'] //@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Attribute'] //@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Relationship'] //@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Generalization']" targetMapping="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Relationship'] //@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Attribute'] //@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Entity'] //@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Generalization']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="chen::Connection" useDomainElement="true" reconnections="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='reconnectConnection']">
+          <conditionnalStyles predicateExpression="aql: not self.generalizationConnection and self.totalPartizipation and self.showBegin()">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="feature:kardinality">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="feature:role">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.generalizationConnection and not self.totalPartizipation and self.showBegin()">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription labelSize="10" showIcon="false" labelExpression="feature:kardinality">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </beginLabelStyleDescription>
+              <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="feature:role">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.generalizationConnection and self.totalPartizipation  and self.showEnd()">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="feature:role">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="feature:kardinality">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.generalizationConnection and not self.totalPartizipation and self.showEnd()">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription labelSize="10" showIcon="false" labelExpression="feature:role">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+              <endLabelStyleDescription labelSize="10" showIcon="false" labelExpression="feature:kardinality">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.generalizationConnection and self.totalPartizipation and not self.showEnd() and not self.showBegin()">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: not self.generalizationConnection and not self.totalPartizipation and not self.showEnd() and not self.showBegin()">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.generalizationConnection and self.totalPartizipation and self.generalization and self.generalizationOrientation">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.generalizationConnection and self.totalPartizipation and self.generalization and not self.generalizationOrientation">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.generalizationConnection and self.totalPartizipation and not self.generalization and self.generalizationOrientation">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.generalizationConnection and self.totalPartizipation and not self.generalization and not self.generalizationOrientation">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.generalizationConnection and not self.totalPartizipation and self.generalization and self.generalizationOrientation">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.generalizationConnection and not self.totalPartizipation and self.generalization and not self.generalizationOrientation">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.generalizationConnection and not self.totalPartizipation and not self.generalization and self.generalizationOrientation">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="aql: self.generalizationConnection and not self.totalPartizipation and not self.generalization and not self.generalizationOrientation">
+            <style targetArrow="NoDecoration" sizeComputationExpression="2" endsCentering="Both">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <toolSections name="creationTools">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateConnection" label="Connection" precondition="service:connectionCreateCondition(preSource, preTarget)" edgeMappings="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@edgeMappings[name='ConnectionEntityRelationship']" iconPath="/dev.yamm.chen.design/icons/connection.ico">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chen::Connection" referenceName="connections" variableName="connection">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:connection">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:initConnection(source, target)"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateRelationship" label="Relationship" nodeMappings="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Relationship']" iconPath="/dev.yamm.chen.design/icons/relationship.ico">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chen::Relationship" referenceName="realtionships"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateEntity" label="Entity" nodeMappings="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Entity']" iconPath="/dev.yamm.chen.design/icons/entity.ico">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chen::Entity" referenceName="entities"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateAttribute" label="Attribute" nodeMappings="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Attribute']" iconPath="/dev.yamm.chen.design/icons/attribute.ico">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chen::Attribute" referenceName="attributes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateGeneralization" label="Generalization" nodeMappings="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Generalization']" iconPath="/dev.yamm.chen.design/icons/generalization.ico">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="chen::Generalization" referenceName="generalizations" variableName="generalization"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="DirectEdit">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="labelEditAttribute" inputLabelExpression="feature:name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="labelEditEntity" inputLabelExpression="feature:name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="labelEditRelationship" inputLabelExpression="feature:name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="labelEditConnection" precondition="service:isConnectionWithLabel()">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:connectionLabelEditDummyService()"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Doubleclick">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="changeGeneralizationType" mappings="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Generalization']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:changeGeneralizationType(element)"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="changeEntityType" mappings="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Entity']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:changeEntityType(element)"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="changeConnectionType" forceRefresh="true" mappings="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@edgeMappings[name='ConnectionEntityRelationship']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:changeConnectionType(element)"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="changeRelationshipType" forceRefresh="true" mappings="//@ownedViewpoints[name='Chen']/@ownedRepresentations[name='Chen%20Diagram']/@defaultLayer/@nodeMappings[name='Relationship']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:changeRelationshipType(element)"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Reconnect">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnectConnection" precondition="service:reconnectConnectionPrecondition(source, target)" reconnectionKind="RECONNECT_BOTH">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:reconnectConnection(source, target, element)"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Deletion">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteEntityRelationshipGeneralizationAttribute">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="service:deleteEntity()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="dev.yamm.chen.design.Services"/>
+  </ownedViewpoints>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="sirius_default_rules_properties">
+    <categories name="Default">
+      <pages name="sirius_default_rules_defaultpage" labelExpression="aql:input.emfEditServices(self).getTabName()" semanticCandidateExpression="aql:input.getAllSemanticElements()" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <groups name="sirius_default_rules_defaultgroup" labelExpression="Properties" semanticCandidateExpression="var:self" preconditionExpression="">
+        <controls xsi:type="properties:DynamicMappingForDescription" name="sirius_default_rules_structural_features_for" iterator="eStructuralFeature" iterableExpression="aql:input.emfEditServices(self).getEStructuralFeatures()">
+          <ifs name="sirius_default_rules_mono_string_if" predicateExpression="aql:self.showProperty(eStructuralFeature) and input.emfEditServices(self).needsTextWidget(eStructuralFeature) and not input.emfEditServices(self).isMultiline(eStructuralFeature)">
+            <widget xsi:type="properties:TextDescription" name="sirius_default_rules_mono_string" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs name="sirius_default_rules_multi_string_if" predicateExpression="aql:self.showProperty(eStructuralFeature) and input.emfEditServices(self).needsTextWidget(eStructuralFeature) and input.emfEditServices(self).isMultiline(eStructuralFeature)">
+            <widget xsi:type="properties:TextAreaDescription" name="sirius_default_rules_multi_string" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs name="sirius_default_rules_mono_boolean" predicateExpression="aql:self.showProperty(eStructuralFeature) and input.emfEditServices(self).needsCheckboxWidget(eStructuralFeature)">
+            <widget xsi:type="properties:CheckboxDescription" name="sirius_default_rules_mono_boolean" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs name="sirius_default_rules_enum_if" predicateExpression="aql:self.showProperty(eStructuralFeature) and eStructuralFeature.eType.oclIsKindOf(ecore::EEnum) and not(eStructuralFeature.many)">
+            <widget xsi:type="properties:RadioDescription" name="sirius_default_rules_enum" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:eStructuralFeature.eType.oclAsType(ecore::EEnum).getEEnumLiteralByLiteral(self.eGet(eStructuralFeature.name).toString())" candidatesExpression="aql:eStructuralFeature.eType.oclAsType(ecore::EEnum).eLiterals" candidateDisplayExpression="aql:candidate.name" numberOfColumns="5">
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:input.emfEditServices(self).setValue(eStructuralFeature, newValue.instance)"/>
+              </initialOperation>
+              <conditionalStyles preconditionExpression="aql:eStructuralFeature.lowerBound==1">
+                <style>
+                  <labelFontFormat>bold</labelFontFormat>
+                </style>
+              </conditionalStyles>
+            </widget>
+          </ifs>
+          <ifs name="sirius_default_rules_eattribute_many_if" predicateExpression="aql:eStructuralFeature.oclIsKindOf(ecore::EAttribute) and eStructuralFeature.many">
+            <widget xsi:type="properties:ListDescription" name="sirius_default_rules_eattribute_many" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" isEnabledExpression="aql:eStructuralFeature.changeable" valueExpression="aql:self.eGet(eStructuralFeature.name)" displayExpression="var:value"/>
+          </ifs>
+          <ifs name="sirius_default_rules_ereference_if" predicateExpression="aql:self.showProperty(eStructuralFeature) and eStructuralFeature.oclIsKindOf(ecore::EReference)">
+            <widget xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="sirius_default_rules_ereference" labelExpression="aql:input.emfEditServices(self).getText(eStructuralFeature)+':'" helpExpression="aql:input.emfEditServices(self).getDescription(eStructuralFeature)" referenceNameExpression="aql:eStructuralFeature.name"/>
+          </ifs>
+        </controls>
+      </groups>
+    </categories>
+  </extensions>
+</description:Group>

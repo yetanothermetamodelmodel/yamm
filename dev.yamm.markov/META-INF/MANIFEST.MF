@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: dev.yamm.markov;singleton:=true
+Automatic-Module-Name: dev.yamm.markov
+Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: dev.yamm.markov.markov,
+ dev.yamm.markov.markov.impl,
+ dev.yamm.markov.markov.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ dev.yamm;bundle-version="1.0.42"
+Bundle-ActivationPolicy: lazy

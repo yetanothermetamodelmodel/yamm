@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="dev.yamm.layerEPackageProvider" name="LayerEPackageProvider" schema="schema/dev.yamm.layerEPackageProvider.exsd"/>
+   <extension-point id="dev.yamm.layerSourceProvider" name="LayerSourceProvider" schema="schema/dev.yamm.layerSourceProvider.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="YAMM"
+            id="YAMM Views">
+      </category>
+      <view
+            name="Layer View"
+            icon="icons/cakeSmall.png"
+            category="YAMM Views"
+            class="dev.yamm.gui.LayerView"
+            id="dev.yamm.LayerView">
+      </view>
+      <view
+            category="YAMM Views"
+            class="dev.yamm.gui.EventQueueView"
+            id="dev.yamm.ui.eventQueueView"
+            name="Event Queue View">
+      </view>
+      <view
+            category="YAMM Views"
+            class="dev.yamm.gui.QueueView"
+            id="dev.yamm.ui.queueView"
+            inject="true"
+            name="Queue View">
+      </view>
+   </extension>
+
+   <extension
+      point = "org.eclipse.ui.preferencePages">
+      <page
+            id="YAMM Preferences"
+            class="dev.yamm.preferencePage.YAMMPreferencePage"
+            name="YAMM Compilation, Simulation and Analysis">
+      </page>
+      <page
+      	 id="YAMM Preferences.Colors"
+      	 category="YAMM Preferences"
+         class="dev.yamm.preferencePage.YAMMSimulationColors"
+         name="Colors">
+      </page>
+   </extension>
+   
+   <extension
+		point="org.eclipse.debug.core.launchConfigurationTypes">
+		<launchConfigurationType delegate="dev.yamm.init.LaunchDelegate"
+			delegateDescription="Launches a YAMM Configuration"
+			delegateName="YAMM Launcher" 
+			id="dev.yamm.launching.Type"
+			modes="run, debug"
+			name="YAMM Layer Configuration">
+		</launchConfigurationType>
+	</extension> 
+	
+	<extension 
+		point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+		<launchConfigurationTypeImage 
+			configTypeID="dev.yamm.launching.Type"
+   			icon="icons/cakeSmall.png" 
+   			id="dev.yamm.launching.Image">
+  		</launchConfigurationTypeImage>
+   </extension>
+   
+   <extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+    <launchConfigurationTabGroup
+        type="dev.yamm.launching.Type"
+        class="dev.yamm.init.LaunchTabGroup"
+        id="dev.yamm.LaunchTabGroup">
+    </launchConfigurationTabGroup>
+   </extension>
+  
+	
+   
+  
+   <extension point="org.eclipse.debug.core.watchExpressionDelegates">
+ 	<watchExpressionDelegate
+		debugModel="YAMM.debugModel"
+     	delegateClass="dev.yamm.debug.model.WatchExpressionDelegate"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="dev.yamm.LoadLayerFile.LayerFile"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            extensions="lay"
+            icon="icons/cakeSmall.png"
+            id="dev.yamm.LoadLayerFile.LayerFile"
+            launcher="dev.yamm.LoadLayerFile.Launcher"
+            name="Layer File Editor">
+      </editor>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="dev.yamm.shortcutCommands.StartStopHandler"
+            id="dev.yamm.StartStop"
+            name="StartStop(LayerView)">
+      </command>
+      <command
+            defaultHandler="dev.yamm.shortcutCommands.StepIntoHandler"
+            id="dev.yamm.StepInto"
+            name="StepInto(LayerView)">
+      </command>
+      <command
+            defaultHandler="dev.yamm.shortcutCommands.StepOverHandler"
+            id="dev.yamm.StepOver"
+            name="StepOver(LayerView)">
+      </command>
+      <command
+            defaultHandler="dev.yamm.shortcutCommands.StepReturnHandler"
+            id="dev.yamm.StepReturn"
+            name="StepReturn(LayerView)">
+      </command>
+      <command
+            defaultHandler="dev.yamm.shortcutCommands.StartRunHandler"
+            id="dev.yamm.StartRun"
+            name="StartRun(LayerView)">
+      </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="dev.yamm.StartStop"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+F2">
+      </key>
+      <key
+            commandId="dev.yamm.StepReturn"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+F6">
+      </key>
+      <key
+            commandId="dev.yamm.StepOver"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+F5">
+      </key>
+      <key
+            commandId="dev.yamm.StepInto"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+F3">
+      </key>
+      <key
+            commandId="dev.yamm.StartRun"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M3+F7">
+      </key>
+      </extension>
+	      <extension
+         point="org.eclipse.debug.ui.debugModelPresentations">
+      <debugModelPresentation
+            class="dev.yamm.debug.model.YAMMDebugModelPresentation"
+            id="YAMM.debugModel">
+      </debugModelPresentation>
+      
+   </extension>
+   
+       <extension
+             point="org.eclipse.ui.perspectiveExtensions">
+          <perspectiveExtension
+                targetID="org.eclipse.sirius.ui.tools.perspective.modeling">
+             <view
+                   closeable="true"
+                   id="dev.yamm.LayerView"
+                   minimized="false"
+                   moveable="true"
+                   ratio="0.50"
+                   relationship="right"
+                   relative="org.eclipse.ui.views.ProblemView"
+                   visible="true">
+             </view>
+             <view
+                   id="org.eclipse.ui.console.ConsoleView"
+                   minimized="false"
+                   ratio="0.50"
+                   relationship="stack"
+                   relative="org.eclipse.ui.views.ProblemView"
+                   visible="true">
+             </view>
+          </perspectiveExtension>
+          <perspectiveExtension
+                targetID="org.eclipse.debug.ui.DebugPerspective">
+             <view
+                   closeable="true"
+                   id="dev.yamm.LayerView"
+                   minimized="false"
+                   moveable="true"
+                   ratio="0.50"
+                   relationship="right"
+                   relative="org.eclipse.ui.console.ConsoleView"
+                   visible="true">
+             </view>
+          </perspectiveExtension>
+       </extension>
+       <extension
+             point="org.eclipse.ui.newWizards">
+          <category
+                id="dev.yamm.gui.YAMMWizardCategory1"
+                name="YAMM">
+          </category>
+          <wizard
+                canFinishEarly="false"
+                category="YAMM"
+                class="dev.yamm.gui.YAMMWizard"
+                descriptionImage="icons/logoYammKlein.png"
+                finalPerspective="org.eclipse.sirius.ui.tools.perspective.modeling"
+                icon="icons/logoYammKlein.png"
+                id="dev.yamm.gui.YAMMWizard"
+                name="YAMM Project"
+                project="true">
+          </wizard>
+       </extension>
+       <extension
+  point="org.eclipse.jdt.core.classpathContainerInitializer">
+  <classpathContainerInitializer
+        class="dev.yamm.buildpath.YAMMClasspathContainerInitializer"
+        id="dev.yamm.buildpath.YAMM_CONTAINER">
+  </classpathContainerInitializer>
+</extension>
+       <extension
+             point="org.eclipse.ui.startup">
+          <startup
+                class="dev.yamm.objDiagram.ObjectDiagramManager">
+          </startup>
+       </extension>
+   
+</plugin>
