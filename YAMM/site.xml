@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/dev.yamm.YAMMFeature_1.0.1.202105041432.jar" id="dev.yamm.YAMMFeature" version="1.0.1.202105041432"/>
+</site>

@@ -2,10 +2,10 @@
 <feature
       id="dev.yamm.YAMMFeature"
       label="YAMMFeature"
-      version="1.0.0.qualifier">
+      version="1.0.1.qualifier">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="http://www.yamm.dev">
+      ...
    </description>
 
    <copyright url="http://www.example.com/copyright">
@@ -74,7 +74,6 @@ END OF TERMS AND CONDITIONS
 
    <requires>
       <import plugin="org.eclipse.ui"/>
-      <import plugin="org.eclipse.emf.codegen.ecore" version="2.4.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.core.resources"/>
       <import plugin="org.eclipse.emf.ecore"/>
@@ -83,95 +82,91 @@ END OF TERMS AND CONDITIONS
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
       <import plugin="org.eclipse.emf.common.ui"/>
-      <import plugin="org.eclipse.emf.cdo" version="1.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.cdo.ui" version="2.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.debug.core"/>
       <import plugin="org.eclipse.debug.ui"/>
       <import plugin="org.eclipse.ui.editors"/>
       <import plugin="org.junit"/>
-      <import plugin="org.eclipse.sirius" version="5.1.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.diagram" version="5.1.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.ui" version="5.1.1" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.common" version="6.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.diagram.ui" version="6.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.ecore.extender" version="6.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext" version="2.14.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.sirius" version="6.0.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.sirius.ui" version="6.0.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.sirius.diagram.ui" version="6.0.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.sirius.ecore.extender" version="6.0.2" match="greaterOrEqual"/>
       <import plugin="org.apache.log4j" version="1.2.15" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext.xbase" version="2.14.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.xtext.common.types.edit"/>
       <import plugin="org.eclipse.xtext.ecore"/>
       <import plugin="org.eclipse.xtext.testing"/>
       <import plugin="dev.yamm.targetAST" version="0.1.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.e4.core.di" version="1.7.100" match="greaterOrEqual"/>
       <import plugin="dev.yamm.coreModelDsl" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="dev.yamm.coreModelDsl.ui" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="dev.yamm.coreModelXmi" version="0.1.0" match="greaterOrEqual"/>
       <import plugin="dev.yamm.coreModelXmi.edit" version="1.0.0" match="greaterOrEqual"/>
       <import plugin="dev.yamm.coreModelDiagram" version="0.1.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jdt.core"/>
-      <import plugin="org.eclipse.xtext.xbase.ui" version="2.14.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.nebula.widgets.nattable.core" version="1.5.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.nebula.widgets.nattable.extension.glazedlists" version="1.5.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext.ui" version="2.14.0" match="greaterOrEqual"/>
       <import plugin="ca.odell.glazedlists" version="1.9.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.emf.cdo.net4j"/>
       <import plugin="org.eclipse.emf.ecore.editor"/>
       <import plugin="org.eclipse.jdt.ui"/>
       <import plugin="org.eclipse.jface"/>
-      <import plugin="org.eclipse.net4j.tcp"/>
       <import plugin="org.eclipse.xtend.ide"/>
       <import plugin="org.eclipse.sirius.common.acceleo.aql"/>
-      <import plugin="org.eclipse.emf.transaction" version="1.9.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.diagram" version="6.0.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui" version="1.8.0" match="greaterOrEqual"/>
       <import plugin="com.google.guava" version="21.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.gmf.runtime.diagram.ui.render" version="1.7.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.ext.base" version="6.0.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ui.ide" version="3.14.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext.common.types.ui" version="2.14.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext.common.types.shared" version="2.14.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jface.text"/>
       <import plugin="org.eclipse.sirius.properties.core" version="6.0.2" match="greaterOrEqual"/>
       <import plugin="org.eclipse.eef.core"/>
       <import plugin="org.eclipse.sirius.ui.properties" version="6.0.2" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.transaction.ui" version="1.4.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext.testing" version="2.14.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.xtext.common.types"/>
-      <import plugin="org.eclipse.core.resources" version="3.13.200" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.jface.text" version="3.15.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.jface" version="3.15.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.edit"/>
       <import plugin="org.eclipse.emf.ecore.edit"/>
       <import plugin="org.eclipse.emf.edit.ui"/>
-      <import plugin="org.eclipse.equinox.common" version="3.5.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.xtext.xbase.lib" version="2.14.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.xtext.util"/>
-      <import plugin="org.eclipse.xtend.lib" version="2.14.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.xtext.ide"/>
       <import plugin="org.eclipse.xtext.xbase.ide"/>
       <import plugin="org.eclipse.xtext.ui.shared"/>
       <import plugin="org.eclipse.xtext.ui.codetemplates.ui"/>
-      <import plugin="org.eclipse.ui.editors" version="3.5.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.ui.ide" version="3.5.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.compare"/>
       <import plugin="org.eclipse.xtext.builder"/>
       <import plugin="org.eclipse.jdt.debug.ui"/>
-      <import plugin="org.eclipse.sirius" version="6.0.2" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.ui" version="6.0.2" match="greaterOrEqual"/>
       <import plugin="dev.yamm" version="1.0.42" match="greaterOrEqual"/>
       <import plugin="dev.yamm.example.dfa" version="0.1.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.diagram.ui" version="6.0.2" match="greaterOrEqual"/>
       <import plugin="dev.yamm.markov" version="0.1.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.ext.gmf.runtime"/>
-      <import plugin="org.eclipse.emf.ecore.xmi" version="2.14.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.sirius.ecore.extender" version="6.0.2" match="greaterOrEqual"/>
       <import plugin="org.eclipse.gef"/>
       <import plugin="org.eclipse.gmf.runtime.notation"/>
-      <import plugin="org.eclipse.ui" version="3.111.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.core.runtime" version="3.15.100" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtchart" version="0.7.0" match="greaterOrEqual"/>
-      <import plugin="org.eclipse.swtchart.extensions" version="0.7.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.emf.common"/>
+      <import plugin="org.eclipse.xtend.lib" version="2.14.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.ui" version="2.14.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.editors" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.ide" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.xbase.lib" version="2.14.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.codegen.ecore" version="2.23.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.sirius.diagram" version="6.0.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.sirius.common" version="6.0.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext" version="2.23.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.xbase" version="2.23.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.di" version="1.7.200" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.xbase.ui" version="2.23.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.nebula.widgets.nattable.core" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.nebula.widgets.nattable.extension.glazedlists" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.ui" version="2.23.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.transaction" version="1.9.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.render" version="1.7.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.sirius.ext.base" version="6.0.2" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.ide" version="3.15.200" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.common.types.ui" version="2.23.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.common.types.shared" version="2.23.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.testing" version="2.23.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources" version="3.13.400" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface.text" version="3.15.200" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface" version="3.16.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.equinox.common" version="3.10.400" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.xbase.lib" version="2.23.0" match="greaterOrEqual"/>
+      <import plugin="org.antlr.runtime" version="3.2.0" match="perfect"/>
+      <import plugin="org.eclipse.xtend.lib" version="2.23.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.editors" version="3.11.500" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore.xmi" version="2.16.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.113.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.15.300" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.swtchart" version="0.12.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.swtchart.extensions" version="0.12.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
